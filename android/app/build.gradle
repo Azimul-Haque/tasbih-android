@@ -23,9 +23,8 @@ if (flutterVersionName == null) {
 }
 
 android {
-    compileSdkVersion 34
     namespace "com.example.tasbih"
-    // compileSdkVersion flutter.compileSdkVersion
+    compileSdkVersion flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
 
     compileOptions {
