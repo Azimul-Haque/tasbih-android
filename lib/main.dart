@@ -56,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             MyBox(
-              color: Colors.purple,
+              color: Theme.of(context).colorScheme.primary,
               child: MyButton(
                 color: Colors.deepPurple[200],
                 onTap: () {},
