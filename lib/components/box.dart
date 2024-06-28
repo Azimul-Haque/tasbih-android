@@ -6,8 +6,8 @@ class MyBox extends StatelessWidget {
   final Color? color;
 
   const MyBox({
-
-  super.key, required this.child, required this.color, });
-
-  ainer
+    super.key,
+    required this.child,
+    required this.color,
+  });
 }
