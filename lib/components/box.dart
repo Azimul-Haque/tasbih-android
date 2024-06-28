@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-build
+
 
 class MyBox extends StatelessWidget {
 
