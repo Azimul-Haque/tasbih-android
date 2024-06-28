@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tasbih/theme/dark_theme.dart';
 import 'package:tasbih/theme/light_theme.dart';
 
 void main() {
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Tasbih Counter',
       theme: lightTheme,
+      darkTheme: darkTheme,
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
       debugShowCheckedModeBanner: false,
     );
