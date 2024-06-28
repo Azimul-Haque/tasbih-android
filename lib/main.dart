@@ -61,7 +61,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Theme Mode Example'),
+        title: const Text('Theme Mode Example'),
       ),
       body: Center(
         child: Column(
@@ -69,15 +69,15 @@ class HomeScreen extends StatelessWidget {
           children: <Widget>[
             ElevatedButton(
               onPressed: () => onThemeChanged(ThemeMode.light),
-              child: Text('Light Mode'),
+              child: const Text('Light Mode'),
             ),
             ElevatedButton(
               onPressed: () => onThemeChanged(ThemeMode.dark),
-              child: Text('Dark Mode'),
+              child: const Text('Dark Mode'),
             ),
             ElevatedButton(
               onPressed: () => onThemeChanged(ThemeMode.system),
-              child: Text('Auto Mode'),
+              child: const Text('Auto Mode'),
             ),
           ],
         ),
