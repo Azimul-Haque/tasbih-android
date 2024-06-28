@@ -8,7 +8,7 @@ ThemeData darkTheme = ThemeData(
       primary: Colors.grey[700]!,
       onPrimary: Colors.grey[50]!,
       secondary: Colors.grey[300]!,
-      onSecondary: onSecondary,
+      onSecondary: Colors.white,
       error: error,
       onError: onError,
       onBackground: onBackground,
