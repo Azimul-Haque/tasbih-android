@@ -11,20 +11,20 @@ class MyBox extends StatelessWidget {
   });
 
   @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: color,
+        borderRadius: BorderRadius.circular(8),
+      ), // BoxDecoration
 
-  Widget build (BuildContext context) {
+      width: 200,
 
-  return Container(
+      height: 200,
 
-  decoration: BoxDecoration( color: color, borderRadius: BorderRadius.circular(8), ), // BoxDecoration
+      padding: const EdgeInsets.all(50),
 
-  width: 200,
-
-  height: 200,
-
-  padding: const EdgeInsets.all(50),
-
-  child: child,
-
-  ); // Container
+      child: child,
+    ); // Container
+  }
 }
