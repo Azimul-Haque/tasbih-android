@@ -4,7 +4,7 @@ ThemeData darkTheme = ThemeData(
   brightness: Brightness.dark,
   colorScheme: ColorScheme(
       brightness: Brightness.dark,
-      background: Col,
+      background: Colors.grey[850],
       primary: primary,
       onPrimary: onPrimary,
       secondary: secondary,
