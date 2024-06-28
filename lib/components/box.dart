@@ -22,6 +22,6 @@ class MyBox extends StatelessWidget {
       padding: const EdgeInsets.all(50),
 
       child: child,
-    ); // Container
+    );
   }
 }
