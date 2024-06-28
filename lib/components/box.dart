@@ -17,11 +17,8 @@ class MyBox extends StatelessWidget {
         color: color,
         borderRadius: BorderRadius.circular(8),
       ), // BoxDecoration
-
       width: 200,
-
       height: 200,
-
       padding: const EdgeInsets.all(50),
 
       child: child,
