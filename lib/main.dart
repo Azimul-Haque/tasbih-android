@@ -55,7 +55,7 @@ class _MyAppState extends State<MyApp> {
 class HomeScreen extends StatelessWidget {
   final Function(ThemeMode) onThemeChanged;
 
-  const HomeScreen({required this.onThemeChanged});
+  const HomeScreen({super.key, required this.onThemeChanged});
 
   @override
   Widget build(BuildContext context) {
