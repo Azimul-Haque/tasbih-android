@@ -58,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
             MyBox(
               color: Colors.purple,
               child: MyButton(
-                color: Colors.white,
+                color: Colors.deepPurple,
                 onTap: () {},
               ),
             ),
