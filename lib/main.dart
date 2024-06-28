@@ -47,7 +47,6 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
         elevation: 2,
       ),
