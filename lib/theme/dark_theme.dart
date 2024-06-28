@@ -13,5 +13,5 @@ ThemeData darkTheme = ThemeData(
       onError: Colors.white,
       onBackground: Colors.white,
       surface: Colors.grey[300]!,,
-      onSurface: onSurface),
+      onSurface: Colors.grey[850]!,),
 );
