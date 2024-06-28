@@ -48,7 +48,6 @@ class _MyHomePageState extends State<MyHomePage> {
       backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
         title: Text(widget.title),
-        elevation: 2,
       ),
       body: Center(
         child: Column(
