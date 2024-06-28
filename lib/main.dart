@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tasbih/components/box.dart';
 import 'package:tasbih/theme/dark_theme.dart';
 import 'package:tasbih/theme/light_theme.dart';
 
@@ -53,12 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Container(
-              decoration: Decoration,
-              padding: const EdgeInsets.all(10),
-              height: 200,
-              width: 200,
-            ),
+            MyBox(child: Text('test'), color: color)
             const Text(
               'You have pushed the button this many times:',
             ),
