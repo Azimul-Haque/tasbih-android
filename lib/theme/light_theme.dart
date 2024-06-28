@@ -6,6 +6,7 @@ ThemeData lightTheme = ThemeData(
     backgroundColor: Colors.transparent,
     elevation: 0,
     iconTheme: IconThemeData(color: Colors.black),
+    titleTextStyle: TextStyle(color: Colors.black, fontSize: 14),
   ),
   // colorScheme: ColorScheme.light(
   //   background: Colors.grey.shade400,
