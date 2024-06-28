@@ -56,8 +56,8 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             MyBox(
-                child: const MyButton(color: Colors.white, onTap: {}),
-                color: Colors.purple),
+                color: Colors.purple,
+                child: MyButton(color: Colors.white, onTap: {})),
             const Text(
               'You have pushed the button this many times:',
             ),
