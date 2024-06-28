@@ -1,87 +1,72 @@
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
-void main() => runApp(const MyApp());
-
-class MyApp extends StatefulWidget {
-  const MyApp({super.key});
-
-  @override
-  // ignore: library_private_types_in_public_api
-  _MyAppState createState() => _MyAppState();
+void main() {
+  runApp(const MyApp());
 }
 
-class _MyAppState extends State<MyApp> {
-  ThemeMode _themeMode = ThemeMode.system;
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
-  @override
-  void initState() {
-    super.initState();
-    _loadThemeMode();
-  }
-
-  _loadThemeMode() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    setState(() {
-      int? themeModeIndex = prefs.getInt('themeMode');
-      _themeMode = ThemeMode.values[themeModeIndex ?? 2]; // default to system
-    });
-  }
-
-  _saveThemeMode(ThemeMode themeMode) async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    prefs.setInt('themeMode', themeMode.index);
-  }
-
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData.light(),
-      darkTheme: ThemeData.dark(),
-      themeMode: _themeMode,
-      home: HomeScreen(
-        onThemeChanged: (themeMode) {
-          setState(() {
-            _themeMode = themeMode;
-            _saveThemeMode(themeMode);
-          });
-        },
+      title: 'Tasbih Counter',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
       ),
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
 
-class HomeScreen extends StatelessWidget {
-  final Function(ThemeMode) onThemeChanged;
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
 
-  const HomeScreen({super.key, required this.onThemeChanged});
+  final String title;
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  int _counter = 0;
+
+  void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Theme Mode Example'),
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        title: Text(widget.title),
+        elevation: 2,
       ),
       body: Center(
         child: Column(
-          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            ElevatedButton(
-              onPressed: () => onThemeChanged(ThemeMode.light),
-              child: const Text('Light Mode'),
+            const Text(
+              'You have pushed the button this many times:',
             ),
-            ElevatedButton(
-              onPressed: () => onThemeChanged(ThemeMode.dark),
-              child: const Text('Dark Mode'),
-            ),
-            ElevatedButton(
-              onPressed: () => onThemeChanged(ThemeMode.system),
-              child: const Text('Auto Mode'),
+            Text(
+              '$_counter',
+              style: Theme.of(context).textTheme.headlineMedium,
             ),
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
+      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
