@@ -10,8 +10,8 @@ ThemeData lightTheme = ThemeData(
   ),
   colorScheme: ColorScheme.light(
     background: Colors.grey.shade300,
-    primary: Colors.grey.shade200,
-    secondary: Colors.grey.shade100,
+    primary: Colors.grey.shade100,
+    secondary: Colors.grey.shade200,
     // primary: Colors.grey[700]!,
     // onPrimary: Colors.grey[50]!,
     // secondary: Colors.grey[500]!,
