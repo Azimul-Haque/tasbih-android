@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Tasbih Counter',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: darkTheme.primaryColor),
+        colorScheme: ColorScheme.fromSeed(seedColor: darkTheme.backgroundColor),
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
