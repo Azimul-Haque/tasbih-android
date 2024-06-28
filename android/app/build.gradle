@@ -41,7 +41,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.orbachinujbuk.tasbih"
+        applicationId "com.example.tasbih"
         minSdkVersion flutter.minSdkVersion
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
