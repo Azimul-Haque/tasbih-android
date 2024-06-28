@@ -14,8 +14,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Tasbih Counter',
       theme: lightTheme,
-        useMaterial3: true,
-      ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
       debugShowCheckedModeBanner: false,
     );
