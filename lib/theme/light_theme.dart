@@ -5,8 +5,8 @@ ThemeData lightTheme = ThemeData(
   appBarTheme: AppBarTheme(
     backgroundColor: Colors.green.shade700,
     elevation: 0,
-    iconTheme: IconThemeData(color: Colors.black),
-    titleTextStyle: TextStyle(color: Colors.black, fontSize: 20),
+    iconTheme: const IconThemeData(color: Colors.black),
+    titleTextStyle: const TextStyle(color: Colors.black, fontSize: 20),
   ),
   colorScheme: ColorScheme.light(
     background: Colors.grey.shade200,
