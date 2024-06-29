@@ -7,7 +7,7 @@ class MyDrawer extends StatelessWidget {
   const MyDrawer({
     super.key,
     required this.color,
-    required this.switch
+    required this.switch,
   });
 
   @override
@@ -25,7 +25,12 @@ class MyDrawer extends StatelessWidget {
           ),
           ListTile(
             title: const Text('মোড পরিবর্তন করুন'),
-            trailing: switch,
+            trailing:  Switch(
+              value: isDarkMode,
+              onChanged: (bool value) {
+                toggleTheme(value);
+              },
+            ),
             onTap: () {
               // Update the sRtate of the app.
               // ...
