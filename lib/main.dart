@@ -52,7 +52,7 @@ class _MyAppState extends State<MyApp> {
       theme: lightTheme,
       darkTheme: darkTheme,
       home: const MyHomePage(
-        title: 'Tasbih Counter',
+        'Tasbih Counter',
         isDarkMode: _isDarkMode,
         toggleTheme: _toggleTheme,
       ),
