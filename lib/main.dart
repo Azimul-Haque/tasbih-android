@@ -111,7 +111,15 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      drawer: MyDrawer(color: Theme.of(context).colorScheme.secondary),
+      drawer: MyDrawer(
+        color: Theme.of(context).colorScheme.secondary,
+        Switch(
+          value: widget.isDarkMode,
+          onChanged: (bool value) {
+            widget.toggleTheme(value);
+          },
+        ),
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
