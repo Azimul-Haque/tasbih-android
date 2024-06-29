@@ -53,7 +53,7 @@ class _MyAppState extends State<MyApp> {
       darkTheme: darkTheme,
       themeMode: _isDarkMode ? ThemeMode.dark : ThemeMode.light,
       home: MyHomePage(
-        'Tasbih Counter',
+        title: 'Tasbih Counter',
         isDarkMode: _isDarkMode,
         toggleTheme: _toggleTheme,
       ),
