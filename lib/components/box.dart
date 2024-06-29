@@ -19,7 +19,7 @@ class MyBox extends StatelessWidget {
       ), // BoxDecoration
       width: 200,
       height: 200,
-      padding: const EdgeInsets.all(50),
+      padding: const EdgeInsets.all(10),
       child: child,
     );
   }
