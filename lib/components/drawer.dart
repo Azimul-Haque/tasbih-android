@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 class MyDrawer extends StatelessWidget {
   final Color? color;
-  // final Widget? switch;
+  final Widget? switch;
 
   const MyDrawer({
     super.key,
     required this.color,
-    // required this.switch,
+    required this.switch,
   });
 
   @override
