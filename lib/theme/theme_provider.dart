@@ -1,3 +1,5 @@
 import 'package:flutter/material.dart';
 
-class ThemeProvider with ChangeNotifier {}
+class ThemeProvider with ChangeNotifier {
+  ThemeData _themeData = 
+}
