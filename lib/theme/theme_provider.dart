@@ -8,5 +8,6 @@ class ThemeProvider with ChangeNotifier {
 
   set themData(ThemeData themeData) {
     _themeData = themeData;
+    notifyListeners();
   }
 }
