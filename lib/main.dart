@@ -58,7 +58,6 @@ class _MyAppState extends State<MyApp> {
         toggleTheme: _toggleTheme,
       ),
       debugShowCheckedModeBanner: false,
-      home: MyHomePage(),
     );
   }
 }
