@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tasbih/theme/dark_theme.dart';
 import 'package:tasbih/theme/light_theme.dart';
 
 class ThemeProvider with ChangeNotifier {
@@ -11,5 +12,11 @@ class ThemeProvider with ChangeNotifier {
     notifyListeners();
   }
 
-  void toggleTheme() {}
+  void toggleTheme() {
+    if (_themeData == lightTheme) {
+      _themeData = darkTheme;
+    } else {
+      _themeData = lightTheme;
+    }
+  }
 }
