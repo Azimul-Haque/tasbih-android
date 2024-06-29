@@ -27,6 +27,25 @@ class _MyAppState extends State<MyApp> {
     _loadThemePreference();
   }
 
+  _loadThemePreference() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    setState(() {
+      _isDarkMode = prefs.getBool('isDarkMode') ?? false;
+    });
+  }
+
+  _saveThemePreference(bool isDarkMode) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setBool('isDarkMode', isDarkMode);
+  }
+
+  _toggleTheme(bool value) {
+    setState(() {
+      _isDarkMode = value;
+    });
+    _saveThemePreference(value);
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -44,24 +63,21 @@ class _MyAppState extends State<MyApp> {
   }
 }
 
-_loadThemePreference() async {
-  SharedPreferences prefs = await SharedPreferences.getInstance();
-  setState(() {
-    _isDarkMode = prefs.getBool('isDarkMode') ?? false;
-  });
-}
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
 
-_saveThemePreference(bool isDarkMode) async {
-  SharedPreferences prefs = await SharedPreferences.getInstance();
-  await prefs.setBool('isDarkMode', isDarkMode);
-}
-
-_toggleTheme(bool value) {
-  setState(() {
-    _isDarkMode = value;
-  });
-  _saveThemePreference(value);
-}
+//   // This widget is the root of your application.
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: 'Tasbih Counter',
+//       theme: lightTheme,
+//       darkTheme: darkTheme,
+//       home: const MyHomePage(title: 'Tasbih Counter'),
+//       debugShowCheckedModeBanner: false,
+//     );
+//   }
+// }
 
 class MyHomePage extends StatefulWidget {
   final String title;
