@@ -6,5 +6,7 @@ class ThemeProvider with ChangeNotifier {
 
   ThemeData get themeData => _themeData;
 
-  set themData(ThemeData themeData) {}
+  set themData(ThemeData themeData) {
+    _themeData =t hemeData;
+  }
 }
