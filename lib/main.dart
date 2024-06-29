@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       title: 'Tasbih Counter',
       theme: lightTheme,
       darkTheme: darkTheme,
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Tasbih Counter'),
       debugShowCheckedModeBanner: false,
     );
   }
