@@ -25,7 +25,7 @@ class MyDrawer extends StatelessWidget {
           ),
           ListTile(
             title: const Text('মোড পরিবর্তন করুন'),
-            trailing: widget.switch,
+            trailing: switch,
             onTap: () {
               // Update the sRtate of the app.
               // ...
