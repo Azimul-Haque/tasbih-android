@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+// NOT USING IT
+// NOT USING IT
+// NOT USING IT
+// NOT USING IT
 class UiProvider extends ChangeNotifier {
   bool _isDark = false;
   bool get isDark => _isDark;
