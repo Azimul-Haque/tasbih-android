@@ -25,13 +25,12 @@ class MyDrawer extends StatelessWidget {
           ),
           ListTile(
             title: const Text('মোড পরিবর্তন করুন'),
-            trailing: 
-              Consumer<UiProvider>(builder: (context, UiProvider notifier, child) {
-            return Switch(
-                                value: notifier.isDark,
-                                onChanged: (value) => notifier.changeTheme()),
-
-                        }),
+            trailing: Consumer<UiProvider>(
+                builder: (context, UiProvider notifier, child) {
+              return Switch(
+                  value: notifier.isDark,
+                  onChanged: (value) => notifier.changeTheme());
+            }),
             onTap: () {
               // Update the state of the app.
               // ...
