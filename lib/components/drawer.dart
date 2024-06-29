@@ -23,7 +23,7 @@ class MyDrawer extends StatelessWidget {
             ),
             child: Text('Digital Tasbih'),
           ),
-          ListTile(
+            const ListTile(
             title:  Text('মোড পরিবর্তন করুন'),
             trailing: Switch(onChanged: {}, value: true,),
             onTap: () {
