@@ -36,41 +36,12 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  ThemeMode _themeMode = ThemeMode.system;
   int _counter = 0;
 
   void _incrementCounter() {
     setState(() {
       _counter++;
     });
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    _loadThemeMode();
-  }
-
-  _loadThemeMode() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    int? themeModeIndex = prefs.getInt('themeMode');
-    if (themeModeIndex != null) {
-      setState(() {
-        _themeMode = ThemeMode.values[themeModeIndex];
-      });
-    }
-  }
-
-  _saveThemeMode(ThemeMode themeMode) async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setInt('themeMode', themeMode.index);
-  }
-
-  _changeThemeMode(ThemeMode themeMode) {
-    setState(() {
-      _themeMode = themeMode;
-    });
-    _saveThemeMode(themeMode);
   }
 
   @override
