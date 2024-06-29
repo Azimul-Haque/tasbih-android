@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:tasbih/components/box.dart';
-import 'package:tasbih/components/button.dart';
-import 'package:tasbih/components/drawer.dart';
 import 'package:tasbih/theme/dark_theme.dart';
 import 'package:tasbih/theme/light_theme.dart';
+import 'package:tasbih/view/home.dart';
 
 void main() {
   runApp(const MyApp());
