@@ -28,8 +28,7 @@ class MyDrawer extends StatelessWidget {
             trailing: Consumer<UiProvider>(builder: (context, UiProvider notifier, child) {
 return Switch(
                     value: notifier.isDark,
-                    onChanged: (value) => notifier.changeTheme()),
-              
+                    onChanged: (value) => notifier.changeTheme()
             }
               child: 
             onTap: () {
