@@ -19,7 +19,7 @@ class MyDrawer extends StatelessWidget {
             decoration: BoxDecoration(
               color: Colors.blue,
             ),
-            child: Text('Drawer Header'),
+            child: Text('Digital Tasbih'),
           ),
           ListTile(
             title: const Text('Item 1'),
