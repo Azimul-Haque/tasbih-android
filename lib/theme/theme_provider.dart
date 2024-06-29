@@ -1,3 +1,3 @@
 import 'package:flutter/material.dart';
 
-ThemePro
+class ThemeProvider 
