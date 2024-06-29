@@ -113,7 +113,7 @@ class _MyHomePageState extends State<MyHomePage> {
       drawer: MyDrawer(
         color: Theme.of(context).colorScheme.secondary,
         Switch(
-          value: isDarkMode,
+          value: widget.isDarkMode,
           onChanged: (bool value) {
             toggleTheme(value);
           },
