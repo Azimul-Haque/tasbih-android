@@ -44,21 +44,24 @@ class _MyAppState extends State<MyApp> {
   }
 }
 
-// class MyApp extends StatelessWidget {
-//   const MyApp({super.key});
+_loadThemePreference() async {
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  setState(() {
+    _isDarkMode = prefs.getBool('isDarkMode') ?? false;
+  });
+}
 
-//   // This widget is the root of your application.
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       title: 'Tasbih Counter',
-//       theme: lightTheme,
-//       darkTheme: darkTheme,
-//       home: const MyHomePage(title: 'Tasbih Counter'),
-//       debugShowCheckedModeBanner: false,
-//     );
-//   }
-// }
+_saveThemePreference(bool isDarkMode) async {
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  await prefs.setBool('isDarkMode', isDarkMode);
+}
+
+_toggleTheme(bool value) {
+  setState(() {
+    _isDarkMode = value;
+  });
+  _saveThemePreference(value);
+}
 
 class MyHomePage extends StatefulWidget {
   final String title;
