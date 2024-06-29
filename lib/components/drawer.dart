@@ -12,7 +12,7 @@ class MyDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: ListView(
-        // padding: EdgeInsets.zero,
+        padding: EdgeInsets.zero,
         children: [
           const DrawerHeader(
             // margin: EdgeInsets.zero,
