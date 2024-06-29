@@ -25,7 +25,7 @@ class MyDrawer extends StatelessWidget {
           ),
           ListTile(
             title: const Text('মোড পরিবর্তন করুন'),
-            // trailing: switch,
+            trailing: Switch(onChanged: {}, value: ,),
             onTap: () {
               
             },
