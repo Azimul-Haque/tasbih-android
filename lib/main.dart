@@ -27,7 +27,6 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
-  ThemeMode _themeMode = ThemeMode.system;
 
   final String title;
 
@@ -36,6 +35,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  ThemeMode _themeMode = ThemeMode.system;
   int _counter = 0;
 
   void _incrementCounter() {
