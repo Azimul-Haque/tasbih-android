@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tasbih/theme/dark_theme.dart';
 import 'package:tasbih/theme/light_theme.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class ThemeProvider with ChangeNotifier {
   ThemeData _themeData = lightTheme;
