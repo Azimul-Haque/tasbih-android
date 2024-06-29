@@ -53,9 +53,9 @@ class _MyAppState extends State<MyApp> {
       darkTheme: darkTheme,
       themeMode: _isDarkMode ? ThemeMode.dark : ThemeMode.light,
       home: MyHomePage(
-        title: 'Tasbih Counter',
-        isDarkMode: _isDarkMode,
-        toggleTheme: _toggleTheme,
+        'Tasbih Counter',
+        _isDarkMode,
+        _toggleTheme,
       ),
       debugShowCheckedModeBanner: false,
     );
