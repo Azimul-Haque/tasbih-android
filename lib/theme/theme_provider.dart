@@ -5,4 +5,6 @@ class ThemeProvider with ChangeNotifier {
   ThemeData _themeData = lightTheme;
 
   ThemeData get themeData => _themeData;
+
+  set themData()
 }
