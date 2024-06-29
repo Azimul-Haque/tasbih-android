@@ -63,22 +63,6 @@ class _MyAppState extends State<MyApp> {
   }
 }
 
-// class MyApp extends StatelessWidget {
-//   const MyApp({super.key});
-
-//   // This widget is the root of your application.
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       title: 'Tasbih Counter',
-//       theme: lightTheme,
-//       darkTheme: darkTheme,
-//       home: const MyHomePage(title: 'Tasbih Counter'),
-//       debugShowCheckedModeBanner: false,
-//     );
-//   }
-// }
-
 class MyHomePage extends StatefulWidget {
   final String title;
   final bool isDarkMode;
