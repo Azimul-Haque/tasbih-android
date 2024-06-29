@@ -28,8 +28,6 @@ class UiProvider extends ChangeNotifier {
 
   late SharedPreferences storage;
 
-  //Now we want to save the last changed theme value
-
   //Dark mode toggle action
   changeTheme() {
     _isDark = !isDark;
