@@ -50,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      drawer: MyDrawer(color: Theme.of(context).colorScheme.primary),
+      drawer: MyDrawer(color: Theme.of(context).colorScheme.secondary),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
