@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tasbih/components/box.dart';
 import 'package:tasbih/components/button.dart';
 import 'package:tasbih/components/drawer.dart';
@@ -47,9 +48,11 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Theme Toggle Demo',
-      theme: ThemeData.light(),
-      darkTheme: ThemeData.dark(),
+      title: 'Tasbih Counter',
+      theme: lightTheme,
+      darkTheme: darkTheme,
+      home: const MyHomePage(title: 'Tasbih Counter'),
+      debugShowCheckedModeBanner: false,
       themeMode: _isDarkMode ? ThemeMode.dark : ThemeMode.light,
       home: MyHomePage(
         isDarkMode: _isDarkMode,
