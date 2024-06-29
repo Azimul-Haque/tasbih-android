@@ -31,7 +31,7 @@ class MyDrawer extends StatelessWidget {
                                 value: notifier.isDark,
                                 onChanged: (value) => notifier.changeTheme()),
 
-                        }
+                        }),
             onTap: () {
               // Update the state of the app.
               // ...
