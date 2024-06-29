@@ -138,12 +138,6 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
-            Switch(
-              value: widget.isDarkMode,
-              onChanged: (bool value) {
-                widget.toggleTheme(value);
-              },
-            ),
           ],
         ),
       ),
