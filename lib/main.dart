@@ -79,7 +79,8 @@ class _MyAppState extends State<MyApp> {
 // }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title, this.isDarkMode});
+  const MyHomePage(
+      {super.key, required this.title, this.isDarkMode, this.toggleTheme});
 
   final String title;
   final bool isDarkMode;
