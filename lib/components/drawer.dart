@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:tasbih/theme/theme_provider.dart';
 import 'package:provider/provider.dart';
 
-
 class MyDrawer extends StatelessWidget {
   final Color? color;
 
@@ -28,10 +27,9 @@ class MyDrawer extends StatelessWidget {
             title: const Text('মোড পরিবর্তন করুন'),
             trailing: Consumer<UiProvider>(
               child: Switch(
-                value: notifier.isDark,
-                onChanged: (value)=>notifier.changeTheme()
-              ),
-            ),,
+                  value: notifier.isDark,
+                  onChanged: (value) => notifier.changeTheme()),
+            ),
             onTap: () {
               // Update the state of the app.
               // ...
