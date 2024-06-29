@@ -82,6 +82,8 @@ class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
   final String title;
+  final bool isDarkMode;
+  final Function(bool) toggleTheme;
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
