@@ -4,6 +4,9 @@ ThemeData darkTheme = ThemeData(
   brightness: Brightness.dark,
   appBarTheme: const AppBarTheme(
     backgroundColor: Colors.black,
+    elevation: 0,
+    iconTheme: IconThemeData(color: Colors.black),
+    titleTextStyle: TextStyle(color: Colors.black, fontSize: 20),
   ),
   colorScheme: ColorScheme.dark(
     background: Colors.grey.shade900,
