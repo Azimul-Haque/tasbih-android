@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 
 class MyDrawer extends StatelessWidget {
-  final Widget? child;
-  final Color? color;
+  
 
   const MyDrawer({
-    super.key,
-    required this.child,
-    required this.color,
+    
   });
 
   @override
