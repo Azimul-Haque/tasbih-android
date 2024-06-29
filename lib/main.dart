@@ -134,7 +134,6 @@ class _MyHomePageState extends State<MyHomePage> {
               value: widget.isDarkMode,
               onChanged: (bool value) {
                 widget.toggleTheme(value);
-                print(widget.isDarkMode);
               },
             ),
           ],
