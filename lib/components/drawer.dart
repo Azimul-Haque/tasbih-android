@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 class MyDrawer extends StatelessWidget {
   final Color? color;
-  final Widget? switch;
+  final Widget? switchdata;
 
   const MyDrawer({
     super.key,
     required this.color,
-    required this.switch,
+    required this.switchdata,
   });
 
   @override
@@ -25,7 +25,7 @@ class MyDrawer extends StatelessWidget {
           ),
           ListTile(
             title: const Text('মোড পরিবর্তন করুন'),
-            trailing: switch,
+            trailing: switchdata,
             onTap: () {},
           ),
           ListTile(
