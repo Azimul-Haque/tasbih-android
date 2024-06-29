@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MyDrawer extends StatelessWidget {
-  
-
-  const MyDrawer({
-    
-  });
+  const MyDrawer();
 
   @override
   Widget build(BuildContext context) {
