@@ -29,7 +29,7 @@ class MyDrawer extends StatelessWidget {
 return Switch(
                     value: notifier.isDark,
                     onChanged: (value) => notifier.changeTheme()),
-              ),
+              
             }
               child: 
             onTap: () {
