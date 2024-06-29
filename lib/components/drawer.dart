@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tasbih/theme/dark_theme.dart';
+import 'package:tasbih/theme/light_theme.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
@@ -15,7 +17,7 @@ class MyDrawer extends StatelessWidget {
         children: [
           const DrawerHeader(
             decoration: BoxDecoration(
-              color: Colors.blue,
+              color: Theme.of(context).colorScheme.primary,
             ),
             child: Text('Drawer Header'),
           ),
