@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tasbih/components/box.dart';
 import 'package:tasbih/components/button.dart';
+import 'package:tasbih/components/drawer.dart';
 import 'package:tasbih/theme/dark_theme.dart';
 import 'package:tasbih/theme/light_theme.dart';
 
@@ -49,6 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
+      drawer: MyDrawer(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
