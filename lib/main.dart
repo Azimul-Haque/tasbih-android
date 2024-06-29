@@ -27,25 +27,6 @@ class _MyAppState extends State<MyApp> {
     _loadThemePreference();
   }
 
-  _loadThemePreference() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    setState(() {
-      _isDarkMode = prefs.getBool('isDarkMode') ?? false;
-    });
-  }
-
-  _saveThemePreference(bool isDarkMode) async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setBool('isDarkMode', isDarkMode);
-  }
-
-  _toggleTheme(bool value) {
-    setState(() {
-      _isDarkMode = value;
-    });
-    _saveThemePreference(value);
-  }
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
