@@ -18,7 +18,7 @@ class MyDrawer extends StatelessWidget {
             decoration: BoxDecoration(
               color: color,
             ),
-            child: Text('Drawer Header'),
+            child: const Text('Drawer Header'),
           ),
           ListTile(
             title: const Text('Item 1'),
