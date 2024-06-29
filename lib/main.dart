@@ -4,7 +4,6 @@ import 'package:tasbih/components/button.dart';
 import 'package:tasbih/components/drawer.dart';
 import 'package:tasbih/theme/dark_theme.dart';
 import 'package:tasbih/theme/light_theme.dart';
-import 'package:dark_theme/theme/theme_provider.dart';
 
 void main() {
   runApp(const MyApp());
