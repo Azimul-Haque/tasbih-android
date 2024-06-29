@@ -14,11 +14,11 @@ class MyDrawer extends StatelessWidget {
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
-          DrawerHeader(
+          const DrawerHeader(
             decoration: BoxDecoration(
               color: Colors.amber,
             ),
-            child: const Text('Drawer Header'),
+            child: Text('Drawer Header'),
           ),
           ListTile(
             title: const Text('Item 1'),
