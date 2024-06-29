@@ -27,6 +27,22 @@ class _MyAppState extends State<MyApp> {
     _loadThemePreference();
   }
 
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Tasbih Counter',
+      theme: lightTheme,
+      darkTheme: darkTheme,
+      themeMode: _isDarkMode ? ThemeMode.dark : ThemeMode.light,
+      home: MyHomePage(
+        title: 'Tasbih Counter',
+        isDarkMode: _isDarkMode,
+        toggleTheme: _toggleTheme,
+      ),
+      debugShowCheckedModeBanner: false,
+    );
+  }
+
   _loadThemePreference() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
@@ -44,22 +60,6 @@ class _MyAppState extends State<MyApp> {
       _isDarkMode = value;
     });
     _saveThemePreference(value);
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Tasbih Counter',
-      theme: lightTheme,
-      darkTheme: darkTheme,
-      themeMode: _isDarkMode ? ThemeMode.dark : ThemeMode.light,
-      home: MyHomePage(
-        title: 'Tasbih Counter',
-        isDarkMode: _isDarkMode,
-        toggleTheme: _toggleTheme,
-      ),
-      debugShowCheckedModeBanner: false,
-    );
   }
 }
 
