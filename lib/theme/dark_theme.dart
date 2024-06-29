@@ -5,8 +5,8 @@ ThemeData darkTheme = ThemeData(
   appBarTheme: const AppBarTheme(
     backgroundColor: Colors.black,
     elevation: 0,
-    iconTheme: IconThemeData(color: Colors.black),
-    titleTextStyle: TextStyle(color: Colors.black, fontSize: 20),
+    iconTheme: IconThemeData(color: Colors.white),
+    titleTextStyle: TextStyle(color: Colors.white, fontSize: 20),
   ),
   colorScheme: ColorScheme.dark(
     background: Colors.grey.shade900,
