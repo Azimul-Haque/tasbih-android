@@ -22,7 +22,7 @@ class MyDrawer extends StatelessWidget {
             child: Text('Digital Tasbih'),
           ),
           ListTile(
-            title: const Text('Item 1'),
+            title: const Text('মোড পরিবর্তন করুন'),
             onTap: () {
               // Update the state of the app.
               // ...
