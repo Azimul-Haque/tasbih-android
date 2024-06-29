@@ -6,7 +6,7 @@ import 'package:tasbih/theme/dark_theme.dart';
 import 'package:tasbih/theme/light_theme.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
