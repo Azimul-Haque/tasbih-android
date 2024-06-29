@@ -79,7 +79,7 @@ class _MyAppState extends State<MyApp> {
 // }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+  const MyHomePage({super.key, required this.title, this.isDarkMode});
 
   final String title;
   final bool isDarkMode;
