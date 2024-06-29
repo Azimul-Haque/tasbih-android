@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tasbih/components/box.dart';
 import 'package:tasbih/components/button.dart';
 import 'package:tasbih/components/drawer.dart';
@@ -42,6 +43,34 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() {
       _counter++;
     });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _loadThemeMode();
+  }
+
+  _loadThemeMode() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    int? themeModeIndex = prefs.getInt('themeMode');
+    if (themeModeIndex != null) {
+      setState(() {
+        _themeMode = ThemeMode.values[themeModeIndex];
+      });
+    }
+  }
+
+  _saveThemeMode(ThemeMode themeMode) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setInt('themeMode', themeMode.index);
+  }
+
+  _changeThemeMode(ThemeMode themeMode) {
+    setState(() {
+      _themeMode = themeMode;
+    });
+    _saveThemeMode(themeMode);
   }
 
   @override
