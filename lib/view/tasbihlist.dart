@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tasbih/globals.dart';
 
 class TasbihList extends StatefulWidget {
   final String title;
@@ -64,6 +65,10 @@ class _TasbihListState extends State<TasbihList> {
           trailing: Icon(iconname2),
           onTap: () {
             // Action for Tasbih
+            setState(() {
+              tasbihEnBn = title;
+              tasbihEnBn = subtitle;
+            });
             Navigator.of(context).pop();
           },
         ),
