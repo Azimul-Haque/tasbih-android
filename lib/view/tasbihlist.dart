@@ -25,7 +25,8 @@ class _TasbihListState extends State<TasbihList> {
             const SizedBox(
               height: 5,
             ),
-            _thisCard('سُبْحَانَ الله', 'SubhanAllah - সুবহানাল্লাহ', Icons.),
+            _thisCard(
+                'سُبْحَانَ الله', 'SubhanAllah - সুবহানাল্লাহ', Icons.label),
             _thisCard(),
             _thisCard(),
           ],
