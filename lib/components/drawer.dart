@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tasbih/view/tasbihlist.dart';
 
 class MyDrawer extends StatelessWidget {
   final Color? color;
@@ -81,6 +80,4 @@ class MyDrawer extends StatelessWidget {
       ),
     );
   }
-
-  void setState(Null Function() param0) {}
 }
