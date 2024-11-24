@@ -38,14 +38,14 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
         actions: [
         IconButton(
-          icon: Icon(Icons.search),
+          icon: const  Icon(Icons.search),
           onPressed: () {
             // Action for Search
             print('Search button pressed');
           },
         ),
         IconButton(
-          icon: Icon(Icons.settings),
+          icon: const Icon(Icons.settings),
           onPressed: () {
             // Action for Settings
             print('Settings button pressed');
