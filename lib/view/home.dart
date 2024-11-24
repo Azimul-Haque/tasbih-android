@@ -78,6 +78,17 @@ class _MyHomePageState extends State<MyHomePage> {
             ]),
           ),
           const SizedBox(height: 10),
+          Align(
+            alignment: Alignment.topCenter,
+            child:
+                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+              Text(
+                tasbihEnBn,
+                style:
+                    const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+              ),
+            ]),
+          ),
           Expanded(
             child: Center(
               child: MyBox(
