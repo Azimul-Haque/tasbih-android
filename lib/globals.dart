@@ -31,31 +31,6 @@ pageAppBar(String appbarname, BuildContext context) {
             fontWeight: FontWeight.bold,
           ),
         ),
-        const Spacer(),
-        Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children: [
-            userdistrict != ''
-                ? Text(
-                    'জেলা: ' + userdistrict,
-                    style: const TextStyle(
-                      fontSize: 12,
-                      color: Colors.white,
-                    ),
-                  )
-                : Container(),
-            userupazilla != ''
-                ? Text(
-                    'উপজেলা: ' + userupazilla,
-                    style: const TextStyle(
-                      fontSize: 12,
-                      color: Colors.white,
-                    ),
-                  )
-                : Container(),
-          ],
-        ),
       ],
     ),
     flexibleSpace: appBarStyle(),
