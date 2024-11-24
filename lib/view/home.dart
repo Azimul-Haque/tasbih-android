@@ -84,8 +84,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Column(mainAxisAlignment: MainAxisAlignment.center, children: [
               Text(
                 tasbihEnBn,
-                style:
-                    const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                style: const TextStyle(fontSize: 18),
               ),
             ]),
           ),
