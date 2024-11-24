@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tasbih/components/box.dart';
-import 'package:tasbih/components/button.dart';
-import 'package:tasbih/components/drawer.dart';
-import 'package:tasbih/globals.dart';
 
 class TasbihList extends StatefulWidget {
   final String title;
