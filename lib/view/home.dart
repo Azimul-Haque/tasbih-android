@@ -62,36 +62,33 @@ class _MyHomePageState extends State<MyHomePage> {
           },
         ),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Align(
-              alignment: Alignment.topCenter,
-              child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      tasbihArabic,
-                      style: const TextStyle(
-                          fontSize: 22, fontWeight: FontWeight.bold),
-                    ),
-                  ]),
-            ),
-            const SizedBox(height: 20),
-            MyBox(
-              height: 150,
-              widht: 150,
-              color: Theme.of(context).colorScheme.secondary,
-              child: MyButton(
-                title: convertToBanglaNumber('$_counter'),
-                titlesize: 50,
-                color: Theme.of(context).colorScheme.primary,
-                ontapfunction: _incrementCounter,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Align(
+            alignment: Alignment.topCenter,
+            child:
+                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+              Text(
+                tasbihArabic,
+                style:
+                    const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
               ),
+            ]),
+          ),
+          const SizedBox(height: 20),
+          MyBox(
+            height: 150,
+            widht: 150,
+            color: Theme.of(context).colorScheme.secondary,
+            child: MyButton(
+              title: convertToBanglaNumber('$_counter'),
+              titlesize: 50,
+              color: Theme.of(context).colorScheme.primary,
+              ontapfunction: _incrementCounter,
             ),
-          ],
-        ),
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
