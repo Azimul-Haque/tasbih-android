@@ -21,8 +21,7 @@ class MyButton extends StatelessWidget {
         ),
       ),
       onPressed: () {
-        // Define the action here
-        print("Square button pressed!");
+        onTap;
       },
       child: Text(title!),
     )
