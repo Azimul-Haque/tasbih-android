@@ -41,14 +41,16 @@ class _TasbihListState extends State<TasbihList> {
       child: Card(
         color: Theme.of(context).colorScheme.primary,
         elevation: 1,
-        child: ListTile(
-          title: Text(title),
-          subtitle: Text(subtitle),
-          leading: Icon(iconname1),
-          trailing: Icon(iconname2),
-          onTap: () {
-            // Action for Item 1
-          },
+        child: Container(
+          child: ListTile(
+            title: Text(title),
+            subtitle: Text(subtitle),
+            leading: Icon(iconname1),
+            trailing: Icon(iconname2),
+            onTap: () {
+              // Action for Item 1
+            },
+          ),
         ),
       ),
     );
