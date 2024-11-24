@@ -72,17 +72,17 @@ class _MyHomePageState extends State<MyHomePage> {
               style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
             ),
           ),
-          Align(
-            alignment: Alignment.topCenter,
-            child:
-                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-              Text(
-                tasbihArabic,
-                style:
-                    const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-              ),
-            ]),
-          ),
+          // Align(
+          //   alignment: Alignment.topCenter,
+          //   child:
+          //       Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          //     Text(
+          //       tasbihArabic,
+          //       style:
+          //           const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+          //     ),
+          //   ]),
+          // ),
           const SizedBox(height: 100),
           MyBox(
             height: 150,
