@@ -9,7 +9,7 @@ ThemeData lightTheme = ThemeData(
     titleTextStyle: TextStyle(color: Colors.black, fontSize: 20),
   ),
   colorScheme: ColorScheme.light(
-    background: Colors.grey.shade200,
+    surface: Colors.grey.shade200,
     primary: Colors.white,
     secondary: Colors.grey.shade300,
     onPrimary: Colors.grey[600]!,
