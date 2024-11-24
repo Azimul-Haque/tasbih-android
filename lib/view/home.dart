@@ -56,9 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 title: '$_counter',
                 titlesize: 50,
                 color: Theme.of(context).colorScheme.primary,
-                ontapfunction: () {
-                  _incrementCounter;
-                },
+                ontapfunction: _incrementCounter,
               ),
             ),
             const Text(
