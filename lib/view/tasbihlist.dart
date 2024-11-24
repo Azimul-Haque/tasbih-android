@@ -23,7 +23,7 @@ class _TasbihListState extends State<TasbihList> {
         body: ListView(
           children: [
             Padding(
-              padding: EdgeInsetsGeometry.infinity,
+              padding: ,
               child: Card(
                 color: Theme.of(context).colorScheme.primary,
                 elevation: 1,
