@@ -67,6 +67,13 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(tasbihEnBn),
+            Align(
+              alignment: Alignment.topCenter,
+              child: Text(
+                'This is the Text at the Top',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+            ),
             const SizedBox(height: 50),
             MyBox(
               height: 150,
