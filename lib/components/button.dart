@@ -15,7 +15,7 @@ class MyButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
-      splashColor: Colors.blue.withOpacity(0.3),
+      splashColor: Colors.blue.withOpacity(0.8),
       child: Container(
         decoration: BoxDecoration(
           color: color,
