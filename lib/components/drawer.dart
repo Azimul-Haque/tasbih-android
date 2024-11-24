@@ -34,7 +34,7 @@ class MyDrawer extends StatelessWidget {
           ),
           const Divider(thickness: .5),
           ListTile(
-            leading: const Icon(Icons.lightbulb_circle_outlined),
+            leading: const Icon(Icons.library_books_outlined),
             title: const Text('প্রাইভেসি পলিসি'),
             onTap: () {
               // Update the state of the app.
