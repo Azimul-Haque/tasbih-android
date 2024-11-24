@@ -13,17 +13,19 @@ class MyButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onTap,
-      splashColor: Colors.blue.withOpacity(0.8),
-      child: Container(
-        decoration: BoxDecoration(
-          color: color,
-          borderRadius: BorderRadius.circular(8),
-        ), // BoxDecoration
-        padding: const EdgeInsets.all(5),
-        child: Center(child: Text(title!)),
-      ), // Container
+    return Material(
+      child: InkWell(
+        onTap: onTap,
+        splashColor: Colors.blue.withOpacity(0.8),
+        child: Container(
+          decoration: BoxDecoration(
+            color: color,
+            borderRadius: BorderRadius.circular(8),
+          ), // BoxDecoration
+          padding: const EdgeInsets.all(5),
+          child: Center(child: Text(title!)),
+        ), // Container
+      ),
     );
   }
 }
