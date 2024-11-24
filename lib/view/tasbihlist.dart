@@ -20,7 +20,7 @@ class _TasbihListState extends State<TasbihList> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Column(
+      body: 
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           ListView(
@@ -64,7 +64,7 @@ class _TasbihListState extends State<TasbihList> {
             ],
           )
         ],
-      ),
+      
     );
   }
 }
