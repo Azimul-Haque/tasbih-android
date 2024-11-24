@@ -45,7 +45,7 @@ class MyDrawer extends StatelessWidget {
               // ...
             },
           ),
-          Divider(),
+          const Divider(),
           ListTile(
             title: const Text('শেয়ার করুন'),
             onTap: () {
