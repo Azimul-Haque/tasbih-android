@@ -13,16 +13,30 @@ class MyButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onTap,
-      child: Container(
-        decoration: BoxDecoration(
-          color: color,
-          borderRadius: BorderRadius.circular(8),
-        ), // BoxDecoration
-        padding: const EdgeInsets.all(5),
-        child: Center(child: Text(title!)),
-      ), // Container
-    ); // GestureDetector
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        fixedSize: Size(100, 100), // Square button with 100x100 dimensions
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(0), // Square shape
+        ),
+      ),
+      onPressed: () {
+        // Define the action here
+        print("Square button pressed!");
+      },
+      child: Text('Click'),
+    )
+    
+    // InkWell(
+    //   onTap: onTap,
+    //   child: Container(
+    //     decoration: BoxDecoration(
+    //       color: color,
+    //       borderRadius: BorderRadius.circular(8),
+    //     ), // BoxDecoration
+    //     padding: const EdgeInsets.all(5),
+    //     child: Center(child: Text(title!)),
+    //   ), // Container
+    // ); // GestureDetector
   }
 }
