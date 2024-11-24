@@ -9,7 +9,7 @@ ThemeData darkTheme = ThemeData(
     titleTextStyle: TextStyle(color: Colors.white, fontSize: 20),
   ),
   colorScheme: ColorScheme.dark(
-    background: Colors.grey.shade900,
+    surface: Colors.grey.shade900,
     primary: Colors.grey.shade700,
     secondary: Colors.grey.shade800,
     // primary: Colors.grey[700]!,
