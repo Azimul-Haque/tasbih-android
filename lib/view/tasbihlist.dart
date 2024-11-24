@@ -64,11 +64,8 @@ class _TasbihListState extends State<TasbihList> {
           leading: Icon(iconname1),
           trailing: Icon(iconname2),
           onTap: () {
-            // Action for Tasbih
-            setState(() {
-              tasbihEnBn = title;
-              tasbihEnBn = subtitle;
-            });
+            tasbihEnBn = title;
+            tasbihEnBn = subtitle;
             Navigator.pop(context);
           },
         ),
