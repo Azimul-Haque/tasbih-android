@@ -4,13 +4,13 @@ class MyButton extends StatelessWidget {
   final String? title;
   final double? titlesize;
   final Color? color;
-  final void Function()? onTap;
+  final void Function()? ontapfunction;
   const MyButton({
     super.key,
     required this.title,
     required this.titlesize,
     required this.color,
-    required this.onTap,
+    required this.ontapfunction,
   });
 
   @override
@@ -20,7 +20,7 @@ class MyButton extends StatelessWidget {
       color: color,
       borderRadius: BorderRadius.circular(8),
       child: InkWell(
-        onTap: onTap,
+        onTap: ontapfunction,
         borderRadius: BorderRadius.circular(8),
         child: Container(
           padding: const EdgeInsets.all(5),
