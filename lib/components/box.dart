@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 
 class MyBox extends StatelessWidget {
   final int width;
-  final int height;
+  final int ;
   final Widget? child;
   final Color? color;
 
   const MyBox({
     super.key,
+    required this.,
     required this.child,
     required this.color,
   });
