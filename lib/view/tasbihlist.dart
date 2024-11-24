@@ -40,7 +40,7 @@ class _TasbihListState extends State<TasbihList> {
       padding: const EdgeInsets.only(top: 5, left: 10, right: 10),
       child: Card(
         color: Theme.of(context).colorScheme.primary,
-        elevation: 1,
+        elevation: 2,
         child: ListTile(
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10.0),
