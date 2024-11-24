@@ -69,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
           Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (context) => TasbihList(
+                builder: (context) => const TasbihList(
                       title: 'Tasbih Counter - ডিজিটাল তসবি',
                     )),
           );
