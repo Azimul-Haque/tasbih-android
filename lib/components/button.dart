@@ -13,7 +13,27 @@ class MyButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return 
+    return GestureDetector(
+      onTap: () {
+        // Define the action here
+        print('Card clicked!');
+      },
+      child: Card(
+        elevation: 5, // Adds shadow for a raised effect
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10), // Rounded corners
+        ),
+        child: Container(
+          width: 120, // Square size
+          height: 120,
+          alignment: Alignment.center,
+          child: Text(
+            'Click Me',
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+          ),
+        ),
+      ),
+    );
 
     // InkWell(
     //   onTap: onTap,
