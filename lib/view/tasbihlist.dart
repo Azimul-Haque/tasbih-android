@@ -22,17 +22,20 @@ class _TasbihListState extends State<TasbihList> {
         ),
         body: ListView(
           children: [
-            Card(
-              color: Theme.of(context).colorScheme.primary,
-              elevation: 1,
-              child: ListTile(
-                title: Text('Item 1'),
-                subtitle: Text('Subtitle for item 1'),
-                leading: Icon(Icons.label),
-                trailing: Icon(Icons.arrow_forward),
-                onTap: () {
-                  // Action for Item 1
-                },
+            Padding(
+              padding: EdgeInsetsGeometry.infinity,
+              child: Card(
+                color: Theme.of(context).colorScheme.primary,
+                elevation: 1,
+                child: ListTile(
+                  title: Text('Item 1'),
+                  subtitle: Text('Subtitle for item 1'),
+                  leading: Icon(Icons.label),
+                  trailing: Icon(Icons.arrow_forward),
+                  onTap: () {
+                    // Action for Item 1
+                  },
+                ),
               ),
             ),
             Card(
