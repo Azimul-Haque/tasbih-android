@@ -69,7 +69,7 @@ class _TasbihListState extends State<TasbihList> {
               tasbihEnBn = title;
               tasbihEnBn = subtitle;
             });
-            Navigator.pop(context, false);
+            Navigator.pop(context, true);
           },
         ),
       ),
