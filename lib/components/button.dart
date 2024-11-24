@@ -21,7 +21,7 @@ class MyButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(8),
         ), // BoxDecoration
         padding: const EdgeInsets.all(25),
-        child: const Center(child: Text(title!)),
+        child: Center(child: Text(title!)),
       ), // Container
     ); // GestureDetector
   }
