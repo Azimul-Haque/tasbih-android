@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class MyDrawer extends StatelessWidget {
+class MyDrawer extends StatefulWidget {
   final Color? color;
   final Widget? switchdata;
 
