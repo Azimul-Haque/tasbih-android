@@ -16,7 +16,6 @@ class MyButton extends StatelessWidget {
     return Material(
       borderRadius: BorderRadius.circular(8),
       child: InkWell(
-        focusColor: color,
         onTap: onTap,
         borderRadius: BorderRadius.circular(8),
         child: Container(
