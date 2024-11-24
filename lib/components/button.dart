@@ -13,19 +13,7 @@ class MyButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        fixedSize:
-            const Size(100, 100), // Square button with 100x100 dimensions
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(0), // Square shape
-        ),
-      ),
-      onPressed: () {
-        onTap;
-      },
-      child: Text(title!),
-    );
+    return 
 
     // InkWell(
     //   onTap: onTap,
