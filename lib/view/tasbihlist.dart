@@ -32,9 +32,6 @@ class _TasbihListState extends State<TasbihList> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      drawer: MyDrawer(
-        color: Theme.of(context).colorScheme.secondary,
-      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
