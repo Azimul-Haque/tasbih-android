@@ -40,7 +40,9 @@ class _MyHomePageState extends State<MyHomePage> {
           IconButton(
             icon: const Icon(Icons.rotate_right),
             onPressed: () {
-              // Action for Search
+              setState(() {
+                _counter = 0;
+              });
             },
           ),
           IconButton(
