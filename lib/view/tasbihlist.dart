@@ -17,8 +17,6 @@ class TasbihList extends StatefulWidget {
 }
 
 class _TasbihListState extends State<TasbihList> {
-  int _counter = 0;
-
   void _incrementCounter() {
     setState(() {
       _counter++;
