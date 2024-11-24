@@ -56,9 +56,7 @@ class _TasbihListState extends State<TasbihList> {
           ),
           subtitle: Text(
             subtitle,
-            style: const TextStyle(
-              fontSize: 15,
-            ),
+            style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
           ),
           leading: Icon(iconname1),
           trailing: Icon(iconname2),
