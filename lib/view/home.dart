@@ -67,7 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(tasbihEnBn),
-            Spacer(),
+            SizedBox(height: 20),
             MyBox(
               height: 150,
               widht: 150,
