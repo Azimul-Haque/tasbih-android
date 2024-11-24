@@ -45,6 +45,9 @@ class MyDrawer extends StatelessWidget {
                           title: 'Tasbih List - তসবি তালিকা',
                         )),
               );
+              setState(() {
+                // Trigger rebuild to show updated tasbihEnBn value
+              });
             },
           ),
           const Divider(thickness: .5),
