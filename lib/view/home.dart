@@ -98,17 +98,6 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
           ),
-          MyBox(
-            height: 150,
-            widht: 150,
-            color: Theme.of(context).colorScheme.secondary,
-            child: MyButton(
-              title: convertToBanglaNumber('$_counter'),
-              titlesize: 50,
-              color: Theme.of(context).colorScheme.primary,
-              ontapfunction: _incrementCounter,
-            ),
-          ),
         ],
       ),
       floatingActionButton: FloatingActionButton(
