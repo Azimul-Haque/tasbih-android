@@ -52,7 +52,7 @@ class _TasbihListState extends State<TasbihList> {
           ),
           title: Text(
             title,
-            style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+            style: const TextStyle(fontSize: 22, fontWeight: FontWeight.no),
           ),
           subtitle: Text(
             subtitle,
