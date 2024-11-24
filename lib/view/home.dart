@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tasbih/components/box.dart';
 import 'package:tasbih/components/button.dart';
 import 'package:tasbih/components/drawer.dart';
+import 'package:tasbih/globals.dart';
 
 class MyHomePage extends StatefulWidget {
   final String title;
@@ -53,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
               widht: 150,
               color: Theme.of(context).colorScheme.secondary,
               child: MyButton(
-                title: '$_counter',
+                title: convertToBanglaNumber('$_counter'),
                 titlesize: 50,
                 color: Theme.of(context).colorScheme.primary,
                 ontapfunction: _incrementCounter,
