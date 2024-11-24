@@ -23,7 +23,7 @@ class MyDrawer extends StatelessWidget {
             ),
             child: Text(
               'ডিজিটাল তসবি',
-              style: TextStyle(fontSize: 20),
+              style: TextStyle(fontSize: 30),
             ),
           ),
           ListTile(
