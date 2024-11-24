@@ -45,6 +45,13 @@ class MyDrawer extends StatelessWidget {
               // ...
             },
           ),
+          ListTile(
+            title: const Text('শেয়ার করুন'),
+            onTap: () {
+              // Update the state of the app.
+              // ...
+            },
+          ),
         ],
       ),
     );
