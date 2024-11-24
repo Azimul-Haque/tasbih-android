@@ -32,7 +32,7 @@ class MyDrawer extends StatelessWidget {
             onTap: () {},
           ),
           ListTile(
-            title: const Text('Item 2'),
+            title: const Text('প্রাইভেসি পলিসি'),
             onTap: () {
               // Update the state of the app.
               // ...
