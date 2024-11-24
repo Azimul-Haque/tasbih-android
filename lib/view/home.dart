@@ -36,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
       backgroundColor: Theme.of(context).colorScheme.surface,
       appBar: AppBar(
         title: Text(widget.title),
-        actions: actions: [
+        actions: [
         IconButton(
           icon: Icon(Icons.search),
           onPressed: () {
