@@ -32,7 +32,7 @@ class _TasbihListState extends State<TasbihList> {
             _thisCard('اللَّهُ أَكْبَرُ', 'Allahu Akbar - আল্লাহু আকবর',
                 Icons.label, Icons.check),
             _thisCard(
-                'اللَّهُ أَكْبَرُ',
+                'لَا إِلَـٰهَ إِلَّا اللَّهُ',
                 'La ilaha illallah - লা ইলাহা ইল্লাল্লাহ',
                 Icons.label,
                 Icons.check),
