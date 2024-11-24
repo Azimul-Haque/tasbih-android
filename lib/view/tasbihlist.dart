@@ -81,4 +81,9 @@ class _TasbihListState extends State<TasbihList> {
       ),
     );
   }
+
+  void _onBackPressed() {
+    // Called when the user either presses the back arrow in the AppBar or
+    // the dedicated back button.
+  }
 }
