@@ -15,7 +15,7 @@ class MyButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
-      child: ss(
+      child: InkWell(
         child: Container(
           decoration: BoxDecoration(
             color: color,
