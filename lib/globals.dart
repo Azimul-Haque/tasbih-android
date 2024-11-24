@@ -1,5 +1,3 @@
-bool _isDarkMode = false;
-
 String convertToBanglaNumber(String englishNumber) {
   const englishToBanglaDigits = {
     '0': '০',
