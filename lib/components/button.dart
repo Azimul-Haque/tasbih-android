@@ -20,7 +20,7 @@ class MyButton extends StatelessWidget {
           color: color,
           borderRadius: BorderRadius.circular(8),
         ), // BoxDecoration
-        padding: const EdgeInsets.all(10),
+        padding: const EdgeInsets.all(5),
         child: Center(child: Text(title!)),
       ), // Container
     ); // GestureDetector
