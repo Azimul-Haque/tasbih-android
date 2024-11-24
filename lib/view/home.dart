@@ -54,6 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
               color: Theme.of(context).colorScheme.secondary,
               child: MyButton(
                 title: 'ক্লিক করুন',
+                titlesize: 15,
                 color: Theme.of(context).colorScheme.primary,
                 onTap: () {
                   print('ক্লিক!');
