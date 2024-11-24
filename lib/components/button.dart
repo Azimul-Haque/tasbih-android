@@ -15,8 +15,7 @@ class MyButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        // Define the action here
-        print('Card clicked!');
+        onTap;
       },
       child: Card(
         elevation: 5, // Adds shadow for a raised effect
@@ -29,7 +28,7 @@ class MyButton extends StatelessWidget {
           alignment: Alignment.center,
           child: Text(
             title!,
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
           ),
         ),
       ),
