@@ -34,7 +34,7 @@ class _TasbihListState extends State<TasbihList> {
 
   Widget _thisCard() {
     return Padding(
-      padding: const EdgeInsets.only(top: 5, left: 10, right: 10, bottom: 0),
+      padding: const EdgeInsets.only(top: 5, left: 10, right: 10),
       child: Card(
         color: Theme.of(context).colorScheme.primary,
         elevation: 1,
