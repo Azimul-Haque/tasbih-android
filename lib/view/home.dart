@@ -42,9 +42,9 @@ class _MyHomePageState extends State<MyHomePage> {
             onPressed: () {
               setState(() {
                 _counter = 0;
-                tasbihArabic = '';
-                tasbihEnBn = '';
               });
+              tasbihArabic = '';
+              tasbihEnBn = '';
             },
           ),
           IconButton(
