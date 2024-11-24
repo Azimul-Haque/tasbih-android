@@ -59,7 +59,7 @@ class _TasbihListState extends State<TasbihList> {
           subtitle: Text(
             subtitle,
             style: const TextStyle(
-              fontSize: 14,
+              fontSize: 15,
             ),
           ),
           leading: Icon(iconname1),
