@@ -32,7 +32,7 @@ class _TasbihListState extends State<TasbihList> {
         ));
   }
 
-  Widget _thisCard(title, subtitle) {
+  Widget _thisCard(title, subtitle, Icon iconname) {
     return Padding(
       padding: const EdgeInsets.only(top: 5, left: 10, right: 10),
       child: Card(
@@ -41,7 +41,7 @@ class _TasbihListState extends State<TasbihList> {
         child: ListTile(
           title: Text(title),
           subtitle: Text(subtitle),
-          leading: Icon(Icons.label),
+          leading: Icon(iconname),
           trailing: Icon(Icons.arrow_forward),
           onTap: () {
             // Action for Item 1
