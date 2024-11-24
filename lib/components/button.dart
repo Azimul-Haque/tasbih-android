@@ -14,6 +14,7 @@ class MyButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
+      color: color,
       borderRadius: BorderRadius.circular(8),
       child: InkWell(
         onTap: onTap,
