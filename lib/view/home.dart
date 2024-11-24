@@ -41,14 +41,12 @@ class _MyHomePageState extends State<MyHomePage> {
           icon: const  Icon(Icons.search),
           onPressed: () {
             // Action for Search
-            print('Search button pressed');
           },
         ),
         IconButton(
           icon: const Icon(Icons.settings),
           onPressed: () {
             // Action for Settings
-            print('Settings button pressed');
           },
         ),
       ],,
