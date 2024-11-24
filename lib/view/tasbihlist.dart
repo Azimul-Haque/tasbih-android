@@ -23,6 +23,7 @@ class _TasbihListState extends State<TasbihList> {
         body: ListView(
           children: [
             Card(
+              color: Theme.of(context).colorScheme.primary,
               elevation: 1,
               child: ListTile(
                 title: Text('Item 1'),
