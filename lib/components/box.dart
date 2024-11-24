@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class MyBox extends StatelessWidget {
-  final int height;
-  final int widht;
+  final double height;
+  final double widht;
   final Widget? child;
   final Color? color;
 
