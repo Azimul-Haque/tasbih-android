@@ -37,19 +37,19 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
         actions: [
-        IconButton(
-          icon: const  Icon(Icons.search),
-          onPressed: () {
-            // Action for Search
-          },
-        ),
-        IconButton(
-          icon: const Icon(Icons.settings),
-          onPressed: () {
-            // Action for Settings
-          },
-        ),
-      ],,
+          IconButton(
+            icon: const Icon(Icons.search),
+            onPressed: () {
+              // Action for Search
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.settings),
+            onPressed: () {
+              // Action for Settings
+            },
+          ),
+        ],
       ),
       drawer: MyDrawer(
         color: Theme.of(context).colorScheme.secondary,
