@@ -3,6 +3,7 @@ import 'package:tasbih/components/box.dart';
 import 'package:tasbih/components/button.dart';
 import 'package:tasbih/components/drawer.dart';
 import 'package:tasbih/globals.dart';
+import 'package:tasbih/view/tasbihlist.dart';
 
 class MyHomePage extends StatefulWidget {
   final String title;
@@ -68,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
           Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (context) => MyHomePage(
+                builder: (context) => TasbihList(
                       title: 'Tasbih Counter - ডিজিটাল তসবি',
                       isDarkMode: _isDarkMode,
                       toggleTheme: _toggleTheme,
