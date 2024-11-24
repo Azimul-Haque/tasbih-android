@@ -38,7 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
         actions: [
           IconButton(
-            icon: const Icon(Icons.replay_outlined),
+            icon: const Icon(Icons.rotate_left),
             onPressed: () {
               // Action for Search
             },
