@@ -71,8 +71,6 @@ class _MyHomePageState extends State<MyHomePage> {
             MaterialPageRoute(
                 builder: (context) => TasbihList(
                       title: 'Tasbih Counter - ডিজিটাল তসবি',
-                      isDarkMode: _isDarkMode,
-                      toggleTheme: _toggleTheme,
                     )),
           );
         },
