@@ -18,7 +18,7 @@ class MyButton extends StatelessWidget {
         onTap;
       },
       child: Card(
-        elevation: 5, // Adds shadow for a raised effect
+        elevation: 2, // Adds shadow for a raised effect
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10), // Rounded corners
         ),
