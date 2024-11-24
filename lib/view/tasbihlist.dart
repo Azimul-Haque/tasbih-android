@@ -16,38 +16,31 @@ class TasbihList extends StatefulWidget {
 class _TasbihListState extends State<TasbihList> {
   @override
   Widget build(BuildContext context) {
-    // ignore: deprecated_member_use
-    return WillPopScope(
-      onWillPop: () {
-        _onBackPressed();
-        return Future.value(false);
-      },
-      child: Scaffold(
-          backgroundColor: Theme.of(context).colorScheme.surface,
-          appBar: AppBar(
-            title: Text(widget.title),
-          ),
-          body: ListView(
-            children: [
-              const SizedBox(
-                height: 5,
-              ),
-              _thisCard('سُبْحَانَ الله', 'SubhanAllah - সুবহানাল্লাহ',
-                  Icons.label, Icons.check),
-              _thisCard('الْحَمْدُ لِلَّهِ', 'Alhamdulillah - আলহামদুলিল্লাহ',
-                  Icons.label, Icons.check),
-              _thisCard('اللَّهُ أَكْبَرُ', 'Allahu Akbar - আল্লাহু আকবর',
-                  Icons.label, Icons.check),
-              _thisCard(
-                  'لَا إِلَـٰهَ إِلَّا اللَّهُ',
-                  'La ilaha illallah - লা ইলাহা ইল্লাল্লাহ',
-                  Icons.label,
-                  Icons.check),
-              _thisCard('أَسْتَغْفِرُ ٱللَّٰهَ',
-                  'Astaghfirullah - আসতাগফিরুল্লাহ', Icons.label, Icons.check),
-            ],
-          )),
-    );
+    return Scaffold(
+        backgroundColor: Theme.of(context).colorScheme.surface,
+        appBar: AppBar(
+          title: Text(widget.title),
+        ),
+        body: ListView(
+          children: [
+            const SizedBox(
+              height: 5,
+            ),
+            _thisCard('سُبْحَانَ الله', 'SubhanAllah - সুবহানাল্লাহ',
+                Icons.label, Icons.check),
+            _thisCard('الْحَمْدُ لِلَّهِ', 'Alhamdulillah - আলহামদুলিল্লাহ',
+                Icons.label, Icons.check),
+            _thisCard('اللَّهُ أَكْبَرُ', 'Allahu Akbar - আল্লাহু আকবর',
+                Icons.label, Icons.check),
+            _thisCard(
+                'لَا إِلَـٰهَ إِلَّا اللَّهُ',
+                'La ilaha illallah - লা ইলাহা ইল্লাল্লাহ',
+                Icons.label,
+                Icons.check),
+            _thisCard('أَسْتَغْفِرُ ٱللَّٰهَ',
+                'Astaghfirullah - আসতাগফিরুল্লাহ', Icons.label, Icons.check),
+          ],
+        ));
   }
 
   Widget _thisCard(title, subtitle, IconData iconname1, IconData iconname2) {
@@ -81,10 +74,5 @@ class _TasbihListState extends State<TasbihList> {
         ),
       ),
     );
-  }
-
-  void _onBackPressed() {
-    // Called when the user either presses the back arrow in the AppBar or
-    // the dedicated back button.
   }
 }
