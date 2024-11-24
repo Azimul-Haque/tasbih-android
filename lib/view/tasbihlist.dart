@@ -6,14 +6,10 @@ import 'package:tasbih/globals.dart';
 
 class TasbihList extends StatefulWidget {
   final String title;
-  final bool isDarkMode;
-  final Function(bool) toggleTheme;
 
   const TasbihList({
     super.key,
     required this.title,
-    required this.isDarkMode,
-    required this.toggleTheme,
   });
 
   @override
