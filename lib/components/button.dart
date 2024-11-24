@@ -15,6 +15,7 @@ class MyButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       child: InkWell(
+        focusColor: color,
         onTap: onTap,
         child: Container(
           decoration: BoxDecoration(
