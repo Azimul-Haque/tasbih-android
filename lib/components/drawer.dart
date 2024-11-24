@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tasbih/view/tasbihlist.dart';
 
-class MyDrawer extends StatefulWidget {
+class MyDrawer extends StatelessWidget {
   final Color? color;
   final Widget? switchdata;
 
@@ -11,11 +10,6 @@ class MyDrawer extends StatefulWidget {
     this.switchdata,
   });
 
-  @override
-  State<MyDrawer> createState() => _MyDrawerState();
-}
-
-class _MyDrawerState extends State<MyDrawer> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -35,25 +29,8 @@ class _MyDrawerState extends State<MyDrawer> {
           ListTile(
             leading: const Icon(Icons.light_mode_outlined),
             title: const Text('থিম পরিবর্তন'),
-            trailing: widget.switchdata,
+            trailing: switchdata,
             onTap: () {},
-          ),
-          const Divider(thickness: .5),
-          ListTile(
-            leading: const Icon(Icons.library_books_outlined),
-            title: const Text('তসবি তালিকা'),
-            onTap: () async {
-              await Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const TasbihList(
-                          title: 'Tasbih List - তসবি তালিকা',
-                        )),
-              );
-              setState(() {
-                // Trigger rebuild to show updated tasbihEnBn value
-              });
-            },
           ),
           const Divider(thickness: .5),
           ListTile(
