@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.orbachinujbuk.bd_helpline">
+    package="com.orbachinujbuk.tasbih">
    <uses-permission android:name="android.permission.INTERNET"/>
    <application
         android:label="Infoline"
