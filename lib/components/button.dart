@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class MyButton extends StatelessWidget {
-  final String? title;
-  final double? titlesize;
-  final Color? color;
-  final void Function()? ontapfunction;
+  final String title;
+  final double titlesize;
+  final Color color;
+  final void Function() ontapfunction;
   const MyButton({
     super.key,
     required this.title,
