@@ -46,9 +46,6 @@ class _TasbihListState extends State<TasbihList> {
           subtitle: Text(subtitle),
           leading: Icon(iconname1),
           trailing: Icon(iconname2),
-          onTap: () {
-            // Action for Item 1
-          },
         ),
       ),
     );
