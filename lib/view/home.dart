@@ -54,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
               color: Theme.of(context).colorScheme.secondary,
               child: MyButton(
                 title: '$_counter',
-                titlesize: 20,
+                titlesize: 60,
                 color: Theme.of(context).colorScheme.primary,
                 onTap: () {
                   _incrementCounter;
