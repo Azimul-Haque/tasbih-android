@@ -21,7 +21,7 @@ class MyDrawer extends StatelessWidget {
             decoration: BoxDecoration(
               color: Colors.blue,
             ),
-            child: Text('Digital Tasbih'),
+            child: Text('ডিজিটাল তসবি'),
           ),
           ListTile(
             title: const Text('মোড পরিবর্তন করুন'),
