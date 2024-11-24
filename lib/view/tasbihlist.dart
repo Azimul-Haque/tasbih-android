@@ -32,24 +32,22 @@ class _TasbihListState extends State<TasbihList> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: 
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            MyBox(
-              height: 150,
-              widht: 150,
-              color: Theme.of(context).colorScheme.secondary,
-              child: MyButton(
-                title: convertToBanglaNumber('$_counter'),
-                titlesize: 50,
-                color: Theme.of(context).colorScheme.primary,
-                ontapfunction: _incrementCounter,
-              ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          MyBox(
+            height: 150,
+            widht: 150,
+            color: Theme.of(context).colorScheme.secondary,
+            child: MyButton(
+              title: convertToBanglaNumber('$_counter'),
+              titlesize: 50,
+              color: Theme.of(context).colorScheme.primary,
+              ontapfunction: _incrementCounter,
             ),
-          ],
-        ),
-      ,
+          ),
+        ],
+      ),
     );
   }
 }
