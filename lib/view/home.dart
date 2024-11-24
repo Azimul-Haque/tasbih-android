@@ -36,6 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
       backgroundColor: Theme.of(context).colorScheme.surface,
       appBar: AppBar(
         title: Text(widget.title),
+        actions: [],
       ),
       drawer: MyDrawer(
         color: Theme.of(context).colorScheme.secondary,
