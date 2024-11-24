@@ -16,7 +16,7 @@ class MyButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      elevation: 2,
+      elevation: 5,
       color: color,
       borderRadius: BorderRadius.circular(8),
       child: InkWell(
