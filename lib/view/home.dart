@@ -69,12 +69,15 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(tasbihEnBn),
             Align(
               alignment: Alignment.topCenter,
-              child: Column(children: [
-                Text(
-                  'This is the Text at the Top',
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                ),
-              ]),
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'This is the Text at the Top',
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
+                  ]),
             ),
             const SizedBox(height: 50),
             MyBox(
