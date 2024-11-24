@@ -8,7 +8,8 @@ class MyBox extends StatelessWidget {
 
   const MyBox({
     super.key,
-    required this.,
+    required this.height,
+    required this.widht,
     required this.child,
     required this.color,
   });
