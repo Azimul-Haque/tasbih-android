@@ -53,7 +53,9 @@ class _MyHomePageState extends State<MyHomePage> {
               child: MyButton(
                 title: 'ক্লিক করুন',
                 color: Theme.of(context).colorScheme.secondary,
-                onTap: () {},
+                onTap: () {
+                  print('ক্লিক!');
+                },
               ),
             ),
             const Text(
