@@ -26,11 +26,13 @@ class MyDrawer extends StatelessWidget {
               style: TextStyle(fontSize: 25),
             ),
           ),
+          const Divider(),
           ListTile(
             title: const Text('মোড পরিবর্তন করুন'),
             trailing: switchdata,
             onTap: () {},
           ),
+          const Divider(),
           ListTile(
             title: const Text('প্রাইভেসি পলিসি'),
             onTap: () {
@@ -38,6 +40,7 @@ class MyDrawer extends StatelessWidget {
               // ...
             },
           ),
+          const Divider(),
           ListTile(
             title: const Text('মতামত ও পরামর্শ'),
             onTap: () {
