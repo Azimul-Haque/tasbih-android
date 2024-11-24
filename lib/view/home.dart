@@ -70,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
             context,
             MaterialPageRoute(
                 builder: (context) => const TasbihList(
-                      title: 'Tasbih Counter - ডিজিটাল তসবি',
+                      title: 'Tasbih List - তসবি তালিকা',
                     )),
           );
         },
