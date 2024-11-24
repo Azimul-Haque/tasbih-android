@@ -26,7 +26,7 @@ class MyButton extends StatelessWidget {
           padding: const EdgeInsets.all(5),
           child: Center(
               child: Text(
-            title!,
+            title,
             style: TextStyle(fontSize: titlesize),
           )),
         ), // Container
