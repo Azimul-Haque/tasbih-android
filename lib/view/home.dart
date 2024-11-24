@@ -119,7 +119,7 @@ class _MyHomePageState extends State<MyHomePage> {
             // Trigger rebuild to show updated tasbihEnBn value
           });
         },
-        tooltip: 'Increment',
+        tooltip: 'তসবিহ নির্বাচন করুন',
         child: const Icon(Icons.lightbulb),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
