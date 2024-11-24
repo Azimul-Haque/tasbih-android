@@ -13,7 +13,7 @@ class MyButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
+    return 
       child: InkWell(
         onTap: onTap,
         child: Container(
@@ -24,7 +24,7 @@ class MyButton extends StatelessWidget {
           padding: const EdgeInsets.all(5),
           child: Center(child: Text(title!)),
         ), // Container
-      ),
+      
     );
   }
 }
