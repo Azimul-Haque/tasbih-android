@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 String convertToBanglaNumber(String englishNumber) {
   const englishToBanglaDigits = {
     '0': '০',
@@ -15,4 +17,51 @@ String convertToBanglaNumber(String englishNumber) {
   return englishNumber.split('').map((char) {
     return englishToBanglaDigits[char] ?? char;
   }).join('');
+}
+
+pageAppBar(String appbarname, BuildContext context) {
+  return AppBar(
+    title: Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Text(
+          appbarname,
+          style: const TextStyle(
+            // fontFamily: 'HindSiliguri',
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+        ),
+        const Spacer(),
+        Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            userdistrict != ''
+                ? Text(
+                    'জেলা: ' + userdistrict,
+                    style: const TextStyle(
+                      fontSize: 12,
+                      color: Colors.white,
+                    ),
+                  )
+                : Container(),
+            userupazilla != ''
+                ? Text(
+                    'উপজেলা: ' + userupazilla,
+                    style: const TextStyle(
+                      fontSize: 12,
+                      color: Colors.white,
+                    ),
+                  )
+                : Container(),
+          ],
+        ),
+      ],
+    ),
+    flexibleSpace: appBarStyle(),
+    backgroundColor: Colors.transparent,
+    automaticallyImplyLeading: true,
+    iconTheme: const IconThemeData(color: Colors.white),
+  );
 }
