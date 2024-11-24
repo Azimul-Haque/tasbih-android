@@ -50,7 +50,10 @@ class _TasbihListState extends State<TasbihList> {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10.0),
           ),
-          title: Text(title),
+          title: Text(
+            title,
+            style: TextStyle(fontSize: 18),
+          ),
           subtitle: Text(subtitle),
           leading: Icon(iconname1),
           trailing: Icon(iconname2),
