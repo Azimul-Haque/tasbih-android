@@ -64,11 +64,13 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: MyHomePage(
-          title: 'Tasbih Counter - ডিজিটাল তসবি',
-          isDarkMode: _isDarkMode,
-          toggleTheme: _toggleTheme,
-        ),
+        onPressed: () {
+          MyHomePage(
+            title: 'Tasbih Counter - ডিজিটাল তসবি',
+            isDarkMode: _isDarkMode,
+            toggleTheme: _toggleTheme,
+          )
+        },
         tooltip: 'Increment',
         child: const Icon(Icons.lightbulb),
       ), // This trailing comma makes auto-formatting nicer for build methods.
