@@ -63,7 +63,6 @@ class _TasbihListState extends State<TasbihList> {
           ],
         ),
       ),
-      // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
