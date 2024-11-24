@@ -2,7 +2,7 @@
     package="com.orbachinujbuk.tasbih">
    <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="Infoline"
+        android:label="Tasbih Counter"
         android:enableOnBackInvokedCallback="true"
         android:icon="@mipmap/ic_launcher">
         <activity
