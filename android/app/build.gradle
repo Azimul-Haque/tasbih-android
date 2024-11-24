@@ -45,10 +45,15 @@ android {
 
     defaultConfig {
         applicationId "com.example.tasbih"
-        minSdkVersion flutter.minSdkVersion
-        targetSdkVersion flutter.targetSdkVersion
+        minSdkVersion 21
+        targetSdkVersion 34
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+        multiDexEnabled true
+        // minSdkVersion flutter.minSdkVersion
+        // targetSdkVersion flutter.targetSdkVersion
+        // versionCode flutterVersionCode.toInteger()
+        // versionName flutterVersionName
     }
 
     buildTypes {
