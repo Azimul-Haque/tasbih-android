@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tasbih/view/tasbihlist.dart';
 
 class MyDrawer extends StatelessWidget {
   final Color? color;
@@ -36,9 +37,17 @@ class MyDrawer extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.library_books_outlined),
             title: const Text('তসবি তালিকা'),
-            onTap: () {
-              // Update the state of the app.
-              // ...
+            onTap: () async {
+              await Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const TasbihList(
+                          title: 'Tasbih List - তসবি তালিকা',
+                        )),
+              );
+              setState(() {
+                // Trigger rebuild to show updated tasbihEnBn value
+              });
             },
           ),
           const Divider(thickness: .5),
