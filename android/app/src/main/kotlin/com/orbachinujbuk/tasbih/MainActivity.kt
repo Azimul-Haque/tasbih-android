@@ -1,4 +1,4 @@
-package com.orbachinujbuk.bd_helpline
+package com.orbachinujbuk.tasbih
 
 import io.flutter.embedding.android.FlutterActivity
 
