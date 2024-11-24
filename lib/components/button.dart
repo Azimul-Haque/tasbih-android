@@ -28,7 +28,7 @@ class MyButton extends StatelessWidget {
           height: 120,
           alignment: Alignment.center,
           child: Text(
-            'Click Me',
+            title!,
             style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
           ),
         ),
