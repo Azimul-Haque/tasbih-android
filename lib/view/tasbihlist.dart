@@ -38,12 +38,12 @@ class _TasbihListState extends State<TasbihList> {
       ),
       drawer: MyDrawer(
         color: Theme.of(context).colorScheme.secondary,
-        switchdata: Switch(
-          value: widget.isDarkMode,
-          onChanged: (bool value) {
-            widget.toggleTheme(value);
-          },
-        ),
+        // switchdata: Switch(
+        //   value: widget.isDarkMode,
+        //   onChanged: (bool value) {
+        //     widget.toggleTheme(value);
+        //   },
+        // ),
       ),
       body: Center(
         child: Column(
