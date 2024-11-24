@@ -103,6 +103,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
           ),
+          const SizedBox(height: 50)
         ],
       ),
       floatingActionButton: FloatingActionButton(
