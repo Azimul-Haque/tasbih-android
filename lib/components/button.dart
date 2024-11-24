@@ -20,7 +20,6 @@ class MyButton extends StatelessWidget {
         onTap: onTap,
         borderRadius: BorderRadius.circular(8),
         child: Container(
-          / BoxDecoration
           padding: const EdgeInsets.all(5),
           child: Center(child: Text(title!)),
         ), // Container
