@@ -56,6 +56,8 @@ class _MyHomePageState extends State<MyHomePage> {
               },
             ),
             MyBox(
+              height: 150,
+              widht: 150,
               color: Theme.of(context).colorScheme.secondary,
               child: MyButton(
                 title: 'ক্লিক করুন',
