@@ -17,12 +17,6 @@ class TasbihList extends StatefulWidget {
 }
 
 class _TasbihListState extends State<TasbihList> {
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
