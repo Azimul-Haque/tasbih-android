@@ -3,7 +3,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tasbih/theme/dark_theme.dart';
 import 'package:tasbih/theme/light_theme.dart';
 import 'package:tasbih/view/home.dart';
-import 'package:tasbih/globals.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,6 +17,8 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  bool _isDarkMode = false;
+
   @override
   void initState() {
     super.initState();
