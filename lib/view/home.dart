@@ -85,15 +85,15 @@ class _MyHomePageState extends State<MyHomePage> {
           // ),
           Expanded(
             child: Center(
-              child: Container(
-                width: 200, // Box width
-                height: 100, // Box height
-                color: Colors.blue, // Box color
-                child: Center(
-                  child: Text(
-                    'This is the Box',
-                    style: TextStyle(color: Colors.white, fontSize: 16),
-                  ),
+              child: MyBox(
+                height: 150,
+                widht: 150,
+                color: Theme.of(context).colorScheme.secondary,
+                child: MyButton(
+                  title: convertToBanglaNumber('$_counter'),
+                  titlesize: 50,
+                  color: Theme.of(context).colorScheme.primary,
+                  ontapfunction: _incrementCounter,
                 ),
               ),
             ),
