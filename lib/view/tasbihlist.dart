@@ -39,16 +39,20 @@ class _TasbihListState extends State<TasbihList> {
                 ),
               ),
             ),
-            Card(
-              elevation: 1,
-              child: ListTile(
-                title: Text('Item 2'),
-                subtitle: Text('Subtitle for item 2'),
-                leading: Icon(Icons.label),
-                trailing: Icon(Icons.arrow_forward),
-                onTap: () {
-                  // Action for Item 2
-                },
+            Padding(
+              padding: const EdgeInsets.only(
+                  top: 10, left: 10, right: 10, bottom: 10),
+              child: Card(
+                elevation: 1,
+                child: ListTile(
+                  title: Text('Item 2'),
+                  subtitle: Text('Subtitle for item 2'),
+                  leading: Icon(Icons.label),
+                  trailing: Icon(Icons.arrow_forward),
+                  onTap: () {
+                    // Action for Item 2
+                  },
+                ),
               ),
             ),
             Card(
