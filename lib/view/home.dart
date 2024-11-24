@@ -74,8 +74,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: [
                     Text(
                       tasbihEnBn,
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                      style: const TextStyle(
+                          fontSize: 20, fontWeight: FontWeight.bold),
                     ),
                   ]),
             ),
