@@ -35,18 +35,16 @@ class MyButton extends StatelessWidget {
         //   ),
         // );
 
-        Material(
-      child: InkWell(
-        onTap: onTap,
-        child: Container(
-          decoration: BoxDecoration(
-            color: color,
-            borderRadius: BorderRadius.circular(8),
-          ), // BoxDecoration
-          padding: const EdgeInsets.all(5),
-          child: Center(child: Text(title!)),
-        ), // Container
-      ),
+        InkWell(
+      onTap: onTap,
+      child: Container(
+        decoration: BoxDecoration(
+          color: color,
+          borderRadius: BorderRadius.circular(8),
+        ), // BoxDecoration
+        padding: const EdgeInsets.all(5),
+        child: Center(child: Text(title!)),
+      ), // Container
     ); // GestureDetector
   }
 }
