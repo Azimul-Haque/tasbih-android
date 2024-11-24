@@ -26,7 +26,8 @@ class _TasbihListState extends State<TasbihList> {
               height: 5,
             ),
             Padding(
-              padding: const EdgeInsets.all(5),
+              padding:
+                  const EdgeInsets.only(top: 5, left: 10, right: 10, bottom: 5),
               child: Card(
                 color: Theme.of(context).colorScheme.primary,
                 elevation: 1,
