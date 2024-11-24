@@ -18,7 +18,7 @@ class _TasbihListState extends State<TasbihList> {
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: () {
-        onBackPressed();
+        _onBackPressed();
         return Future.value(false);
       },
       child: Scaffold(
