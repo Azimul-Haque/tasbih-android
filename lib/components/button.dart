@@ -46,7 +46,8 @@ class MyButton extends StatelessWidget {
     //     child: Center(child: Text(title!)),
     //   ), // Container
     // ); 
-    //ElevatedButton(
+    //
+    ElevatedButton(
       style: ElevatedButton.styleFrom(
         fixedSize: Size(100, 100), // Square button with 100x100 dimensions
         shape: RoundedRectangleBorder(
@@ -58,6 +59,6 @@ class MyButton extends StatelessWidget {
         print("Square button pressed!");
       },
       child: Text('Click'),
-    );// GestureDetector
+    ),;// GestureDetector
   }
 }
