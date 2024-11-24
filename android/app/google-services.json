@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "810382807923",
-    "project_id": "bd-helpline-2024",
-    "storage_bucket": "bd-helpline-2024.appspot.com"
+    "project_number": "115467096490",
+    "project_id": "tasbih-azimul",
+    "storage_bucket": "tasbih-azimul.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:810382807923:android:1d6d59c961b8e0098c2b06",
+        "mobilesdk_app_id": "1:115467096490:android:169a0ae4fd6278c4631bd3",
         "android_client_info": {
           "package_name": "com.orbachinujbuk.tasbih"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDzEv_TGJnQ2EQAaiUI1Hnlibaf1FWbsB4"
+          "current_key": "AIzaSyD8UckIUnJHOof6AxlnsbWJKDY1wL8Z_Xo"
         }
       ],
       "services": {
