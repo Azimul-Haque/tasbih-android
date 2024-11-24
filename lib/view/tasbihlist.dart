@@ -53,7 +53,7 @@ class _TasbihListState extends State<TasbihList> {
           title: Text(
             title,
             style: TextStyle(
-              fontSize: 25,
+              fontSize: 24,
             ),
           ),
           subtitle: Text(subtitle),
