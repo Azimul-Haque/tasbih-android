@@ -17,8 +17,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  bool _isDarkMode = false;
-
   @override
   void initState() {
     super.initState();
