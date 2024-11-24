@@ -35,7 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return WillPopScope(
       onWillPop: () {
         _onBackPressed();
-        return Future.value(false);
+        return Future.value(true);
       },
       child: Scaffold(
         backgroundColor: Theme.of(context).colorScheme.surface,
