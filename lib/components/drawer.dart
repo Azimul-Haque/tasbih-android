@@ -43,6 +43,15 @@ class MyDrawer extends StatelessWidget {
           ),
           const Divider(thickness: .5),
           ListTile(
+            leading: const Icon(Icons.privacy_tip_outlined),
+            title: const Text('প্রাইভেসি পলিসি'),
+            onTap: () {
+              // Update the state of the app.
+              // ...
+            },
+          ),
+          const Divider(thickness: .5),
+          ListTile(
             leading: const Icon(Icons.mail_outline_sharp),
             title: const Text('মতামত ও পরামর্শ'),
             onTap: () {
