@@ -49,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             MyBox(
-              color: Colors.white,
+              color: Theme.of(context).colorScheme.secondary,
               child: MyButton(
                 title: 'ক্লিক করুন',
                 color: Theme.of(context).colorScheme.primary,
