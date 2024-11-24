@@ -38,6 +38,13 @@ class MyDrawer extends StatelessWidget {
               // ...
             },
           ),
+          ListTile(
+            title: const Text('প্রাইভেসি পলিসি'),
+            onTap: () {
+              // Update the state of the app.
+              // ...
+            },
+          ),
         ],
       ),
     );
