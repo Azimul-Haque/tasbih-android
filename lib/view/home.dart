@@ -83,7 +83,21 @@ class _MyHomePageState extends State<MyHomePage> {
           //     ),
           //   ]),
           // ),
-          const SizedBox(height: 100),
+          Expanded(
+            child: Center(
+              child: Container(
+                width: 200, // Box width
+                height: 100, // Box height
+                color: Colors.blue, // Box color
+                child: Center(
+                  child: Text(
+                    'This is the Box',
+                    style: TextStyle(color: Colors.white, fontSize: 16),
+                  ),
+                ),
+              ),
+            ),
+          ),
           MyBox(
             height: 150,
             widht: 150,
