@@ -88,7 +88,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: () {
+          onPressed: () async {
             Navigator.push(
               context,
               MaterialPageRoute(
@@ -96,6 +96,18 @@ class _MyHomePageState extends State<MyHomePage> {
                         title: 'Tasbih List - তসবি তালিকা',
                       )),
             );
+
+            // Navigate to TasbihList screen
+            await Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => TasbihList(
+                        title: 'Tasbih List - তসবি তালিকা',
+                      )),
+            );
+            setState(() {
+              // Trigger rebuild to show updated tasbihEnBn value
+            });
           },
           tooltip: 'Increment',
           child: const Icon(Icons.lightbulb),
