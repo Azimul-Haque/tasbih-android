@@ -26,7 +26,6 @@ class MyDrawer extends StatelessWidget {
               style: TextStyle(fontSize: 25),
             ),
           ),
-          const Divider(),
           ListTile(
             title: const Text('মোড পরিবর্তন করুন'),
             trailing: switchdata,
