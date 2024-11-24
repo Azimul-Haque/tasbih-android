@@ -57,7 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 titlesize: 20,
                 color: Theme.of(context).colorScheme.primary,
                 onTap: () {
-                  print('ক্লিক!');
+                  _incrementCounter;
                 },
               ),
             ),
