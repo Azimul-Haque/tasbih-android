@@ -32,69 +32,75 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.surface,
-      appBar: AppBar(
-        title: Text(widget.title),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.rotate_right),
-            onPressed: () {
-              setState(() {
-                _counter = 0;
-              });
-            },
-          ),
-          IconButton(
-            icon: const Icon(Icons.settings),
-            onPressed: () {
-              // Action for Settings
-            },
-          ),
-        ],
-      ),
-      drawer: MyDrawer(
-        color: Theme.of(context).colorScheme.secondary,
-        switchdata: Switch(
-          value: widget.isDarkMode,
-          onChanged: (bool value) {
-            widget.toggleTheme(value);
-          },
-        ),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(tasbihEnBn),
-            const SizedBox(height: 50),
-            MyBox(
-              height: 150,
-              widht: 150,
-              color: Theme.of(context).colorScheme.secondary,
-              child: MyButton(
-                title: convertToBanglaNumber('$_counter'),
-                titlesize: 50,
-                color: Theme.of(context).colorScheme.primary,
-                ontapfunction: _incrementCounter,
-              ),
+    return WillPopScope(
+      onWillPop: () {
+        _onBackPressed();
+        return Future.value(false);
+      },
+      child: Scaffold(
+        backgroundColor: Theme.of(context).colorScheme.surface,
+        appBar: AppBar(
+          title: Text(widget.title),
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.rotate_right),
+              onPressed: () {
+                setState(() {
+                  _counter = 0;
+                });
+              },
+            ),
+            IconButton(
+              icon: const Icon(Icons.settings),
+              onPressed: () {
+                // Action for Settings
+              },
             ),
           ],
         ),
+        drawer: MyDrawer(
+          color: Theme.of(context).colorScheme.secondary,
+          switchdata: Switch(
+            value: widget.isDarkMode,
+            onChanged: (bool value) {
+              widget.toggleTheme(value);
+            },
+          ),
+        ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(tasbihEnBn),
+              const SizedBox(height: 50),
+              MyBox(
+                height: 150,
+                widht: 150,
+                color: Theme.of(context).colorScheme.secondary,
+                child: MyButton(
+                  title: convertToBanglaNumber('$_counter'),
+                  titlesize: 50,
+                  color: Theme.of(context).colorScheme.primary,
+                  ontapfunction: _incrementCounter,
+                ),
+              ),
+            ],
+          ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => const TasbihList(
+                        title: 'Tasbih List - তসবি তালিকা',
+                      )),
+            );
+          },
+          tooltip: 'Increment',
+          child: const Icon(Icons.lightbulb),
+        ), // This trailing comma makes auto-formatting nicer for build methods.
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) => const TasbihList(
-                      title: 'Tasbih List - তসবি তালিকা',
-                    )),
-          );
-        },
-        tooltip: 'Increment',
-        child: const Icon(Icons.lightbulb),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
