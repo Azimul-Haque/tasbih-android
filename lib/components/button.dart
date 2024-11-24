@@ -13,37 +13,38 @@ class MyButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        onTap;
-      },
-      child: Card(
-        elevation: 2, // Adds shadow for a raised effect
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10), // Rounded corners
-        ),
-        child: Container(
-          width: 120, // Square size
-          height: 120,
-          alignment: Alignment.center,
-          child: Text(
-            title!,
-            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-          ),
-        ),
-      ),
-    );
+    return
+        // GestureDetector(
+        //   onTap: () {
+        //     onTap;
+        //   },
+        //   child: Card(
+        //     elevation: 2, // Adds shadow for a raised effect
+        //     shape: RoundedRectangleBorder(
+        //       borderRadius: BorderRadius.circular(10), // Rounded corners
+        //     ),
+        //     child: Container(
+        //       width: 120, // Square size
+        //       height: 120,
+        //       alignment: Alignment.center,
+        //       child: Text(
+        //         title!,
+        //         style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+        //       ),
+        //     ),
+        //   ),
+        // );
 
-    // InkWell(
-    //   onTap: onTap,
-    //   child: Container(
-    //     decoration: BoxDecoration(
-    //       color: color,
-    //       borderRadius: BorderRadius.circular(8),
-    //     ), // BoxDecoration
-    //     padding: const EdgeInsets.all(5),
-    //     child: Center(child: Text(title!)),
-    //   ), // Container
-    // ); // GestureDetector
+        InkWell(
+      onTap: onTap,
+      child: Container(
+        decoration: BoxDecoration(
+          color: color,
+          borderRadius: BorderRadius.circular(8),
+        ), // BoxDecoration
+        padding: const EdgeInsets.all(5),
+        child: Center(child: Text(title!)),
+      ), // Container
+    ); // GestureDetector
   }
 }
