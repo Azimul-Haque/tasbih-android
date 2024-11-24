@@ -77,7 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ]),
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 5),
           Align(
             alignment: Alignment.topCenter,
             child:
