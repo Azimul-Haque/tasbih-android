@@ -69,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(tasbihEnBn),
             Align(
               alignment: Alignment.topCenter,
-              child: Column([
+              child: Column(children: [
                 Text(
                   'This is the Text at the Top',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
