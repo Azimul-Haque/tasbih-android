@@ -19,40 +19,40 @@ String convertToBanglaNumber(String englishNumber) {
   }).join('');
 }
 
-pageAppBar(String appbarname, BuildContext context) {
-  return AppBar(
-    title: Row(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Text(
-          appbarname,
-          style: const TextStyle(
-            // fontFamily: 'HindSiliguri',
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-      ],
-    ),
-    flexibleSpace: appBarStyle(),
-    backgroundColor: Colors.transparent,
-    automaticallyImplyLeading: true,
-    iconTheme: const IconThemeData(color: Colors.white),
-  );
-}
+// pageAppBar(String appbarname, BuildContext context) {
+//   return AppBar(
+//     title: Row(
+//       mainAxisSize: MainAxisSize.min,
+//       children: [
+//         Text(
+//           appbarname,
+//           style: const TextStyle(
+//             // fontFamily: 'HindSiliguri',
+//             fontWeight: FontWeight.bold,
+//           ),
+//         ),
+//       ],
+//     ),
+//     flexibleSpace: appBarStyle(),
+//     backgroundColor: Colors.transparent,
+//     automaticallyImplyLeading: true,
+//     iconTheme: const IconThemeData(color: Colors.white),
+//   );
+// }
 
-appBarStyle() {
-  return Container(
-    decoration: const BoxDecoration(
-      gradient: LinearGradient(
-        colors: [
-          Color.fromARGB(255, 23, 124, 117),
-          Color.fromARGB(255, 26, 148, 140),
-        ],
-        begin: FractionalOffset(0.0, 0.0),
-        end: FractionalOffset(1.0, 0.0),
-        stops: [0.0, 1.0],
-        tileMode: TileMode.clamp,
-      ),
-    ),
-  );
-}
+// appBarStyle() {
+//   return Container(
+//     decoration: const BoxDecoration(
+//       gradient: LinearGradient(
+//         colors: [
+//           Color.fromARGB(255, 23, 124, 117),
+//           Color.fromARGB(255, 26, 148, 140),
+//         ],
+//         begin: FractionalOffset(0.0, 0.0),
+//         end: FractionalOffset(1.0, 0.0),
+//         stops: [0.0, 1.0],
+//         tileMode: TileMode.clamp,
+//       ),
+//     ),
+//   );
+// }
