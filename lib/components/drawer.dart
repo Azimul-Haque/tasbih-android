@@ -32,6 +32,9 @@ class MyDrawer extends StatelessWidget {
             onTap: () {},
           ),
           const Divider(thickness: .5),
+          const Divider(thickness: .5),
+          const Divider(thickness: .5),
+          const Divider(thickness: .5),
           ListTile(
             title: const Text('প্রাইভেসি পলিসি'),
             onTap: () {
