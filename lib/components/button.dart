@@ -15,7 +15,8 @@ class MyButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        fixedSize: const Size(100, 100), // Square button with 100x100 dimensions
+        fixedSize:
+            const Size(100, 100), // Square button with 100x100 dimensions
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(0), // Square shape
         ),
@@ -24,8 +25,8 @@ class MyButton extends StatelessWidget {
         onTap;
       },
       child: Text(title!),
-    )
-    
+    );
+
     // InkWell(
     //   onTap: onTap,
     //   child: Container(
