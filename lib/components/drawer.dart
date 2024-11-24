@@ -7,7 +7,7 @@ class MyDrawer extends StatelessWidget {
   const MyDrawer({
     super.key,
     required this.color,
-    required this.switchdata,
+    this.switchdata,
   });
 
   @override
