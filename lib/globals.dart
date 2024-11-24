@@ -29,7 +29,6 @@ pageAppBar(String appbarname, BuildContext context) {
           style: const TextStyle(
             // fontFamily: 'HindSiliguri',
             fontWeight: FontWeight.bold,
-            color: Colors.white,
           ),
         ),
         const Spacer(),
