@@ -43,7 +43,7 @@ class _TasbihListState extends State<TasbihList> {
         elevation: 1,
         child: ListTile(
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(30.0),
+            borderRadius: BorderRadius.circular(5.0),
           ),
           title: Text(title),
           subtitle: Text(subtitle),
