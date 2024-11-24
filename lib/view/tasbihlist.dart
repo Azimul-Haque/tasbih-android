@@ -16,6 +16,7 @@ class TasbihList extends StatefulWidget {
 class _TasbihListState extends State<TasbihList> {
   @override
   Widget build(BuildContext context) {
+    // ignore: deprecated_member_use
     return WillPopScope(
       onWillPop: () {
         _onBackPressed();
