@@ -65,11 +65,15 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          MyHomePage(
-            title: 'Tasbih Counter - ডিজিটাল তসবি',
-            isDarkMode: _isDarkMode,
-            toggleTheme: _toggleTheme,
-          )
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => MyHomePage(
+                      title: 'Tasbih Counter - ডিজিটাল তসবি',
+                      isDarkMode: _isDarkMode,
+                      toggleTheme: _toggleTheme,
+                    )),
+          );
         },
         tooltip: 'Increment',
         child: const Icon(Icons.lightbulb),
