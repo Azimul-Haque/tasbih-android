@@ -34,7 +34,7 @@ class _MyDrawerState extends State<MyDrawer> {
           ListTile(
             leading: const Icon(Icons.light_mode_outlined),
             title: const Text('থিম পরিবর্তন'),
-            trailing: switchdata,
+            trailing: widget.switchdata,
             onTap: () {},
           ),
           const Divider(thickness: .5),
