@@ -194,8 +194,8 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  AyahModel? getAyahById(String id) {
-    return bnayahs.firstWhere((ayah) => ayah.id == id,
+  AyahModel? getAyahById(String ayahnumber) {
+    return bnayahs.firstWhere((ayah) => ayah.id == ayahnumber,
         orElse: () =>
             AyahModel(id: '0', sura: '0', aya: '0', text: 'Not Found'));
   }
