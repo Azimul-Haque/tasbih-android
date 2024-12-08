@@ -186,7 +186,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Future<void> loadJsonData() async {
     // Load the JSON file
     final String response =
-        await rootBundle.rootBundle.loadString('lib/json/ayah-bn.json');
+        await rootBundle.rootBundle.loadString('assets/data/ayats_bn.json');
     final List<dynamic> data = json.decode(response);
 
     // Convert the JSON data to a list of AyahModel objects
