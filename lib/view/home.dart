@@ -167,7 +167,7 @@ class _MyHomePageState extends State<MyHomePage> {
         throw Exception('Failed to load data');
       }
     } catch (e) {
-      print('Error: $e'); // Handle any errors
+      // print('Error: $e'); // Handle any errors
     }
   }
 }
