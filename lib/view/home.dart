@@ -36,7 +36,6 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     super.initState();
     getAnAyah();
-    print('test');
   }
 
   @override
