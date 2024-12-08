@@ -162,7 +162,7 @@ class _MyHomePageState extends State<MyHomePage> {
         setState(() {
           ayah = data['data']['text'];
           surah = data['data']['surah']['englishName'];
-          ayahnumber = data['data']['number'];
+          ayahnumber = data['data']['number'].toString();
         });
 
         // Handle the data as needed (e.g., store in state, show in UI)
