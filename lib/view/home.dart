@@ -180,6 +180,18 @@ class _MyHomePageState extends State<MyHomePage> {
       // print('Error: $e'); // Handle any errors
     }
   }
+
+  Future<void> loadJsonData() async {
+    // Load the JSON file
+    final String response =
+        await rootBundle.rootBundle.loadString('lib/json/ayah-bn.json');
+    final List<dynamic> data = json.decode(response);
+
+    // Convert the JSON data to a list of AyahModel objects
+    setState(() {
+      ayahs = data.map((item) => AyahModel.fromJson(item)).toList();
+    });
+  }
 }
 
 class AyahModel {
