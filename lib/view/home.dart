@@ -7,7 +7,7 @@ import 'package:tasbih/components/drawer.dart';
 import 'package:tasbih/globals.dart';
 import 'package:tasbih/view/tasbihlist.dart';
 import 'dart:convert';
-import 'package:flutter/services.dart' as rootBundle;
+import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http; // For HTTP requests
 
 class MyHomePage extends StatefulWidget {
@@ -167,7 +167,7 @@ class _MyHomePageState extends State<MyHomePage> {
         // If server returns a 200 OK response, parse the data
         Map<String, dynamic> data =
             json.decode(response.body); // Decoding the JSON response
-        print(data['data']); // Print the data for debugging
+        // print(data['data']); // Print the data for debugging
         setState(() {
           ayahid = data['data']['number'].toString();
           ayah = data['data']['text'];
