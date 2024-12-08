@@ -33,6 +33,7 @@ class _MyHomePageState extends State<MyHomePage> {
   String ayah = '';
   String surah = '';
   String ayahnumber = '';
+  String ahayinbn = '';
 
   void _incrementCounter() {
     setState(() {
