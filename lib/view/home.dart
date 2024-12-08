@@ -148,6 +148,9 @@ class _MyHomePageState extends State<MyHomePage> {
         Map<String, dynamic> data =
             json.decode(response.body); // Decoding the JSON response
         print(data['data']['text']); // Print the data for debugging
+        setState(() {
+          ayah = data['data']['text'];
+        });
 
         // Handle the data as needed (e.g., store in state, show in UI)
       } else {
