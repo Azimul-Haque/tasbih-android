@@ -99,6 +99,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ]),
           ),
+          const SizedBox(height: 20),
           Expanded(
             child: Center(
               child: MyBox(
