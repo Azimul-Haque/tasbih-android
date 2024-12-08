@@ -121,7 +121,7 @@ class _MyHomePageState extends State<MyHomePage> {
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: Text(
-              'আজকের আয়াত: $ayah',
+              'আজকের আয়াত: [$surah:$ayahnumber] \n$ayah',
               style: const TextStyle(fontSize: 18),
             ),
           ),
@@ -158,7 +158,7 @@ class _MyHomePageState extends State<MyHomePage> {
         // If server returns a 200 OK response, parse the data
         Map<String, dynamic> data =
             json.decode(response.body); // Decoding the JSON response
-        print(data['data']); // Print the data for debugging
+        // print(data['data']); // Print the data for debugging
         setState(() {
           ayah = data['data']['text'];
           surah = data['data']['surah']['englishName'];
