@@ -27,6 +27,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  List<AyahModel> ayahs = [];
   int _counter = 0;
   String ayah = '';
   String surah = '';
