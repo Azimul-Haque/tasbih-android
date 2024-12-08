@@ -121,7 +121,7 @@ class _MyHomePageState extends State<MyHomePage> {
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: Text(
-              'আজকের আয়াত: [$surah/$ayahnumber] \n$ayah',
+              'আজকের আয়াত: [$surah$ayahnumber] \n$ayahnumber',
               style: const TextStyle(fontSize: 18),
             ),
           ),
