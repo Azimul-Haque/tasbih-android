@@ -119,7 +119,7 @@ class _MyHomePageState extends State<MyHomePage> {
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: Text(
-              ayah,
+              'আজকের আয়াত ' + ayah,
               style: const TextStyle(fontSize: 18),
             ),
           ),
