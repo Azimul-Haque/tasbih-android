@@ -144,7 +144,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
       if (response.statusCode == 200) {
         // If server returns a 200 OK response, parse the data
-        String data = json.decode(response.body); // Decoding the JSON response
+        Map<String, dynamic> data =
+            json.decode(response.body); // Decoding the JSON response
         print(data); // Print the data for debugging
 
         // Handle the data as needed (e.g., store in state, show in UI)
