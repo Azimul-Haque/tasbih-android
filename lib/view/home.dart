@@ -193,6 +193,12 @@ class _MyHomePageState extends State<MyHomePage> {
       bnayahs = data.map((item) => AyahModel.fromJson(item)).toList();
     });
   }
+
+  AyahModel? getAyahById(String id) {
+    return ayahs.firstWhere((ayah) => ayah.id == id,
+        orElse: () =>
+            AyahModel(id: '0', sura: '0', aya: '0', text: 'Not Found'));
+  }
 }
 
 class AyahModel {
