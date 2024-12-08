@@ -131,6 +131,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Future<void> getAnAyah() async {
     try {
       // Sending GET request to the API
+      String apiUrl = 
       final response = await http.get(Uri.parse(apiUrl));
 
       if (response.statusCode == 200) {
