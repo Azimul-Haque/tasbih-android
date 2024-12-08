@@ -116,7 +116,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           // const SizedBox(height: 100),
           Padding(
-            padding: EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(10.0),
             child: Text(ayah),
           ),
         ],
