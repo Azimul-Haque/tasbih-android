@@ -151,7 +151,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Future<void> getAnAyah() async {
     try {
       // Sending GET request to the API
-      String apiUrl = 'https://api.alquran.cloud/v1/ayah/2';
+      String apiUrl = 'https://api.alquran.cloud/v1/ayah/262';
       final response = await http.get(Uri.parse(apiUrl));
 
       if (response.statusCode == 200) {
