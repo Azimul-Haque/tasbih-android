@@ -138,7 +138,6 @@ class _MyHomePageState extends State<MyHomePage> {
   // _onBackPressed() {}
   Future<void> getAnAyah() async {
     try {
-      print('test');
       // Sending GET request to the API
       String apiUrl = 'https://api.alquran.cloud/v1/ayah/262';
       final response = await http.get(Uri.parse(apiUrl));
