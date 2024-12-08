@@ -105,7 +105,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
           ),
-          const SizedBox(height: 120)
+          const SizedBox(height: 100)
         ],
       ),
       floatingActionButton: FloatingActionButton(
@@ -127,5 +127,24 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  _onBackPressed() {}
+  // _onBackPressed() {}
+  Future<void> getAnAyah() async {
+    try {
+      // Sending GET request to the API
+      final response = await http.get(Uri.parse(apiUrl));
+
+      if (response.statusCode == 200) {
+        // If server returns a 200 OK response, parse the data
+        List data = json.decode(response.body); // Decoding the JSON response
+        print(data); // Print the data for debugging
+
+        // Handle the data as needed (e.g., store in state, show in UI)
+      } else {
+        // If server returns an error, throw an exception
+        throw Exception('Failed to load data');
+      }
+    } catch (e) {
+      print('Error: $e'); // Handle any errors
+    }
+  }
 }
