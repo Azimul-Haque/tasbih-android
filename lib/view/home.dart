@@ -26,6 +26,8 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
   String ayah = '';
+  String surah = '';
+  String ayahnumber = '';
 
   void _incrementCounter() {
     setState(() {
@@ -156,10 +158,11 @@ class _MyHomePageState extends State<MyHomePage> {
         // If server returns a 200 OK response, parse the data
         Map<String, dynamic> data =
             json.decode(response.body); // Decoding the JSON response
-        print(data['data']['surah']
-            ['englishName']); // Print the data for debugging
+        print(data['data']['number']); // Print the data for debugging
         setState(() {
           ayah = data['data']['text'];
+          surah = data['data']['surah']['englishName'];
+          // ayahnumber =
         });
 
         // Handle the data as needed (e.g., store in state, show in UI)
