@@ -27,7 +27,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  List<AyahModel> ayahs = [];
+  List<AyahModel> bnayahs = [];
   int _counter = 0;
   String ayah = '';
   String surah = '';
@@ -190,7 +190,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     // Convert the JSON data to a list of AyahModel objects
     setState(() {
-      ayahs = data.map((item) => AyahModel.fromJson(item)).toList();
+      bnayahs = data.map((item) => AyahModel.fromJson(item)).toList();
     });
   }
 }
