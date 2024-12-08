@@ -173,7 +173,7 @@ class _MyHomePageState extends State<MyHomePage> {
           surah = data['data']['surah']['englishName'];
           ayahnumber = data['data']['numberInSurah'].toString();
         });
-        print(getAyahById(ayahid)?.aya.toString());
+        print(getAyahById(ayahid)?.text.toString());
 
         // Handle the data as needed (e.g., store in state, show in UI)
       } else {
