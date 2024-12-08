@@ -35,8 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    ApiService()
-        .fetchData(); // Call the fetchData method when the widget is initialized
+    fetchData(); // Call the fetchData method when the widget is initialized
   }
 
   @override
