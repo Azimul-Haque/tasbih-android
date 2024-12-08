@@ -29,6 +29,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   List<AyahModel> bnayahs = [];
   int _counter = 0;
+  String ayahid = '';
   String ayah = '';
   String surah = '';
   String ayahnumber = '';
@@ -167,6 +168,7 @@ class _MyHomePageState extends State<MyHomePage> {
             json.decode(response.body); // Decoding the JSON response
         print(data['data']); // Print the data for debugging
         setState(() {
+          ayahid = data['data']['text'];
           ayah = data['data']['text'];
           surah = data['data']['surah']['englishName'];
           ayahnumber = data['data']['number'].toString();
