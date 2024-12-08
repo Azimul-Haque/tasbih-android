@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:tasbih/components/box.dart';
 import 'package:tasbih/components/button.dart';
@@ -149,9 +151,13 @@ class _MyHomePageState extends State<MyHomePage> {
 
   // _onBackPressed() {}
   Future<void> getAnAyah() async {
+    var rng = Random();
+
+    // Generate a random number between 1 and 6236
+    int randomNumber = rng.nextInt(6236) + 1;
     try {
       // Sending GET request to the API
-      String apiUrl = 'https://api.alquran.cloud/v1/ayah/262';
+      String apiUrl = 'https://api.alquran.cloud/v1/ayah/' + randomNumber;
       final response = await http.get(Uri.parse(apiUrl));
 
       if (response.statusCode == 200) {
