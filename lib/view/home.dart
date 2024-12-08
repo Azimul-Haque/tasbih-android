@@ -146,7 +146,7 @@ class _MyHomePageState extends State<MyHomePage> {
         // If server returns a 200 OK response, parse the data
         Map<String, dynamic> data =
             json.decode(response.body); // Decoding the JSON response
-        print(data['data']); // Print the data for debugging
+        print(data); // Print the data for debugging
 
         // Handle the data as needed (e.g., store in state, show in UI)
       } else {
