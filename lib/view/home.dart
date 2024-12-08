@@ -180,3 +180,26 @@ class _MyHomePageState extends State<MyHomePage> {
     }
   }
 }
+
+class AyahModel {
+  final String id;
+  final String sura;
+  final String aya;
+  final String text;
+
+  AyahModel(
+      {required this.id,
+      required this.sura,
+      required this.aya,
+      required this.text});
+
+  // Method to create AyahModel from JSON
+  factory AyahModel.fromJson(Map<String, dynamic> json) {
+    return AyahModel(
+      id: json['id'],
+      sura: json['sura'],
+      aya: json['aya'],
+      text: json['text'],
+    );
+  }
+}
