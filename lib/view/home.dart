@@ -168,7 +168,7 @@ class _MyHomePageState extends State<MyHomePage> {
             json.decode(response.body); // Decoding the JSON response
         print(data['data']); // Print the data for debugging
         setState(() {
-          ayahid = data['data']['text'];
+          ayahid = data['data']['number'].toString();
           ayah = data['data']['text'];
           surah = data['data']['surah']['englishName'];
           ayahnumber = data['data']['number'].toString();
