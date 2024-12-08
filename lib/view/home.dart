@@ -119,7 +119,7 @@ class _MyHomePageState extends State<MyHomePage> {
             padding: const EdgeInsets.all(20.0),
             child: Text(
               ayah,
-              style: TextStyle(fontSize: 14),
+              style: TextStyle(fontSize: 16),
             ),
           ),
           const SizedBox(height: 50),
