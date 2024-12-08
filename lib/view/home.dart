@@ -171,7 +171,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ayahid = data['data']['number'].toString();
           ayah = data['data']['text'];
           surah = data['data']['surah']['englishName'];
-          ayahnumber = data['data']['number'].toString();
+          ayahnumber = data['data']['numberInAyah'].toString();
         });
         print(getAyahById(ayahid)?.aya.toString());
 
