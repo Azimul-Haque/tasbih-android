@@ -165,11 +165,11 @@ class _MyHomePageState extends State<MyHomePage> {
         // If server returns a 200 OK response, parse the data
         Map<String, dynamic> data =
             json.decode(response.body); // Decoding the JSON response
-        print(data['data']['numberInSurah']); // Print the data for debugging
+        print(data['data'][]); // Print the data for debugging
         setState(() {
           ayah = data['data']['text'];
           surah = data['data']['surah']['englishName'];
-          ayahnumber = data['data']['numberInSurah'].toString();
+          ayahnumber = data['data']['number'].toString();
         });
         print(getAyahById(ayahnumber)?.aya.toString());
 
