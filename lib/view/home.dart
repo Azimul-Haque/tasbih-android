@@ -157,8 +157,7 @@ class _MyHomePageState extends State<MyHomePage> {
     int randomNumber = rng.nextInt(6236) + 1;
     try {
       // Sending GET request to the API
-      String apiUrl =
-          'https://api.alquran.cloud/v1/ayah/' + randomNumber.toString();
+      String apiUrl = 'https://api.alquran.cloud/v1/ayah/$randomNumber';
       final response = await http.get(Uri.parse(apiUrl));
 
       if (response.statusCode == 200) {
