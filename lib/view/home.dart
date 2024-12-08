@@ -152,8 +152,6 @@ class _MyHomePageState extends State<MyHomePage> {
   // _onBackPressed() {}
   Future<void> getAnAyah() async {
     var rng = Random();
-
-    // Generate a random number between 1 and 6236
     int randomNumber = rng.nextInt(6236) + 1;
     try {
       // Sending GET request to the API
