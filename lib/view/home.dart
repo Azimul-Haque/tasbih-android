@@ -116,9 +116,10 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           // const SizedBox(height: 100),
           Padding(
-            padding: const EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(20.0),
             child: Text(ayah),
           ),
+          const SizedBox(height: 30),
         ],
       ),
       floatingActionButton: FloatingActionButton(
