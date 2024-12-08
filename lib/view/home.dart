@@ -122,7 +122,7 @@ class _MyHomePageState extends State<MyHomePage> {
               style: TextStyle(fontSize: 18),
             ),
           ),
-          const SizedBox(height: 50),
+          const SizedBox(height: 40),
         ],
       ),
       floatingActionButton: FloatingActionButton(
