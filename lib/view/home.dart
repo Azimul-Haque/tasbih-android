@@ -196,7 +196,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                   thumbShape: RoundSliderThumbShape(
                                       enabledThumbRadius: 0), // Hide thumb
                                   trackHeight:
-                                      3, // Make the track a bit thicker
+                                      2, // Make the track a bit thicker
                                 ),
                                 child: Slider(
                                   value: bufferedPosition.inSeconds.toDouble(),
