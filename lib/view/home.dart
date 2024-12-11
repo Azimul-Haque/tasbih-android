@@ -200,7 +200,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 ),
                                 child: Slider(
                                   value: bufferedPosition.inSeconds.toDouble(),
-                                  max: totalDuration.inSeconds.toDouble(),
+                                  max: maxDuration,
                                   activeColor: Colors
                                       .lightBlue, // Buffered portion color
                                   inactiveColor: Colors
@@ -211,7 +211,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               // Played portion
                               Slider(
                                 value: currentPosition.inSeconds.toDouble(),
-                                max: totalDuration.inSeconds.toDouble(),
+                                max: maxDuration,
                                 activeColor:
                                     Colors.green, // Played portion color
                                 inactiveColor: Colors
