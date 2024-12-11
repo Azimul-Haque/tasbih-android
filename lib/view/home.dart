@@ -38,10 +38,6 @@ class _MyHomePageState extends State<MyHomePage> {
   String ahayinbn = '';
 
   final AudioPlayer _audioPlayer = AudioPlayer();
-  double _volume = 1.0; // Default volume (max)
-  bool isPlaying = false;
-  bool _isVolumeVisible =
-      false; // To toggle the visibility of the vertical slider
 
   // Example audio URL
   final String audioUrl =
