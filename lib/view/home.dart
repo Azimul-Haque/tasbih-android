@@ -39,6 +39,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   final AudioPlayer _audioPlayer = AudioPlayer();
 
+  bool isPlaying = false;
+
   // Example audio URL
   final String audioUrl =
       "https://cdn.islamic.network/quran/audio/128/ar.alafasy/262.mp3";
