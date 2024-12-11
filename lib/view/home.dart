@@ -229,7 +229,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
                     // Time Display
                     SizedBox(
-                      width: 70, // Width of the volume slider
+                      width: 65, // Width of the volume slider
                       child: // Time Display
                           StreamBuilder<Duration>(
                         stream: _audioPlayer.positionStream,
