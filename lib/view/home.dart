@@ -341,6 +341,14 @@ class _MyHomePageState extends State<MyHomePage> {
     } catch (e) {
       print("Error loading audio: $e");
     }
+
+    // Listen for when the audio finishes
+    _audioPlayer.playerStateStream.listen((state) {
+      if (state.processingState == ProcessingState.completed) {
+        // Reset the progress slider to 0
+        _audioPlayer.seek(Duration.zero);
+      }
+    });
   }
 
   void _playAudio() async {
