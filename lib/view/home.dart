@@ -163,8 +163,10 @@ class _MyHomePageState extends State<MyHomePage> {
                           );
                         } else {
                           return IconButton(
-                            icon: Icon(Icons.play_arrow,
-                                size: 36, color: Colors.blue),
+                            icon: Icon(
+                              Icons.play_arrow,
+                              size: 36,
+                            ),
                             onPressed: _audioPlayer.play,
                           );
                         }
