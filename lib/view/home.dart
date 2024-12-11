@@ -229,7 +229,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
                     // Time Display
                     SizedBox(
-                      width: 80, // Width of the volume slider
+                      width: 70, // Width of the volume slider
                       child: // Time Display
                           StreamBuilder<Duration>(
                         stream: _audioPlayer.positionStream,
@@ -242,7 +242,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           return Text(
                             "${currentPosition.inMinutes}:${(currentPosition.inSeconds % 60).toString().padLeft(2, '0')} / "
                             "${totalDuration.inMinutes}:${(totalDuration.inSeconds % 60).toString().padLeft(2, '0')}",
-                            style: TextStyle(fontSize: 16),
+                            style: TextStyle(fontSize: 13),
                           );
                         },
                       ),
