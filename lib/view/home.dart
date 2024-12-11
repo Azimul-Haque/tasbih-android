@@ -231,7 +231,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ),
 
-                    // Volume Controller
+                    // Time Display
                     SizedBox(
                       width: 100, // Width of the volume slider
                       child: // Time Display
