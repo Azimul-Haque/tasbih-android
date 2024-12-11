@@ -183,6 +183,10 @@ class _MyHomePageState extends State<MyHomePage> {
                               .bufferedPosition; // Buffered position
                           final totalDuration =
                               _audioPlayer.duration ?? Duration.zero;
+                          // If totalDuration is null (audio is finished), use currentPosition
+                          final maxDuration = totalDuration.inSeconds > 0
+                              ? totalDuration.inSeconds.toDouble()
+                              : currentPosition.inSeconds.toDouble();
 
                           return Stack(
                             children: [
