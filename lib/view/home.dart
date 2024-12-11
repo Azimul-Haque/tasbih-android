@@ -238,7 +238,10 @@ class _MyHomePageState extends State<MyHomePage> {
                               snapshot.data ?? Duration.zero;
                           final totalDuration =
                               _audioPlayer.duration ?? Duration.zero;
-
+                          if (currentPosition >= totalDuration) {
+                            _audioPlayer
+                                .seek(Duration.zero); // Reset the slider to 0
+                          }
                           return Text(
                             "${currentPosition.inMinutes}:${(currentPosition.inSeconds % 60).toString().padLeft(2, '0')} / "
                             "${totalDuration.inMinutes}:${(totalDuration.inSeconds % 60).toString().padLeft(2, '0')}",
