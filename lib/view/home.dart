@@ -269,43 +269,38 @@ class _MyHomePageState extends State<MyHomePage> {
                           final totalDuration =
                               _audioPlayer.duration ?? Duration.zero;
 
-                          return Column(
+                          return Stack(
                             children: [
-                              Stack(
-                                children: [
-                                  // Buffered portion
-                                  SliderTheme(
-                                    data: const SliderThemeData(
-                                      thumbShape: RoundSliderThumbShape(
-                                          enabledThumbRadius: 0), // Hide thumb
-                                      trackHeight:
-                                          3, // Make the track a bit thicker
-                                    ),
-                                    child: Slider(
-                                      value:
-                                          bufferedPosition.inSeconds.toDouble(),
-                                      max: totalDuration.inSeconds.toDouble(),
-                                      activeColor: Colors
-                                          .lightBlue, // Buffered portion color
-                                      inactiveColor: Colors.grey
-                                          .shade400, // Remaining portion color
-                                      onChanged: null, // Non-draggable
-                                    ),
-                                  ),
-                                  // Played portion
-                                  Slider(
-                                    value: currentPosition.inSeconds.toDouble(),
-                                    max: totalDuration.inSeconds.toDouble(),
-                                    activeColor:
-                                        Colors.green, // Played portion color
-                                    inactiveColor: Colors
-                                        .transparent, // Transparent to show buffered color below
-                                    onChanged: (value) async {
-                                      await _audioPlayer.seek(
-                                          Duration(seconds: value.toInt()));
-                                    },
-                                  ),
-                                ],
+                              // Buffered portion
+                              SliderTheme(
+                                data: const SliderThemeData(
+                                  thumbShape: RoundSliderThumbShape(
+                                      enabledThumbRadius: 0), // Hide thumb
+                                  trackHeight:
+                                      3, // Make the track a bit thicker
+                                ),
+                                child: Slider(
+                                  value: bufferedPosition.inSeconds.toDouble(),
+                                  max: totalDuration.inSeconds.toDouble(),
+                                  activeColor: Colors
+                                      .lightBlue, // Buffered portion color
+                                  inactiveColor: Colors
+                                      .grey.shade400, // Remaining portion color
+                                  onChanged: null, // Non-draggable
+                                ),
+                              ),
+                              // Played portion
+                              Slider(
+                                value: currentPosition.inSeconds.toDouble(),
+                                max: totalDuration.inSeconds.toDouble(),
+                                activeColor:
+                                    Colors.green, // Played portion color
+                                inactiveColor: Colors
+                                    .transparent, // Transparent to show buffered color below
+                                onChanged: (value) async {
+                                  await _audioPlayer
+                                      .seek(Duration(seconds: value.toInt()));
+                                },
                               ),
                             ],
                           );
