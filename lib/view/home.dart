@@ -183,10 +183,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               .bufferedPosition; // Buffered position
                           final totalDuration =
                               _audioPlayer.duration ?? Duration.zero;
-                          if (currentPosition >= totalDuration) {
-                            _audioPlayer
-                                .seek(Duration.zero); // Reset the slider to 0
-                          }
+
                           // If totalDuration is null (audio is finished), use currentPosition
                           final maxDuration = totalDuration.inSeconds > 0
                               ? totalDuration.inSeconds.toDouble()
