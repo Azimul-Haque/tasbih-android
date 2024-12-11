@@ -240,7 +240,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               _audioPlayer.duration ?? Duration.zero;
 
                           return Text(
-                            "${currentPosition.inMinutes}:${(currentPosition.inSeconds % 60).toString().padLeft(2, '0')} / "
+                            "${currentPosition.inMinutes}:${(currentPosition.inSeconds % 60).toString().padLeft(2, '0')}/"
                             "${totalDuration.inMinutes}:${(totalDuration.inSeconds % 60).toString().padLeft(2, '0')}",
                             style: TextStyle(fontSize: 15),
                           );
