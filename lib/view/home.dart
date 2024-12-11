@@ -10,6 +10,7 @@ import 'dart:convert';
 // ignore: library_prefixes
 import 'package:flutter/services.dart' as rootBundle;
 import 'package:http/http.dart' as http; // For HTTP requests
+import 'package:just_audio/just_audio.dart';
 
 class MyHomePage extends StatefulWidget {
   final String title;
@@ -36,6 +37,16 @@ class _MyHomePageState extends State<MyHomePage> {
   String ayahnumber = '';
   String ahayinbn = '';
 
+  final AudioPlayer _audioPlayer = AudioPlayer();
+  double _volume = 1.0; // Default volume (max)
+  bool isPlaying = false;
+  bool _isVolumeVisible =
+      false; // To toggle the visibility of the vertical slider
+
+  // Example audio URL
+  final String audioUrl =
+      "https://cdn.islamic.network/quran/audio/128/ar.alafasy/262.mp3";
+
   void _incrementCounter() {
     setState(() {
       _counter++;
@@ -47,6 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
     super.initState();
     getAnAyah();
     loadJsonData();
+    _initializeAudio();
   }
 
   @override
@@ -126,6 +138,205 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
           // const SizedBox(height: 100),
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                StreamBuilder<PlayerState>(
+                  stream: _audioPlayer.playerStateStream,
+                  builder: (context, snapshot) {
+                    final playerState = snapshot.data;
+                    final isPlaying = playerState?.playing ?? false;
+                    final processingState = playerState?.processingState;
+
+                    if (processingState == ProcessingState.loading ||
+                        processingState == ProcessingState.buffering) {
+                      return CircularProgressIndicator();
+                    } else if (isPlaying) {
+                      return IconButton(
+                        icon: Icon(Icons.pause, size: 64, color: Colors.blue),
+                        onPressed: _audioPlayer.pause,
+                      );
+                    } else {
+                      return IconButton(
+                        icon: Icon(Icons.play_arrow,
+                            size: 64, color: Colors.blue),
+                        onPressed: _audioPlayer.play,
+                      );
+                    }
+                  },
+                ),
+                SizedBox(height: 10),
+
+                // Slider for Played, Buffered, and Remaining Portions
+                StreamBuilder<Duration>(
+                  stream: _audioPlayer.positionStream,
+                  builder: (context, snapshot) {
+                    final currentPosition = snapshot.data ?? Duration.zero;
+                    final bufferedPosition =
+                        _audioPlayer.bufferedPosition; // Buffered position
+                    final totalDuration =
+                        _audioPlayer.duration ?? Duration.zero;
+
+                    return Column(
+                      children: [
+                        Stack(
+                          children: [
+                            // Buffered portion
+                            SliderTheme(
+                              data: const SliderThemeData(
+                                thumbShape: RoundSliderThumbShape(
+                                    enabledThumbRadius: 0), // Hide thumb
+                                trackHeight: 3, // Make the track a bit thicker
+                              ),
+                              child: Slider(
+                                value: bufferedPosition.inSeconds.toDouble(),
+                                max: totalDuration.inSeconds.toDouble(),
+                                activeColor:
+                                    Colors.lightBlue, // Buffered portion color
+                                inactiveColor: Colors
+                                    .grey.shade400, // Remaining portion color
+                                onChanged: null, // Non-draggable
+                              ),
+                            ),
+                            // Played portion
+                            Slider(
+                              value: currentPosition.inSeconds.toDouble(),
+                              max: totalDuration.inSeconds.toDouble(),
+                              activeColor: Colors.green, // Played portion color
+                              inactiveColor: Colors
+                                  .transparent, // Transparent to show buffered color below
+                              onChanged: (value) async {
+                                await _audioPlayer
+                                    .seek(Duration(seconds: value.toInt()));
+                              },
+                            ),
+                          ],
+                        ),
+                        Text(
+                          "${currentPosition.inMinutes}:${(currentPosition.inSeconds % 60).toString().padLeft(2, '0')} / "
+                          "${totalDuration.inMinutes}:${(totalDuration.inSeconds % 60).toString().padLeft(2, '0')}",
+                          style: TextStyle(fontSize: 16),
+                        ),
+                      ],
+                    );
+                  },
+                ),
+// NEW PLAYER
+// NEW PLAYER
+// NEW PLAYER
+// Row for play/pause, slider, and volume control
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    // Play/Pause Button
+                    StreamBuilder<PlayerState>(
+                      stream: _audioPlayer.playerStateStream,
+                      builder: (context, snapshot) {
+                        final playerState = snapshot.data;
+                        final isPlaying = playerState?.playing ?? false;
+                        final processingState = playerState?.processingState;
+
+                        if (processingState == ProcessingState.loading ||
+                            processingState == ProcessingState.buffering) {
+                          return CircularProgressIndicator();
+                        } else if (isPlaying) {
+                          return IconButton(
+                            icon:
+                                Icon(Icons.pause, size: 36, color: Colors.blue),
+                            onPressed: _audioPlayer.pause,
+                          );
+                        } else {
+                          return IconButton(
+                            icon: Icon(Icons.play_arrow,
+                                size: 36, color: Colors.blue),
+                            onPressed: _audioPlayer.play,
+                          );
+                        }
+                      },
+                    ),
+
+                    // Progress Slider
+                    Expanded(
+                      child: // Slider for Played, Buffered, and Remaining Portions
+                          StreamBuilder<Duration>(
+                        stream: _audioPlayer.positionStream,
+                        builder: (context, snapshot) {
+                          final currentPosition =
+                              snapshot.data ?? Duration.zero;
+                          final bufferedPosition = _audioPlayer
+                              .bufferedPosition; // Buffered position
+                          final totalDuration =
+                              _audioPlayer.duration ?? Duration.zero;
+
+                          return Column(
+                            children: [
+                              Stack(
+                                children: [
+                                  // Buffered portion
+                                  SliderTheme(
+                                    data: const SliderThemeData(
+                                      thumbShape: RoundSliderThumbShape(
+                                          enabledThumbRadius: 0), // Hide thumb
+                                      trackHeight:
+                                          3, // Make the track a bit thicker
+                                    ),
+                                    child: Slider(
+                                      value:
+                                          bufferedPosition.inSeconds.toDouble(),
+                                      max: totalDuration.inSeconds.toDouble(),
+                                      activeColor: Colors
+                                          .lightBlue, // Buffered portion color
+                                      inactiveColor: Colors.grey
+                                          .shade400, // Remaining portion color
+                                      onChanged: null, // Non-draggable
+                                    ),
+                                  ),
+                                  // Played portion
+                                  Slider(
+                                    value: currentPosition.inSeconds.toDouble(),
+                                    max: totalDuration.inSeconds.toDouble(),
+                                    activeColor:
+                                        Colors.green, // Played portion color
+                                    inactiveColor: Colors
+                                        .transparent, // Transparent to show buffered color below
+                                    onChanged: (value) async {
+                                      await _audioPlayer.seek(
+                                          Duration(seconds: value.toInt()));
+                                    },
+                                  ),
+                                ],
+                              ),
+                              Text(
+                                "${currentPosition.inMinutes}:${(currentPosition.inSeconds % 60).toString().padLeft(2, '0')} / "
+                                "${totalDuration.inMinutes}:${(totalDuration.inSeconds % 60).toString().padLeft(2, '0')}",
+                                style: TextStyle(fontSize: 16),
+                              ),
+                            ],
+                          );
+                        },
+                      ),
+                    ),
+
+                    // Volume Controller
+                    SizedBox(
+                      width: 100, // Width of the volume slider
+                      child: Text(
+                        "${currentPosition.inMinutes}:${(currentPosition.inSeconds % 60).toString().padLeft(2, '0')} / "
+                        "${totalDuration.inMinutes}:${(totalDuration.inSeconds % 60).toString().padLeft(2, '0')}",
+                        style: TextStyle(fontSize: 16),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 20),
+
+// NEW PLAYER
+// NEW PLAYER
+// NEW PLAYER
+              ],
+            ),
+          ),
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: Text(
@@ -151,7 +362,7 @@ class _MyHomePageState extends State<MyHomePage> {
         },
         tooltip: 'তসবিহ নির্বাচন করুন',
         child: const Icon(Icons.lightbulb),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ),
     );
   }
 
@@ -203,6 +414,41 @@ class _MyHomePageState extends State<MyHomePage> {
     return bnayahs.firstWhere((ayah) => ayah.id == ayahnumber,
         orElse: () =>
             AyahModel(id: '0', sura: '0', aya: '0', text: 'Not Found'));
+  }
+
+  Future<void> _initializeAudio() async {
+    try {
+      await _audioPlayer.setUrl(audioUrl); // Load the audio file from URL
+    } catch (e) {
+      print("Error loading audio: $e");
+    }
+  }
+
+  void _playAudio() async {
+    await _audioPlayer.play();
+    setState(() {
+      isPlaying = true;
+    });
+  }
+
+  void _pauseAudio() async {
+    await _audioPlayer.pause();
+    setState(() {
+      isPlaying = false;
+    });
+  }
+
+  void _stopAudio() async {
+    await _audioPlayer.stop();
+    setState(() {
+      isPlaying = false;
+    });
+  }
+
+  @override
+  void dispose() {
+    _audioPlayer.dispose(); // Release resources
+    super.dispose();
   }
 }
 
