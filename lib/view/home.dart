@@ -248,10 +248,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   ],
                 ),
                 SizedBox(height: 20),
-
-// NEW PLAYER
-// NEW PLAYER
-// NEW PLAYER
               ],
             ),
           ),
