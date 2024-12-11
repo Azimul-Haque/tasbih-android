@@ -157,8 +157,8 @@ class _MyHomePageState extends State<MyHomePage> {
                           return CircularProgressIndicator();
                         } else if (isPlaying) {
                           return IconButton(
-                            icon:
-                                Icon(Icons.pause, size: 36, color: Colors.blue),
+                            icon: Icon(Icons.pause,
+                                size: 36, color: Colors.green),
                             onPressed: _audioPlayer.pause,
                           );
                         } else {
