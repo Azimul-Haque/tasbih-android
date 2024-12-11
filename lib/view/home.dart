@@ -321,10 +321,21 @@ class _MyHomePageState extends State<MyHomePage> {
                     // Volume Controller
                     SizedBox(
                       width: 100, // Width of the volume slider
-                      child: Text(
-                        "${currentPosition.inMinutes}:${(currentPosition.inSeconds % 60).toString().padLeft(2, '0')} / "
-                        "${totalDuration.inMinutes}:${(totalDuration.inSeconds % 60).toString().padLeft(2, '0')}",
-                        style: TextStyle(fontSize: 16),
+                      child: // Time Display
+                          StreamBuilder<Duration>(
+                        stream: _audioPlayer.positionStream,
+                        builder: (context, snapshot) {
+                          final currentPosition =
+                              snapshot.data ?? Duration.zero;
+                          final totalDuration =
+                              _audioPlayer.duration ?? Duration.zero;
+
+                          return Text(
+                            "${currentPosition.inMinutes}:${(currentPosition.inSeconds % 60).toString().padLeft(2, '0')} / "
+                            "${totalDuration.inMinutes}:${(totalDuration.inSeconds % 60).toString().padLeft(2, '0')}",
+                            style: TextStyle(fontSize: 16),
+                          );
+                        },
                       ),
                     ),
                   ],
