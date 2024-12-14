@@ -56,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(
           widget.title,
-          style: TextStyle(fontFamily: 'Kalpurush'),
+          style: TextStyle(fontFamily: 'HindSiliguri'),
         ),
         actions: [
           IconButton(
