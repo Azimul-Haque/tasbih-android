@@ -13,7 +13,7 @@ ThemeData darkTheme = ThemeData(
     primary: Colors.grey.shade700,
     secondary: Colors.grey.shade800,
     // primary: Colors.grey[700]!,
-    onPrimary: const Color.fromARGB(255, 255, 255, 255)!,
+    onPrimary: const Color.fromARGB(255, 255, 255, 255),
     // secondary: Colors.grey[500]!,
     // onSecondary: Colors.white,
     // error: Colors.black,
