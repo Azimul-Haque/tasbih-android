@@ -222,24 +222,36 @@ class _MyHomePageState extends State<MyHomePage> {
             AyahModel(id: '0', sura: '0', aya: '0', text: 'Not Found'));
   }
 
-  showConfirmDialogue() {
-    return AlertDialog(
-      title: Text("Confirmation"),
-      content: Text("Are you sure you want to proceed?"),
-      actions: [
-        TextButton(
-          onPressed: () {
-            Navigator.of(context).pop(false); // Return false
-          },
-          child: Text("Cancel"),
-        ),
-        TextButton(
-          onPressed: () {
-            Navigator.of(context).pop(true); // Return true
-          },
-          child: Text("Confirm"),
-        ),
-      ],
+  // Reusable confirmation dialog method
+  Future<bool?> showConfirmationDialog({
+    required BuildContext context,
+    required String title,
+    required String message,
+    String cancelButtonText = "Cancel",
+    String confirmButtonText = "Confirm",
+  }) async {
+    return showDialog<bool>(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text(title),
+          content: Text(message),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop(false); // Return false
+              },
+              child: Text(cancelButtonText),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop(true); // Return true
+              },
+              child: Text(confirmButtonText),
+            ),
+          ],
+        );
+      },
     );
   }
 }
