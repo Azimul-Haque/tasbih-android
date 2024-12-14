@@ -38,7 +38,8 @@ class MyDrawer extends StatelessWidget {
           const Divider(thickness: .5),
           ListTile(
             leading: const Icon(Icons.privacy_tip_outlined),
-            title: const Text('প্রাইভেসি পলিসি', style: TextStyle(fontFamily: 'Kalpurush')),
+            title: const Text('প্রাইভেসি পলিসি',
+                style: TextStyle(fontFamily: 'Kalpurush')),
             onTap: () {
               // Update the state of the app.
               // ...
@@ -47,7 +48,8 @@ class MyDrawer extends StatelessWidget {
           const Divider(thickness: .5),
           ListTile(
             leading: const Icon(Icons.mail_outline_sharp),
-            title: const Text('মতামত ও পরামর্শ'. style: TextStyle(fontFamily: 'Kalpurush')),
+            title: const Text('মতামত ও পরামর্শ',
+                style: TextStyle(fontFamily: 'Kalpurush')),
             onTap: () {
               // Update the state of the app.
               // ...
