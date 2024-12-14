@@ -35,7 +35,7 @@ class MyDrawer extends StatelessWidget {
                 Text(
                   'ডিজিটাল তসবি',
                   style: TextStyle(
-                      color: Colors.white,
+                      // color: Colors.white,
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                       fontFamily: 'Kalpurush'),
