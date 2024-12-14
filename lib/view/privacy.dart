@@ -6,6 +6,7 @@ class PrivacyPolicy extends StatefulWidget {
   const PrivacyPolicy({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _PrivacyPolicyState createState() => _PrivacyPolicyState();
 }
 
