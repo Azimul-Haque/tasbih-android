@@ -28,24 +28,10 @@ class _PrivacyPolicyState extends State<PrivacyPolicy> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.pop(context);
-          },
+        title: Text(
+          widget.title,
+          style: const TextStyle(fontFamily: 'HindSiliguri'),
         ),
-        title: const Text(
-          "Privacy Policy",
-          style: TextStyle(
-            fontFamily: 'Arial',
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
-          ),
-        ),
-        // flexibleSpace: appBarStyle(),
-        backgroundColor: Colors.transparent,
-        automaticallyImplyLeading: true,
-        iconTheme: const IconThemeData(color: Colors.white),
       ),
       body: WebViewWidget(
         controller: controller,
