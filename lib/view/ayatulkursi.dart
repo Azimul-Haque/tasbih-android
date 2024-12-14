@@ -182,7 +182,7 @@ class _AyatulKursiState extends State<AyatulKursi> {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 10),
+                  const SizedBox(height: 5),
                   const Padding(
                     padding: EdgeInsets.all(10),
                     child: Text(
