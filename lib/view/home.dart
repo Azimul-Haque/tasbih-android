@@ -130,6 +130,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     style: TextStyle(
                       fontSize: 12,
                       fontFamily: 'Kalpurush',
+                      color: Theme.of(context).colorScheme.onPrimary,
                     ),
                   ),
                 ],
