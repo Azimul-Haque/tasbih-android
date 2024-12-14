@@ -223,13 +223,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   // Reusable confirmation dialog method
-  Future<bool?> showConfirmationDialog({
-    required BuildContext context,
-    required String title,
-    required String message,
-    String cancelButtonText = "Cancel",
-    String confirmButtonText = "Confirm",
-  }) async {
+  Future<bool?> showConfirmationDialog() async {
     return showDialog<bool>(
       context: context,
       builder: (BuildContext context) {
