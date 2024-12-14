@@ -21,7 +21,7 @@ class _TasbihListState extends State<TasbihList> {
         appBar: AppBar(
           title: Text(
             widget.title,
-            style: const TextStyle(fontFamily: 'Kalpurush'),
+            style: const TextStyle(fontFamily: 'HindSiliguri'),
           ),
         ),
         body: ListView(
