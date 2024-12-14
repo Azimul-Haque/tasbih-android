@@ -30,7 +30,7 @@ class _AyatulKursiState extends State<AyatulKursi> {
         backgroundColor: Theme.of(context).colorScheme.surface,
         appBar: AppBar(
           title: const Text(
-            'আয়াতুল কুরসি - آية الكرسي',
+            'আয়াতুল কুরসি - ',
             style: TextStyle(fontFamily: 'Kalpurush'),
           ),
         ),
