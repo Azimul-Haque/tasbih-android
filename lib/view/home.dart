@@ -66,13 +66,13 @@ class _MyHomePageState extends State<MyHomePage> {
             },
             tooltip: 'মুছে দিন',
           ),
-          IconButton(
-            icon: const Icon(Icons.settings),
-            onPressed: () {
-              // Action for Settings
-            },
-            tooltip: 'সেটিংস',
-          ),
+          // IconButton(
+          //   icon: const Icon(Icons.settings),
+          //   onPressed: () {
+          //     // Action for Settings
+          //   },
+          //   tooltip: 'সেটিংস',
+          // ),
         ],
       ),
       drawer: MyDrawer(
