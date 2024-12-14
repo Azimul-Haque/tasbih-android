@@ -54,7 +54,7 @@ class _AyatulKursiState extends State<AyatulKursi> {
 
                             if (processingState == ProcessingState.loading ||
                                 processingState == ProcessingState.buffering) {
-                              return CircularProgressIndicator();
+                              return const CircularProgressIndicator();
                             } else if (isPlaying) {
                               return IconButton(
                                 icon: Icon(Icons.pause,
