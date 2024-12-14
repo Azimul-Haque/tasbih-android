@@ -152,7 +152,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 Text(
-                  ayah\nahayinbn,
+                  '$ayah\n$ahayinbn',
                   style: const TextStyle(fontSize: 17),
                   textAlign: TextAlign.right,
                 ),
