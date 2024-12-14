@@ -243,7 +243,11 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             TextButton(
               onPressed: () {
-                Navigator.of(context).pop(true); // Return true
+                setState(() {
+                  _counter = 0;
+                  tasbihArabic = '';
+                  tasbihEnBn = '';
+                });
               },
               child: const Text(
                 'নিশ্চিত',
