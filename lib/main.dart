@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tasbih/theme/dark_theme.dart';
 import 'package:tasbih/theme/light_theme.dart';
@@ -58,5 +59,11 @@ class _MyAppState extends State<MyApp> {
       _isDarkMode = value;
     });
     _saveThemePreference(value);
+  }
+
+  void initPackageInfo() async {
+    PackageInfo packageInfo = await PackageInfo.fromPlatform();
+    appversion = packageInfo.version;
+    // print(appversion);
   }
 }
