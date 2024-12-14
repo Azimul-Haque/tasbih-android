@@ -181,7 +181,7 @@ class _AyatulKursiState extends State<AyatulKursi> {
                         fontSize: 18,
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
