@@ -19,8 +19,7 @@ class MyDrawer extends StatelessWidget {
           const DrawerHeader(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage(
-                    'assets/images/drawer.jpg'), // Replace with your image path
+                image: AssetImage('assets/images/drawer.jpg'),
                 fit: BoxFit.cover, // Cover the entire header
               ),
             ),
