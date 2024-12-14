@@ -228,7 +228,7 @@ class _MyHomePageState extends State<MyHomePage> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text(
+          title: const Text(
             'নিশ্চিতকরণ',
             style: TextStyle(fontFamily: 'Kalpurush'),
           ),
