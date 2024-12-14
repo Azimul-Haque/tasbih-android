@@ -220,6 +220,29 @@ class _MyHomePageState extends State<MyHomePage> {
         orElse: () =>
             AyahModel(id: '0', sura: '0', aya: '0', text: 'Not Found'));
   }
+
+  showConfirmDialogue() {
+return AlertDialog(
+          title: Text("Confirmation"),
+          content: Text("Are you sure you want to proceed?"),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop(false); // Return false
+              },
+              child: Text("Cancel"),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop(true); // Return true
+              },
+              child: Text("Confirm"),
+            ),
+          ],
+        );
+      },
+    );
+  }
 }
 
 class AyahModel {
