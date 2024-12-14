@@ -33,9 +33,6 @@ class _AyatulKursiState extends State<AyatulKursi> {
         ),
         body: ListView(
           children: [
-            const SizedBox(
-              height: 5,
-            ),
             Padding(
               padding: const EdgeInsets.only(
                 top: 10,
