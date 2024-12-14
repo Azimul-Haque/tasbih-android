@@ -154,7 +154,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 Text(
                   '$ayah\n$ahayinbn',
                   style: const TextStyle(fontSize: 17),
-                  textAlign: TextAlign.right,
                 ),
                 Text(
                   ahayinbn,
