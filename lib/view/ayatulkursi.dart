@@ -31,7 +31,7 @@ class _AyatulKursiState extends State<AyatulKursi> {
               height: 5,
             ),
             Padding(
-              padding: EdgeInsets.only(
+              padding: const EdgeInsets.only(
                 top: 10,
                 left: 10,
                 right: 10,
