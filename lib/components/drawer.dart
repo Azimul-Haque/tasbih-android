@@ -66,6 +66,7 @@ class MyDrawer extends StatelessWidget {
             title: const Text('আয়াতুল কুরসি',
                 style: TextStyle(fontFamily: 'Kalpurush')),
             onTap: () {
+              Navigator.pop(context);
               Navigator.push(
                 context,
                 MaterialPageRoute(
