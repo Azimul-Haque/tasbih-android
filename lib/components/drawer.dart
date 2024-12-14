@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tasbih/globals.dart';
 import 'package:tasbih/view/ayatulkursi.dart';
 import 'package:tasbih/view/privacypolicy.dart';
 
