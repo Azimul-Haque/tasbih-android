@@ -12,7 +12,7 @@ ThemeData lightTheme = ThemeData(
     surface: Colors.grey.shade200,
     primary: Colors.white,
     secondary: Colors.grey.shade300,
-    onPrimary: Colors.grey[300]!,
+    onPrimary: Colors.grey[600]!,
     // secondary: Colors.grey[500]!,
     // onSecondary: Colors.white,
     // error: Colors.black,
