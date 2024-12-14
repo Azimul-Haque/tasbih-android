@@ -12,7 +12,7 @@ class MyButton extends StatelessWidget {
     required this.titlesize,
     required this.color,
     required this.ontapfunction,
-    required this.fontfamily,
+    this.fontfamily,
   });
 
   @override
