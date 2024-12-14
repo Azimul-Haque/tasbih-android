@@ -235,7 +235,7 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 Navigator.of(context).pop(false); // Return false
               },
-              child: Text('নিশ্চিত'),
+              child: Text('ফিরে যান'),
             ),
             TextButton(
               onPressed: () {
