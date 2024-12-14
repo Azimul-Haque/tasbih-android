@@ -81,8 +81,11 @@ class _AyatulKursiState extends State<AyatulKursi> {
                                     );
                                   } else {
                                     return IconButton(
-                                      icon: const Icon(Icons.play_arrow,
-                                          size: 36, color: Colors.green),
+                                      icon: Icon(Icons.play_arrow,
+                                          size: 36,
+                                          color: Theme.of(context)
+                                              .colorScheme
+                                              .surface),
                                       onPressed: _audioPlayer.play,
                                     );
                                   }
