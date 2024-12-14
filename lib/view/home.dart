@@ -255,7 +255,10 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: Text(
                 'নিশ্চিত',
-                style: TextStyle(fontFamily: 'Kalpurush'),
+                style: TextStyle(
+                  fontFamily: 'Kalpurush',
+                  color: Theme.of(context).colorScheme.onPrimary,
+                ),
               ),
             ),
           ],
