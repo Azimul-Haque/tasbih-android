@@ -53,12 +53,6 @@ class _AyatulKursiState extends State<AyatulKursi> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(height: 10),
-                    Text(
-                      "Cards are used to represent content inside an elevated container. You can add any widgets inside a card.",
-                      style: TextStyle(fontSize: 14),
-                      textAlign: TextAlign.center,
-                    ),
                   ],
                 ),
               ),
