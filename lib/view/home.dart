@@ -250,7 +250,10 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 Navigator.of(context).pop(true); // Return true
               },
-              child: const Text('নিশ্চিত'),
+              child: const Text(
+                'নিশ্চিত',
+                style: TextStyle(fontFamily: 'Kalpurush'),
+              ),
             ),
           ],
         );
