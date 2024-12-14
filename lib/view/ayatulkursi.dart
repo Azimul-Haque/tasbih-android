@@ -57,13 +57,13 @@ class _AyatulKursiState extends State<AyatulKursi> {
                               return const CircularProgressIndicator();
                             } else if (isPlaying) {
                               return IconButton(
-                                icon: Icon(Icons.pause,
+                                icon: const Icon(Icons.pause,
                                     size: 36, color: Colors.green),
                                 onPressed: _audioPlayer.pause,
                               );
                             } else {
                               return IconButton(
-                                icon: Icon(Icons.play_arrow,
+                                icon: const Icon(Icons.play_arrow,
                                     size: 36, color: Colors.green),
                                 onPressed: _audioPlayer.play,
                               );
