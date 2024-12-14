@@ -67,7 +67,7 @@ class MyDrawer extends StatelessWidget {
               Positioned(
                 right: 3,
                 bottom: 3,
-                child: Text("Version: $appversion",
+                child: Text("Version: ",
                     style: const TextStyle(
                         color: Colors.white60,
                         fontSize: 11,
