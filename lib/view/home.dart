@@ -137,7 +137,7 @@ class _MyHomePageState extends State<MyHomePage> {
               'আজকের আয়াত: [$surah:$ayahnumber]\n$ayah\n($ahayinbn)',
               style: const TextStyle(
                 fontSize: 18,
-                // fontFamily: 'Kalpurush',
+                fontFamily: 'Kalpurush',
               ),
             ),
           ),
