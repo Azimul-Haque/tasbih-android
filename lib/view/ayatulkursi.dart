@@ -128,8 +128,9 @@ class _AyatulKursiState extends State<AyatulKursi> {
                                             max: maxDuration,
                                             activeColor: Colors
                                                 .lightBlue, // Buffered portion color
-                                            inactiveColor: Colors.grey
-                                                .shade400, // Remaining portion color
+                                            inactiveColor: Theme.of(context)
+                                                .colorScheme
+                                                .onPrimary, // Remaining portion color
                                             onChanged: null, // Non-draggable
                                           ),
                                         ),
