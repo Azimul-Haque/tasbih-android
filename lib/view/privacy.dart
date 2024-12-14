@@ -29,7 +29,7 @@ class _PrivacyPolicyState extends State<PrivacyPolicy> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          widget.title,
+          'Privacy Policy',
           style: const TextStyle(fontFamily: 'HindSiliguri'),
         ),
       ),
