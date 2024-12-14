@@ -48,7 +48,7 @@ class _AyatulKursiState extends State<AyatulKursi> {
                     color: Theme.of(context).colorScheme.primary,
                     child: Padding(
                       padding: const EdgeInsets.only(
-                          top: 5, left: 3, right: 15, bottom: 5),
+                          top: 5, left: 5, right: 15, bottom: 5),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
