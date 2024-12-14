@@ -222,25 +222,23 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   showConfirmDialogue() {
-return AlertDialog(
-          title: Text("Confirmation"),
-          content: Text("Are you sure you want to proceed?"),
-          actions: [
-            TextButton(
-              onPressed: () {
-                Navigator.of(context).pop(false); // Return false
-              },
-              child: Text("Cancel"),
-            ),
-            TextButton(
-              onPressed: () {
-                Navigator.of(context).pop(true); // Return true
-              },
-              child: Text("Confirm"),
-            ),
-          ],
-        );
-      },
+    return AlertDialog(
+      title: Text("Confirmation"),
+      content: Text("Are you sure you want to proceed?"),
+      actions: [
+        TextButton(
+          onPressed: () {
+            Navigator.of(context).pop(false); // Return false
+          },
+          child: Text("Cancel"),
+        ),
+        TextButton(
+          onPressed: () {
+            Navigator.of(context).pop(true); // Return true
+          },
+          child: Text("Confirm"),
+        ),
+      ],
     );
   }
 }
