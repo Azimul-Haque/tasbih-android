@@ -20,7 +20,7 @@ class _PrivacyPolicyState extends State<PrivacyPolicy> {
     // if (Platform.isAndroid) WebView.platform = SurfaceAndroidWebView();
     controller = WebViewController()
       ..loadRequest(
-        Uri.parse('https://bdhelpline.info/privacy-policy'),
+        Uri.parse('https://orbachinujbuk.com/tasbih-app/privacy-policy'),
       );
   }
 
