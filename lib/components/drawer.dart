@@ -32,7 +32,7 @@ class MyDrawer extends StatelessWidget {
                   backgroundImage: AssetImage(
                       'assets/images/ic_launcher.png'), // User avatar
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 5),
                 Text(
                   'John Doe',
                   style: TextStyle(
