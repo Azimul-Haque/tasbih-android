@@ -59,6 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
           IconButton(
             icon: const Icon(Icons.rotate_right),
             onPressed: () {
+              showConfirmDialogue();
               setState(() {
                 _counter = 0;
                 tasbihArabic = '';
