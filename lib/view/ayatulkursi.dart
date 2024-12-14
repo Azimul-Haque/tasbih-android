@@ -43,7 +43,7 @@ class _AyatulKursiState extends State<AyatulKursi> {
                 right: 10,
               ),
               child: Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.only(top: 5, left: 10, right: 10),
                 child: Card(
                   color: Theme.of(context).colorScheme.primary,
                   child: Column(
