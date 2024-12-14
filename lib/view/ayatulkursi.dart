@@ -158,7 +158,7 @@ class _AyatulKursiState extends State<AyatulKursi> {
                                     return Text(
                                       "${currentPosition.inMinutes}:${(currentPosition.inSeconds % 60).toString().padLeft(2, '0')} / "
                                       "${totalDuration.inMinutes}:${(totalDuration.inSeconds % 60).toString().padLeft(2, '0')}",
-                                      style: TextStyle(fontSize: 13),
+                                      style: const TextStyle(fontSize: 13),
                                     );
                                   },
                                 ),
