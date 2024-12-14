@@ -248,7 +248,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   tasbihArabic = '';
                   tasbihEnBn = '';
                 });
-                Navigator.of(context).pop();
+                Navigator.of(context).pop(true);
               },
               child: const Text(
                 'নিশ্চিত',
