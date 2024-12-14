@@ -1,4 +1,6 @@
 // import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
+
 String tasbihArabic = '';
 String tasbihEnBn = '';
 
@@ -59,7 +61,7 @@ String convertToBanglaNumber(String englishNumber) {
 //   );
 // }
 
-showSnackBar(String message) {
+showSnackBar(context, String message) {
   return ScaffoldMessenger.of(context).showSnackBar(
     SnackBar(
       content: Text(message),
