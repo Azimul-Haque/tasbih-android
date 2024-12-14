@@ -182,6 +182,7 @@ class _AyatulKursiState extends State<AyatulKursi> {
                       ),
                     ),
                   ),
+                  const SizedBox(height: 10),
                 ],
               ),
             ),
