@@ -44,7 +44,7 @@ class MyDrawer extends StatelessWidget {
                   'Version: 1.1.1',
                   style: TextStyle(
                     color: Colors.white70,
-                    fontSize: 14,
+                    fontSize: 12,
                   ),
                 ),
               ],
