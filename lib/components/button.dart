@@ -5,12 +5,14 @@ class MyButton extends StatelessWidget {
   final double titlesize;
   final Color color;
   final void Function() ontapfunction;
+  final String fontfamily;
   const MyButton({
     super.key,
     required this.title,
     required this.titlesize,
     required this.color,
     required this.ontapfunction,
+    required this.fontfamily,
   });
 
   @override
@@ -27,7 +29,7 @@ class MyButton extends StatelessWidget {
           child: Center(
               child: Text(
             title,
-            style: TextStyle(fontSize: titlesize),
+            style: TextStyle(fontSize: titlesize, fontFamily: ''),
           )),
         ), // Container
       ),
