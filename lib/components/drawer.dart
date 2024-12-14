@@ -26,7 +26,6 @@ class MyDrawer extends StatelessWidget {
                   height: 60,
                   width: 60,
                   decoration: BoxDecoration(
-                    boxShadow: [_boxShadow1()],
                     borderRadius: BorderRadius.circular(50),
                   ),
                   child: Image.asset("assets/images/ic_launcher.png"),
