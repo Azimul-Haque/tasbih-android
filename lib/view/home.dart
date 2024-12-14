@@ -229,7 +229,7 @@ class _MyHomePageState extends State<MyHomePage> {
       builder: (BuildContext context) {
         return AlertDialog(
           title: Text('নিশ্চিতকরণ'),
-          content: Text(message),
+          content: Text('আপনি কি নিশ্চিতভাবে কাউন্টারটি শূন্য করতে চান?'),
           actions: [
             TextButton(
               onPressed: () {
