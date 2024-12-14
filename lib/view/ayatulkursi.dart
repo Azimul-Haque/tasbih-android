@@ -42,123 +42,129 @@ class _AyatulKursiState extends State<AyatulKursi> {
                 left: 10,
                 right: 10,
               ),
-              child: Card(
-                color: Theme.of(context).colorScheme.primary,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        // Play/Pause Button
-                        StreamBuilder<PlayerState>(
-                          stream: _audioPlayer.playerStateStream,
-                          builder: (context, snapshot) {
-                            final playerState = snapshot.data;
-                            final isPlaying = playerState?.playing ?? false;
-                            final processingState =
-                                playerState?.processingState;
-
-                            if (processingState == ProcessingState.loading ||
-                                processingState == ProcessingState.buffering) {
-                              return const CircularProgressIndicator();
-                            } else if (isPlaying) {
-                              return IconButton(
-                                icon: const Icon(Icons.pause,
-                                    size: 36, color: Colors.green),
-                                onPressed: _audioPlayer.pause,
-                              );
-                            } else {
-                              return IconButton(
-                                icon: const Icon(Icons.play_arrow,
-                                    size: 36, color: Colors.green),
-                                onPressed: _audioPlayer.play,
-                              );
-                            }
-                          },
-                        ),
-
-                        // Progress Slider
-                        Expanded(
-                          child: // Slider for Played, Buffered, and Remaining Portions
-                              StreamBuilder<Duration>(
-                            stream: _audioPlayer.positionStream,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Card(
+                  color: Theme.of(context).colorScheme.primary,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          // Play/Pause Button
+                          StreamBuilder<PlayerState>(
+                            stream: _audioPlayer.playerStateStream,
                             builder: (context, snapshot) {
-                              final currentPosition =
-                                  snapshot.data ?? Duration.zero;
-                              final bufferedPosition = _audioPlayer
-                                  .bufferedPosition; // Buffered position
-                              final totalDuration =
-                                  _audioPlayer.duration ?? Duration.zero;
-                              // If totalDuration is null (audio is finished), use currentPosition
-                              final maxDuration = totalDuration.inSeconds > 0
-                                  ? totalDuration.inSeconds.toDouble()
-                                  : currentPosition.inSeconds.toDouble();
+                              final playerState = snapshot.data;
+                              final isPlaying = playerState?.playing ?? false;
+                              final processingState =
+                                  playerState?.processingState;
 
-                              return Stack(
-                                children: [
-                                  // Buffered portion
-                                  SliderTheme(
-                                    data: const SliderThemeData(
-                                      thumbShape: RoundSliderThumbShape(
-                                          enabledThumbRadius: 0), // Hide thumb
-                                      trackHeight:
-                                          2, // Make the track a bit thicker
+                              if (processingState == ProcessingState.loading ||
+                                  processingState ==
+                                      ProcessingState.buffering) {
+                                return const CircularProgressIndicator();
+                              } else if (isPlaying) {
+                                return IconButton(
+                                  icon: const Icon(Icons.pause,
+                                      size: 36, color: Colors.green),
+                                  onPressed: _audioPlayer.pause,
+                                );
+                              } else {
+                                return IconButton(
+                                  icon: const Icon(Icons.play_arrow,
+                                      size: 36, color: Colors.green),
+                                  onPressed: _audioPlayer.play,
+                                );
+                              }
+                            },
+                          ),
+
+                          // Progress Slider
+                          Expanded(
+                            child: // Slider for Played, Buffered, and Remaining Portions
+                                StreamBuilder<Duration>(
+                              stream: _audioPlayer.positionStream,
+                              builder: (context, snapshot) {
+                                final currentPosition =
+                                    snapshot.data ?? Duration.zero;
+                                final bufferedPosition = _audioPlayer
+                                    .bufferedPosition; // Buffered position
+                                final totalDuration =
+                                    _audioPlayer.duration ?? Duration.zero;
+                                // If totalDuration is null (audio is finished), use currentPosition
+                                final maxDuration = totalDuration.inSeconds > 0
+                                    ? totalDuration.inSeconds.toDouble()
+                                    : currentPosition.inSeconds.toDouble();
+
+                                return Stack(
+                                  children: [
+                                    // Buffered portion
+                                    SliderTheme(
+                                      data: const SliderThemeData(
+                                        thumbShape: RoundSliderThumbShape(
+                                            enabledThumbRadius:
+                                                0), // Hide thumb
+                                        trackHeight:
+                                            2, // Make the track a bit thicker
+                                      ),
+                                      child: Slider(
+                                        value: bufferedPosition.inSeconds
+                                            .toDouble(),
+                                        max: maxDuration,
+                                        activeColor: Colors
+                                            .lightBlue, // Buffered portion color
+                                        inactiveColor: Colors.grey
+                                            .shade400, // Remaining portion color
+                                        onChanged: null, // Non-draggable
+                                      ),
                                     ),
-                                    child: Slider(
+                                    // Played portion
+                                    Slider(
                                       value:
-                                          bufferedPosition.inSeconds.toDouble(),
+                                          currentPosition.inSeconds.toDouble(),
                                       max: maxDuration,
-                                      activeColor: Colors
-                                          .lightBlue, // Buffered portion color
-                                      inactiveColor: Colors.grey
-                                          .shade400, // Remaining portion color
-                                      onChanged: null, // Non-draggable
+                                      activeColor:
+                                          Colors.green, // Played portion color
+                                      inactiveColor: Colors
+                                          .transparent, // Transparent to show buffered color below
+                                      onChanged: (value) async {
+                                        await _audioPlayer.seek(
+                                            Duration(seconds: value.toInt()));
+                                      },
                                     ),
-                                  ),
-                                  // Played portion
-                                  Slider(
-                                    value: currentPosition.inSeconds.toDouble(),
-                                    max: maxDuration,
-                                    activeColor:
-                                        Colors.green, // Played portion color
-                                    inactiveColor: Colors
-                                        .transparent, // Transparent to show buffered color below
-                                    onChanged: (value) async {
-                                      await _audioPlayer.seek(
-                                          Duration(seconds: value.toInt()));
-                                    },
-                                  ),
-                                ],
-                              );
-                            },
+                                  ],
+                                );
+                              },
+                            ),
                           ),
-                        ),
 
-                        // Time Display
-                        SizedBox(
-                          width: 65, // Width of the volume slider
-                          child: // Time Display
-                              StreamBuilder<Duration>(
-                            stream: _audioPlayer.positionStream,
-                            builder: (context, snapshot) {
-                              final currentPosition =
-                                  snapshot.data ?? Duration.zero;
-                              final totalDuration =
-                                  _audioPlayer.duration ?? Duration.zero;
+                          // Time Display
+                          SizedBox(
+                            width: 65, // Width of the volume slider
+                            child: // Time Display
+                                StreamBuilder<Duration>(
+                              stream: _audioPlayer.positionStream,
+                              builder: (context, snapshot) {
+                                final currentPosition =
+                                    snapshot.data ?? Duration.zero;
+                                final totalDuration =
+                                    _audioPlayer.duration ?? Duration.zero;
 
-                              return Text(
-                                "${currentPosition.inMinutes}:${(currentPosition.inSeconds % 60).toString().padLeft(2, '0')} / "
-                                "${totalDuration.inMinutes}:${(totalDuration.inSeconds % 60).toString().padLeft(2, '0')}",
-                                style: TextStyle(fontSize: 13),
-                              );
-                            },
+                                return Text(
+                                  "${currentPosition.inMinutes}:${(currentPosition.inSeconds % 60).toString().padLeft(2, '0')} / "
+                                  "${totalDuration.inMinutes}:${(totalDuration.inSeconds % 60).toString().padLeft(2, '0')}",
+                                  style: TextStyle(fontSize: 13),
+                                );
+                              },
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 20),
-                  ],
+                        ],
+                      ),
+                      SizedBox(height: 20),
+                    ],
+                  ),
                 ),
               ),
             ),
