@@ -209,34 +209,7 @@ class _AyatulKursiState extends State<AyatulKursi> {
         ));
   }
 
-  Widget _thisCard(title, subtitle, IconData iconname1, IconData iconname2) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 5, left: 10, right: 10),
-      child: Card(
-        color: Theme.of(context).colorScheme.primary,
-        elevation: 1.5,
-        child: ListTile(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10.0),
-          ),
-          title: Text(
-            title,
-            style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-          ),
-          subtitle: Text(
-            subtitle,
-            style: const TextStyle(fontSize: 15),
-          ),
-          leading: Icon(iconname1),
-          trailing: Icon(iconname2),
-          onTap: () {
-            tasbihArabic = title;
-            tasbihEnBn = subtitle;
-            Navigator.pop(context);
-          },
-        ),
-      ),
-    );
+  
   }
 
   Future<void> _initializeAudio() async {
