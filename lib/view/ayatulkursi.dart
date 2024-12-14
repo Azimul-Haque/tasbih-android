@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:tasbih/globals.dart';
 
 class AyatulKursi extends StatefulWidget {
+  const AyatulKursi({super.key});
+
   @override
   State<AyatulKursi> createState() => _AyatulKursiState();
 }
