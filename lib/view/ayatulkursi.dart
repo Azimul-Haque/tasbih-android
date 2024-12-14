@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:tasbih/globals.dart';
 
-class TasbihList extends StatefulWidget {
+class AyatulKursi extends StatefulWidget {
   final String title;
 
-  const TasbihList({
+  const AyatulKursi({
     super.key,
     required this.title,
   });
 
   @override
-  State<TasbihList> createState() => _TasbihListState();
+  State<AyatulKursi> createState() => _AyatulKursiState();
 }
 
-class _TasbihListState extends State<TasbihList> {
+class _AyatulKursiState extends State<AyatulKursi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
