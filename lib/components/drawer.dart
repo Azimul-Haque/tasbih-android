@@ -44,9 +44,9 @@ class MyDrawer extends StatelessWidget {
                 const Positioned(
                   left: 30,
                   bottom: 40,
-                  child: Text("Infoline",
-                      style: const TextStyle(
-                          fontFamily: 'Calibri',
+                  child: Text("ডিজিটাল তসবি",
+                      style: TextStyle(
+                          fontFamily: 'Kalpurush',
                           color: Colors.white,
                           fontSize: 16)),
                 ),
