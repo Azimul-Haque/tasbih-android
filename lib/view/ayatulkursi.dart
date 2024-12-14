@@ -209,9 +209,6 @@ class _AyatulKursiState extends State<AyatulKursi> {
         ));
   }
 
-  
-  }
-
   Future<void> _initializeAudio() async {
     try {
       await _audioPlayer.setUrl(audioUrl); // Load the audio file from URL
