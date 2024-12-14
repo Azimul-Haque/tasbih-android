@@ -125,7 +125,12 @@ class _MyHomePageState extends State<MyHomePage> {
                         ontapfunction: _incrementCounter,
                         fontfamily: 'Kalpurush'),
                   ),
-                  const Text('উপরের বক্সে ট্যাপ করুন'),
+                  const Text(
+                    'উপরের বক্সে ট্যাপ করুন',
+                    style: TextStyle(
+                      fontSize: 14,
+                    ),
+                  ),
                 ],
               ),
             ),
