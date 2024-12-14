@@ -65,7 +65,8 @@ showSnackBar(context, String message) {
   return ScaffoldMessenger.of(context).showSnackBar(
     SnackBar(
       content: Text(message),
-      duration: Duration(seconds: 3), // Snackbar will disappear in 3 seconds
+      duration:
+          const Duration(seconds: 3), // Snackbar will disappear in 3 seconds
     ),
   );
 }
