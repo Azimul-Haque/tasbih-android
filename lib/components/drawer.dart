@@ -17,7 +17,7 @@ class MyDrawer extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: [
           DrawerHeader(
-            margin: EdgeInsets.zero,
+            // margin: EdgeInsets.zero,
             decoration: const BoxDecoration(
               // Image.asset("assets/images/drawer.jpg")
               color: Colors.blue,
