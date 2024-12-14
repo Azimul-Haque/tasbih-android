@@ -19,6 +19,12 @@ class _AyatulKursiState extends State<AyatulKursi> {
       "https://cdn.islamic.network/quran/audio/128/ar.alafasy/262.mp3";
 
   @override
+  void initState() {
+    super.initState();
+    _initializeAudio();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Theme.of(context).colorScheme.surface,
