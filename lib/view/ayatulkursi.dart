@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
-import 'package:tasbih/globals.dart';
 
 class AyatulKursi extends StatefulWidget {
   const AyatulKursi({super.key});
