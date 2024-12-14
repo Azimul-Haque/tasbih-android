@@ -139,8 +139,9 @@ class _AyatulKursiState extends State<AyatulKursi> {
                                           value: currentPosition.inSeconds
                                               .toDouble(),
                                           max: maxDuration,
-                                          activeColor: Colors
-                                              .green, // Played portion color
+                                          activeColor: Theme.of(context)
+                                              .colorScheme
+                                              .onPrimary, // Played portion color
                                           inactiveColor: Colors
                                               .transparent, // Transparent to show buffered color below
                                           onChanged: (value) async {
