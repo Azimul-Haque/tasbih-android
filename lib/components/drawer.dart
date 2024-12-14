@@ -65,8 +65,14 @@ class MyDrawer extends StatelessWidget {
             title: const Text('আয়াতুল কুরসি',
                 style: TextStyle(fontFamily: 'Kalpurush')),
             onTap: () {
-              // Update the state of the app.
-              // ...
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const TasbihList(
+                    title: 'Tasbih List - তসবি তালিকা',
+                  ),
+                ),
+              );
             },
           ),
           const Divider(thickness: .5),
