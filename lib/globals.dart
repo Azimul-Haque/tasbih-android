@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 String tasbihArabic = '';
 String tasbihEnBn = '';
+String appversion = '1.0.0';
 
 String convertToBanglaNumber(String englishNumber) {
   const englishToBanglaDigits = {
