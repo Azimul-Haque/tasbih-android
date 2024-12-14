@@ -44,7 +44,8 @@ class _AyatulKursiState extends State<AyatulKursi> {
                   Card(
                     color: Theme.of(context).colorScheme.primary,
                     child: Padding(
-                      padding: const EdgeInsets.all(0.0),
+                      padding: const EdgeInsets.only(
+                          top: 5, left: 0, right: 5, bottom: 5),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
