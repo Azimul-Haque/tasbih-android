@@ -41,7 +41,7 @@ class MyDrawer extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  'john.doe@example.com',
+                  'Version: ',
                   style: TextStyle(
                     color: Colors.white70,
                     fontSize: 14,
