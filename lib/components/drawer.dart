@@ -16,65 +16,6 @@ class MyDrawer extends StatelessWidget {
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
-          Stack(
-            children: <Widget>[
-              Image.asset("assets/images/drawer.jpg"),
-              Positioned(
-                left: 30,
-                bottom: 70,
-                child: Container(
-                  height: 60,
-                  width: 60,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(50),
-                  ),
-                  child: Image.asset("assets/images/ic_launcher.png"),
-                  // ClipRRect(
-                  //   borderRadius: BorderRadius.circular(50.0),
-                  //   child: Image.asset("assets/images/withouttext.png"),
-                  // ),
-                ),
-              ),
-              Positioned(
-                left: 30,
-                bottom: 40,
-                child: Text("Infoline",
-                    style: const TextStyle(
-                        fontFamily: 'Calibri',
-                        color: Colors.white,
-                        fontSize: 16)),
-              ),
-              // Positioned(
-              //   left: 30,
-              //   bottom: 25,
-              //   child: Text(userdatasp[0]['mobile'] ?? '',
-              //       style: const TextStyle(color: Colors.white70, fontSize: 13)),
-              // ),
-              Positioned(
-                right: 10,
-                bottom: 30,
-                child: IconButton(
-                  padding: const EdgeInsets.all(0.0),
-                  icon: const Icon(
-                    Icons.edit,
-                    color: Colors.white,
-                  ),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                ),
-              ),
-              Positioned(
-                right: 3,
-                bottom: 3,
-                child: Text("Version: ",
-                    style: const TextStyle(
-                        color: Colors.white60,
-                        fontSize: 11,
-                        fontFamily: 'Arial')),
-              ),
-            ],
-          ),
           const DrawerHeader(
             // margin: EdgeInsets.zero,
             decoration: BoxDecoration(
