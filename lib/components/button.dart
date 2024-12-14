@@ -5,7 +5,7 @@ class MyButton extends StatelessWidget {
   final double titlesize;
   final Color color;
   final void Function() ontapfunction;
-  final String fontfamily;
+  String fontfamily;
   const MyButton({
     super.key,
     required this.title,
