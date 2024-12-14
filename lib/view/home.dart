@@ -228,7 +228,7 @@ class _MyHomePageState extends State<MyHomePage> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text(title),
+          title: Text('নিশ্চিতকরণ'),
           content: Text(message),
           actions: [
             TextButton(
