@@ -241,7 +241,10 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 Navigator.of(context).pop(false); // Return false
               },
-              child: Text('ফিরে যান'),
+              child: const Text(
+                'ফিরে যান',
+                style: TextStyle(fontFamily: 'Kalpurush'),
+              ),
             ),
             TextButton(
               onPressed: () {
