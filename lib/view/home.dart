@@ -236,9 +236,12 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 Navigator.of(context).pop(false); // Return false
               },
-              child: const Text(
+              child: Text(
                 'ফিরে যান',
-                style: TextStyle(fontFamily: 'Kalpurush'),
+                style: TextStyle(
+                  fontFamily: 'Kalpurush',
+                  color: Theme.of(context).colorScheme.onPrimary,
+                ),
               ),
             ),
             TextButton(
@@ -250,7 +253,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 });
                 Navigator.of(context).pop(true);
               },
-              child: const Text(
+              child: Text(
                 'নিশ্চিত',
                 style: TextStyle(fontFamily: 'Kalpurush'),
               ),
