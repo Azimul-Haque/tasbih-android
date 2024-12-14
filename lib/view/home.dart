@@ -152,7 +152,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 Text(
-                  '$ayah\n$ahayinbn',
+                  ayah,
                   style: const TextStyle(fontSize: 17),
                 ),
                 Text(
