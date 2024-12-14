@@ -68,6 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
             onPressed: () {
               // Action for Settings
             },
+            tooltip: 'সেটিংস',
           ),
         ],
       ),
