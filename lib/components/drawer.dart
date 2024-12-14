@@ -19,6 +19,7 @@ class MyDrawer extends StatelessWidget {
           const DrawerHeader(
             // margin: EdgeInsets.zero,
             decoration: BoxDecoration(
+              image: DecorationImage(image: image),
               color: Colors.blue,
             ),
             child: Text(
