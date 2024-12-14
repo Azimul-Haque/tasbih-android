@@ -20,7 +20,7 @@ class _PrivacyPolicyState extends State<PrivacyPolicy> {
     // if (Platform.isAndroid) WebView.platform = SurfaceAndroidWebView();
     controller = WebViewController()
       ..loadRequest(
-        Uri.parse('$baseAPIURL/privacy-policy'),
+        Uri.parse('https://orbachinujbuk.com/tasbih-app/privacy-policy.php'),
       );
   }
 
@@ -36,7 +36,7 @@ class _PrivacyPolicyState extends State<PrivacyPolicy> {
         ),
         title: const Text(
           "Terms & Conditions",
-          style: const TextStyle(
+          style: TextStyle(
             fontFamily: 'Arial',
             fontWeight: FontWeight.bold,
             color: Colors.white,
