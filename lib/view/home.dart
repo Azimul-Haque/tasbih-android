@@ -61,6 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
             onPressed: () {
               showConfirmationDialog();
             },
+            tooltip: 'মুছে দিন',
           ),
           IconButton(
             icon: const Icon(Icons.settings),
