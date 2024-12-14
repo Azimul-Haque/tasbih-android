@@ -43,6 +43,7 @@ class _AyatulKursiState extends State<AyatulKursi> {
                 right: 10,
               ),
               child: Card(
+                margin: EdgeInsets.all(10),
                 color: Theme.of(context).colorScheme.primary,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
