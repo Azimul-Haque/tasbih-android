@@ -25,7 +25,7 @@ class MyDrawer extends StatelessWidget {
             child: Stack(
               children: <Widget>[
                 Image.asset("assets/images/drawer.jpg"),
-                const Positioned(
+                Positioned(
                   left: 30,
                   bottom: 70,
                   child: Container(
@@ -60,8 +60,8 @@ class MyDrawer extends StatelessWidget {
                   right: 10,
                   bottom: 30,
                   child: IconButton(
-                    padding: const EdgeInsets.all(0.0),
-                    icon: const Icon(
+                    padding: EdgeInsets.all(0.0),
+                    icon: Icon(
                       Icons.edit,
                       color: Colors.white,
                     ),
