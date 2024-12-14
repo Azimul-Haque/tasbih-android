@@ -35,10 +35,10 @@ class MyDrawer extends StatelessWidget {
                 Text(
                   'John Doe',
                   style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Kalpurush'),
                 ),
                 Text(
                   'Version: 1.1.1',
