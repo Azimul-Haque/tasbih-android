@@ -43,7 +43,7 @@ class _AyatulKursiState extends State<AyatulKursi> {
                 borderRadius: BorderRadius.circular(10), // Rounded corners
               ),
               child: Padding(
-                padding: EdgeInsets.all(16.0), // Padding inside the card
+                padding: EdgeInsets.all(5.0), // Padding inside the card
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
