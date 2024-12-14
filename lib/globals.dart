@@ -58,3 +58,10 @@ String convertToBanglaNumber(String englishNumber) {
 //     ),
 //   );
 // }
+
+ScaffoldMessenger.of(context).showSnackBar(
+  SnackBar(
+    content: Text("This is a simple Snackbar!"),
+    duration: Duration(seconds: 3), // Snackbar will disappear in 3 seconds
+  ),
+);
