@@ -28,7 +28,7 @@ class MyDrawer extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 CircleAvatar(
-                  radius: 40,
+                  radius: 20,
                   backgroundImage: AssetImage('assets/images/ic_launcher.png'),
                 ),
                 SizedBox(height: 5),
