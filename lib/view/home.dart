@@ -268,9 +268,10 @@ class _MyHomePageState extends State<MyHomePage> {
           await Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (context) => const TasbihList(
-                      title: 'Tasbih List - তসবি তালিকা',
-                    )),
+              builder: (context) => const TasbihList(
+                title: 'Tasbih List - তসবি তালিকা',
+              ),
+            ),
           );
           setState(() {
             // Trigger rebuild to show updated tasbihEnBn value
