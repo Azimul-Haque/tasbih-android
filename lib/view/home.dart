@@ -232,7 +232,10 @@ class _MyHomePageState extends State<MyHomePage> {
             'নিশ্চিতকরণ',
             style: TextStyle(fontFamily: 'Kalpurush'),
           ),
-          content: Text('আপনি কি নিশ্চিতভাবে কাউন্টারটি শূন্য করতে চান?'),
+          content: const Text(
+            'আপনি কি নিশ্চিতভাবে কাউন্টারটি শূন্য করতে চান?',
+            style: TextStyle(fontFamily: 'Kalpurush'),
+          ),
           actions: [
             TextButton(
               onPressed: () {
