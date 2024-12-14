@@ -62,7 +62,7 @@ class MyDrawer extends StatelessWidget {
           const Divider(thickness: .5),
           ListTile(
             leading: const Icon(Icons.privacy_tip_outlined),
-            title: const Text('প্রাইভেসি পলিসি',
+            title: const Text('আয়াতুল কুরসি',
                 style: TextStyle(fontFamily: 'Kalpurush')),
             onTap: () {
               // Update the state of the app.
