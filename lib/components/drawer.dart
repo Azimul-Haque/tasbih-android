@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tasbih/view/ayatulkursi.dart';
 
 class MyDrawer extends StatelessWidget {
   final Color? color;
@@ -68,9 +69,7 @@ class MyDrawer extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const TasbihList(
-                    title: 'Tasbih List - তসবি তালিকা',
-                  ),
+                  builder: (context) => AyatulKursi(),
                 ),
               );
             },
