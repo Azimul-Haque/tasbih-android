@@ -28,7 +28,10 @@ class MyDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.light_mode_outlined),
-            title: const Text('থিম পরিবর্তন'),
+            title: const Text(
+              'থিম পরিবর্তন',
+              style: TextStyle(fontFamily: 'HindSiliguri'),
+            ),
             trailing: switchdata,
             onTap: () {},
           ),
