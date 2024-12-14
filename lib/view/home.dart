@@ -143,9 +143,9 @@ class _MyHomePageState extends State<MyHomePage> {
             padding: const EdgeInsets.all(15.0),
             child: Column(
               children: [
-                const Text(
+                Text(
                   'আজকের আয়াত: [$surah:$ayahnumber]',
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 18,
                     fontFamily: 'Kalpurush',
                   ),
