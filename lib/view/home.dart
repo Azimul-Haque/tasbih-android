@@ -130,7 +130,7 @@ class _MyHomePageState extends State<MyHomePage> {
             padding: const EdgeInsets.all(20.0),
             child: Text(
               'আজকের আয়াত: [$surah:$ayahnumber] \n$ayah ($ahayinbn)',
-              style: const TextStyle(fontSize: 18),
+              style: const TextStyle(fontSize: 18, fontFamily: 'Kalpurush'),
             ),
           ),
           const SizedBox(height: 50),
