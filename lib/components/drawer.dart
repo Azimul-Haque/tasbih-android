@@ -20,7 +20,7 @@ class MyDrawer extends StatelessWidget {
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/images/drawer.jpg'),
-                fit: BoxFit.cover, // Cover the entire header
+                fit: BoxFit.cover,
               ),
             ),
             child: Column(
