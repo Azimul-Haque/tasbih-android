@@ -16,13 +16,13 @@ class MyDrawer extends StatelessWidget {
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
-          DrawerHeader(
+          const DrawerHeader(
             // margin: EdgeInsets.zero,
             decoration: BoxDecoration(
               // Image.asset("assets/images/drawer.jpg")
               color: Colors.blue,
             ),
-            child: const Text(
+            child: Text(
               'ডিজিটাল তসবি',
               style: TextStyle(fontSize: 25, fontFamily: 'Kalpurush'),
             ),
