@@ -19,7 +19,10 @@ class _TasbihListState extends State<TasbihList> {
     return Scaffold(
         backgroundColor: Theme.of(context).colorScheme.surface,
         appBar: AppBar(
-          title: Text(widget.title),
+          title: Text(
+            widget.title,
+            style: TextStyle(fontFamily: 'Kalpurush'),
+          ),
         ),
         body: ListView(
           children: [
