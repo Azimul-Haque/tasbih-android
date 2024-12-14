@@ -149,7 +149,7 @@ class _AyatulKursiState extends State<AyatulKursi> {
 
                               // Time Display
                               SizedBox(
-                                width: 65, // Width of the volume slider
+                                width: 70, // Width of the volume slider
                                 child: // Time Display
                                     StreamBuilder<Duration>(
                                   stream: _audioPlayer.positionStream,
