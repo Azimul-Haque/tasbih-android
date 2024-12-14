@@ -27,7 +27,124 @@ class _AyatulKursiState extends State<AyatulKursi> {
                 left: 10,
                 right: 10,
               ),
-              child: Text('test'),
+              child: Card(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        // Play/Pause Button
+                        StreamBuilder<PlayerState>(
+                          stream: _audioPlayer.playerStateStream,
+                          builder: (context, snapshot) {
+                            final playerState = snapshot.data;
+                            final isPlaying = playerState?.playing ?? false;
+                            final processingState =
+                                playerState?.processingState;
+
+                            if (processingState == ProcessingState.loading ||
+                                processingState == ProcessingState.buffering) {
+                              return CircularProgressIndicator();
+                            } else if (isPlaying) {
+                              return IconButton(
+                                icon: Icon(Icons.pause,
+                                    size: 36, color: Colors.green),
+                                onPressed: _audioPlayer.pause,
+                              );
+                            } else {
+                              return IconButton(
+                                icon: Icon(Icons.play_arrow,
+                                    size: 36, color: Colors.green),
+                                onPressed: _audioPlayer.play,
+                              );
+                            }
+                          },
+                        ),
+
+                        // Progress Slider
+                        Expanded(
+                          child: // Slider for Played, Buffered, and Remaining Portions
+                              StreamBuilder<Duration>(
+                            stream: _audioPlayer.positionStream,
+                            builder: (context, snapshot) {
+                              final currentPosition =
+                                  snapshot.data ?? Duration.zero;
+                              final bufferedPosition = _audioPlayer
+                                  .bufferedPosition; // Buffered position
+                              final totalDuration =
+                                  _audioPlayer.duration ?? Duration.zero;
+                              // If totalDuration is null (audio is finished), use currentPosition
+                              final maxDuration = totalDuration.inSeconds > 0
+                                  ? totalDuration.inSeconds.toDouble()
+                                  : currentPosition.inSeconds.toDouble();
+
+                              return Stack(
+                                children: [
+                                  // Buffered portion
+                                  SliderTheme(
+                                    data: const SliderThemeData(
+                                      thumbShape: RoundSliderThumbShape(
+                                          enabledThumbRadius: 0), // Hide thumb
+                                      trackHeight:
+                                          2, // Make the track a bit thicker
+                                    ),
+                                    child: Slider(
+                                      value:
+                                          bufferedPosition.inSeconds.toDouble(),
+                                      max: maxDuration,
+                                      activeColor: Colors
+                                          .lightBlue, // Buffered portion color
+                                      inactiveColor: Colors.grey
+                                          .shade400, // Remaining portion color
+                                      onChanged: null, // Non-draggable
+                                    ),
+                                  ),
+                                  // Played portion
+                                  Slider(
+                                    value: currentPosition.inSeconds.toDouble(),
+                                    max: maxDuration,
+                                    activeColor:
+                                        Colors.green, // Played portion color
+                                    inactiveColor: Colors
+                                        .transparent, // Transparent to show buffered color below
+                                    onChanged: (value) async {
+                                      await _audioPlayer.seek(
+                                          Duration(seconds: value.toInt()));
+                                    },
+                                  ),
+                                ],
+                              );
+                            },
+                          ),
+                        ),
+
+                        // Time Display
+                        SizedBox(
+                          width: 65, // Width of the volume slider
+                          child: // Time Display
+                              StreamBuilder<Duration>(
+                            stream: _audioPlayer.positionStream,
+                            builder: (context, snapshot) {
+                              final currentPosition =
+                                  snapshot.data ?? Duration.zero;
+                              final totalDuration =
+                                  _audioPlayer.duration ?? Duration.zero;
+
+                              return Text(
+                                "${currentPosition.inMinutes}:${(currentPosition.inSeconds % 60).toString().padLeft(2, '0')} / "
+                                "${totalDuration.inMinutes}:${(totalDuration.inSeconds % 60).toString().padLeft(2, '0')}",
+                                style: TextStyle(fontSize: 13),
+                              );
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 20),
+                  ],
+                ),
+              ),
             ),
             _thisCard('أَسْتَغْفِرُ ٱللَّٰهَ',
                 'Astaghfirullah - আসতাগফিরুল্লাহ', Icons.label, Icons.check),
