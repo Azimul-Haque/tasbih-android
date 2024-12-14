@@ -33,7 +33,7 @@ class MyDrawer extends StatelessWidget {
                 ),
                 SizedBox(height: 5),
                 Text(
-                  'John Doe',
+                  'ডিজিটাল তসবি',
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
