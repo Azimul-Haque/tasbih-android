@@ -60,11 +60,6 @@ class _MyHomePageState extends State<MyHomePage> {
             icon: const Icon(Icons.rotate_right),
             onPressed: () {
               showConfirmationDialog();
-              // setState(() {
-              //   _counter = 0;
-              //   tasbihArabic = '';
-              //   tasbihEnBn = '';
-              // });
             },
           ),
           IconButton(
