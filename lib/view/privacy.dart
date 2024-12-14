@@ -1,47 +1,60 @@
+// import 'dart:io';
+import 'package:bdhelpline/globals.dart';
 import 'package:flutter/material.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
-class PrivacyPage extends StatelessWidget {
-  const PrivacyPage({Key? key}) : super(key: key);
+class PrivacyPolicy extends StatefulWidget {
+  const PrivacyPolicy({Key? key}) : super(key: key);
+
+  @override
+  _PrivacyPolicyState createState() => _PrivacyPolicyState();
+}
+
+class _PrivacyPolicyState extends State<PrivacyPolicy> {
+  late WebViewController controller;
+
+  @override
+  void initState() {
+    super.initState();
+    // Enable virtual display.
+    // if (Platform.isAndroid) WebView.platform = SurfaceAndroidWebView();
+    controller = WebViewController()
+      ..loadRequest(
+        Uri.parse('$baseAPIURL/privacy-policy'),
+      );
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'শর্তাবলী',
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        title: const Text(
+          "Terms & Conditions",
           style: const TextStyle(
-            fontFamily: 'HindSiliguri',
+            fontFamily: 'Arial',
             fontWeight: FontWeight.bold,
+            color: Colors.white,
           ),
         ),
+        flexibleSpace: appBarStyle(),
+        backgroundColor: Colors.transparent,
+        automaticallyImplyLeading: true,
+        iconTheme: const IconThemeData(color: Colors.white),
       ),
-      body: Container(
-        margin: EdgeInsets.all(20),
-        width: double.infinity,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            ElevatedButton(
-              style: ButtonStyle(
-                shape: WidgetStateProperty.all<RoundedRectangleBorder>(
-                  RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(18.0),
-                  ),
-                ),
-                elevation: WidgetStateProperty.all(1),
-              ),
-              onPressed: () {
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => PrivacyPage()));
-              },
-              child: Text(
-                'শর্তাবলী',
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
-          ],
-        ),
+      body: WebViewWidget(
+        controller: controller,
       ),
+      // const WebView(
+      //   initialUrl: '$baseAPIURL/privacy-policy',
+      //   javascriptMode: JavascriptMode.unrestricted,
+      //   gestureNavigationEnabled: true,
+      // ),
     );
   }
 }
