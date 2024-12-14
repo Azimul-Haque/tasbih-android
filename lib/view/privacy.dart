@@ -42,7 +42,7 @@ class _PrivacyPolicyState extends State<PrivacyPolicy> {
             color: Colors.white,
           ),
         ),
-        flexibleSpace: appBarStyle(),
+        // flexibleSpace: appBarStyle(),
         backgroundColor: Colors.transparent,
         automaticallyImplyLeading: true,
         iconTheme: const IconThemeData(color: Colors.white),
