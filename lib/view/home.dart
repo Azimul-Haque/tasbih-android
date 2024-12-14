@@ -153,12 +153,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 Text(
                   ayah,
-                  style: const TextStyle(fontSize: 18),
+                  style: const TextStyle(fontSize: 17),
                 ),
                 Text(
                   '($ahayinbn)',
                   style: const TextStyle(
-                    fontSize: 18,
+                    fontSize: 17,
                     fontFamily: 'HindSiliguri',
                   ),
                 ),
