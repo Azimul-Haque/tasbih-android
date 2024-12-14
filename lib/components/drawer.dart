@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tasbih/view/ayatulkursi.dart';
+import 'package:tasbih/view/privacy.dart';
 
 class MyDrawer extends StatelessWidget {
   final Color? color;
@@ -81,8 +82,13 @@ class MyDrawer extends StatelessWidget {
             title: const Text('প্রাইভেসি পলিসি',
                 style: TextStyle(fontFamily: 'Kalpurush')),
             onTap: () {
-              // Update the state of the app.
-              // ...
+              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const PrivacyPolicy(),
+                ),
+              );
             },
           ),
           const Divider(thickness: .5),
