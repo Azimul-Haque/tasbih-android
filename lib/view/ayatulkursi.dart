@@ -210,7 +210,7 @@ class _AyatulKursiState extends State<AyatulKursi> {
     try {
       await _audioPlayer.setUrl(audioUrl); // Load the audio file from URL
     } catch (e) {
-      print("Error loading audio: $e");
+      showSnackBar(context, 'Check internet connection!');
     }
 
     // Listen for when the audio finishes
