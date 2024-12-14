@@ -144,10 +144,10 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Column(
               children: [
                 Text(
-                  'আজকের আয়াত: [$surah:$ayahnumber]\n$ayah\n($ahayinbn)',
+                  'আজকের আয়াত:',
                   style: const TextStyle(
                     fontSize: 18,
-                    fontFamily: 'HindSiliguri',
+                    fontFamily: 'Kalpurush',
                   ),
                 ),
                 Text(
