@@ -56,7 +56,6 @@ class _MyHomePageState extends State<MyHomePage> {
     super.initState();
     getAnAyah();
     loadJsonData();
-    _initializeAudio();
   }
 
   @override
@@ -331,53 +330,6 @@ class _MyHomePageState extends State<MyHomePage> {
     return bnayahs.firstWhere((ayah) => ayah.id == ayahnumber,
         orElse: () =>
             AyahModel(id: '0', sura: '0', aya: '0', text: 'Not Found'));
-  }
-
-  Future<void> _initializeAudio() async {
-    try {
-      await _audioPlayer.setUrl(audioUrl); // Load the audio file from URL
-    } catch (e) {
-      print("Error loading audio: $e");
-    }
-
-    // Listen for when the audio finishes
-    _audioPlayer.playerStateStream.listen((state) {
-      if (state.processingState == ProcessingState.completed) {
-        // When audio finishes, reset the slider to 0 and stop
-        _audioPlayer.seek(Duration.zero);
-        setState(() {
-          // Ensure the play button is visible and audio remains paused
-          _audioPlayer.pause();
-        });
-      }
-    });
-  }
-
-  void _playAudio() async {
-    await _audioPlayer.play();
-    setState(() {
-      isPlaying = true;
-    });
-  }
-
-  void _pauseAudio() async {
-    await _audioPlayer.pause();
-    setState(() {
-      isPlaying = false;
-    });
-  }
-
-  void _stopAudio() async {
-    await _audioPlayer.stop();
-    setState(() {
-      isPlaying = false;
-    });
-  }
-
-  @override
-  void dispose() {
-    _audioPlayer.dispose(); // Release resources
-    super.dispose();
   }
 }
 
