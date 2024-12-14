@@ -112,18 +112,21 @@ class _MyHomePageState extends State<MyHomePage> {
           const SizedBox(height: 20),
           Expanded(
             child: Center(
-              child: MyBox(
-                height: 150,
-                widht: 150,
-                color: Theme.of(context).colorScheme.secondary,
-                child: MyButton(
-                    title: convertToBanglaNumber('$_counter'),
-                    titlesize: 50,
-                    color: Theme.of(context).colorScheme.primary,
-                    ontapfunction: _incrementCounter,
-                    fontfamily: 'Kalpurush'),
-              ),
-            ),
+                child: Column(
+              children: [
+                MyBox(
+                  height: 150,
+                  widht: 150,
+                  color: Theme.of(context).colorScheme.secondary,
+                  child: MyButton(
+                      title: convertToBanglaNumber('$_counter'),
+                      titlesize: 50,
+                      color: Theme.of(context).colorScheme.primary,
+                      ontapfunction: _incrementCounter,
+                      fontfamily: 'Kalpurush'),
+                ),
+              ],
+            )),
           ),
           const SizedBox(height: 50),
           Padding(
