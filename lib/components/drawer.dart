@@ -43,7 +43,7 @@ class MyDrawer extends StatelessWidget {
                       fontFamily: 'Kalpurush'),
                 ),
                 Text(
-                  'Version: 1.1.1',
+                  'Version: $appversion',
                   style: TextStyle(
                     color: Colors.white70,
                     fontSize: 12,
