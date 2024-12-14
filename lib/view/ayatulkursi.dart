@@ -72,7 +72,7 @@ class _AyatulKursiState extends State<AyatulKursi> {
                                     return const CircularProgressIndicator();
                                   } else if (isPlaying) {
                                     return IconButton(
-                                      icon: const Icon(Icons.pause,
+                                      icon: Icon(Icons.pause,
                                           size: 36,
                                           color: Theme.of(context)
                                               .colorScheme
