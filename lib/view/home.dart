@@ -54,7 +54,10 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.surface,
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text(
+          widget.title,
+          style: TextStyle(fontFamily: 'Kalpurush'),
+        ),
         actions: [
           IconButton(
             icon: const Icon(Icons.rotate_right),
