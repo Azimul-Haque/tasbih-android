@@ -49,7 +49,7 @@ class _AyatulKursiState extends State<AyatulKursi> {
                     Text(
                       "This is a Card",
                       style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 15,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
