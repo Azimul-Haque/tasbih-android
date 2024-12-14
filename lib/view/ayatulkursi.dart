@@ -23,6 +23,14 @@ class _AyatulKursiState extends State<AyatulKursi> {
   }
 
   @override
+  void dispose() {
+    // Stop the audio player and dispose of its resources
+    _audioPlayer.stop(); // Stop the playback
+    _audioPlayer.dispose(); // Free resources
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Theme.of(context).colorScheme.surface,
