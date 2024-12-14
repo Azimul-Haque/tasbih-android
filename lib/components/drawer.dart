@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tasbih/view/ayatulkursi.dart';
-import 'package:tasbih/view/privacy.dart';
+import 'package:tasbih/view/privacypolicy.dart';
 
 class MyDrawer extends StatelessWidget {
   final Color? color;
