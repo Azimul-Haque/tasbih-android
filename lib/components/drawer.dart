@@ -19,8 +19,8 @@ class MyDrawer extends StatelessWidget {
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
-          const DrawerHeader(
-            decoration: BoxDecoration(
+          DrawerHeader(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/images/drawer.jpg'),
                 fit: BoxFit.cover,
@@ -30,12 +30,12 @@ class MyDrawer extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                CircleAvatar(
+                const CircleAvatar(
                   radius: 35,
                   backgroundImage: AssetImage('assets/images/ic_launcher.png'),
                 ),
-                SizedBox(height: 5),
-                Text(
+                const SizedBox(height: 5),
+                const Text(
                   'ডিজিটাল তসবি',
                   style: TextStyle(
                       color: Colors.white,
@@ -44,8 +44,8 @@ class MyDrawer extends StatelessWidget {
                       fontFamily: 'Kalpurush'),
                 ),
                 Text(
-                  'Version: $appversion',
-                  style: TextStyle(
+                  'Version: ' + appversion,
+                  style: const TextStyle(
                     color: Colors.white70,
                     fontSize: 12,
                   ),
