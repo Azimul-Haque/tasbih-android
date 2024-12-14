@@ -37,7 +37,7 @@ class _AyatulKursiState extends State<AyatulKursi> {
         appBar: AppBar(
           title: const Text(
             'আয়াতুল কুরসি - آية الكرسي',
-            style: TextStyle(fontFamily: 'Kalpurush'),
+            style: TextStyle(fontFamily: 'HindSiliguri'),
           ),
         ),
         body: ListView(
