@@ -58,7 +58,8 @@ class MyDrawer extends StatelessWidget {
           const Divider(thickness: .5),
           ListTile(
             leading: const Icon(Icons.share),
-            title: const Text('শেয়ার করুন'),
+            title: const Text('শেয়ার করুন',
+                style: TextStyle(fontFamily: 'Kalpurush')),
             onTap: () {
               // Update the state of the app.
               // ...
