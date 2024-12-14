@@ -76,7 +76,7 @@ class _AyatulKursiState extends State<AyatulKursi> {
                                           size: 36,
                                           color: Theme.of(context)
                                               .colorScheme
-                                              .surface),
+                                              .secondary),
                                       onPressed: _audioPlayer.pause,
                                     );
                                   } else {
@@ -85,7 +85,7 @@ class _AyatulKursiState extends State<AyatulKursi> {
                                           size: 36,
                                           color: Theme.of(context)
                                               .colorScheme
-                                              .surface),
+                                              .secondary),
                                       onPressed: _audioPlayer.play,
                                     );
                                   }
