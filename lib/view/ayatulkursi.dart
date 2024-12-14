@@ -29,7 +29,10 @@ class _AyatulKursiState extends State<AyatulKursi> {
     return Scaffold(
         backgroundColor: Theme.of(context).colorScheme.surface,
         appBar: AppBar(
-          title: const Text('আয়াতুল কুরসি'),
+          title: const Text(
+            'আয়াতুল কুরসি',
+            style: TextStyle(fontFamily: 'Kalpurush'),
+          ),
         ),
         body: ListView(
           children: [
