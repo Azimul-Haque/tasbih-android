@@ -28,9 +28,9 @@ class _PrivacyPolicyState extends State<PrivacyPolicy> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Privacy Policy',
-          style: const TextStyle(fontFamily: 'HindSiliguri'),
+          style: TextStyle(fontFamily: 'HindSiliguri'),
         ),
       ),
       body: WebViewWidget(
