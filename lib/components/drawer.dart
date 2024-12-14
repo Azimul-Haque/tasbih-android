@@ -17,6 +17,42 @@ class MyDrawer extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: [
           DrawerHeader(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(
+                    'assets/images/drawer.jpg'), // Replace with your image path
+                fit: BoxFit.cover, // Cover the entire header
+              ),
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                CircleAvatar(
+                  radius: 40,
+                  backgroundImage:
+                      AssetImage('assets/images/.jpg'), // User avatar
+                ),
+                SizedBox(height: 10),
+                Text(
+                  'John Doe',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Text(
+                  'john.doe@example.com',
+                  style: TextStyle(
+                    color: Colors.white70,
+                    fontSize: 14,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          DrawerHeader(
             // margin: EdgeInsets.zero,
             decoration: const BoxDecoration(
               color: Colors.blue,
