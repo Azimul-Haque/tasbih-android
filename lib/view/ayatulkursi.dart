@@ -2,13 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:tasbih/globals.dart';
 
 class AyatulKursi extends StatefulWidget {
-  final String title;
-
-  const AyatulKursi({
-    super.key,
-    required this.title,
-  });
-
   @override
   State<AyatulKursi> createState() => _AyatulKursiState();
 }
