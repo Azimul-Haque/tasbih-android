@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   just_audio: ^0.9.42
   webview_flutter: ^4.10.0
+  package_info_plus: ^8.1.0
   http: ^1.2.2
 
 dev_dependencies:
