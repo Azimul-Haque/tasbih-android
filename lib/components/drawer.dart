@@ -16,16 +16,16 @@ class MyDrawer extends StatelessWidget {
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
-          const DrawerHeader(
+          DrawerHeader(
             // margin: EdgeInsets.zero,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               // Image.asset("assets/images/drawer.jpg")
               color: Colors.blue,
             ),
             child: Stack(
               children: <Widget>[
                 Image.asset("assets/images/drawer.jpg"),
-                Positioned(
+                const Positioned(
                   left: 30,
                   bottom: 70,
                   child: Container(
@@ -41,7 +41,7 @@ class MyDrawer extends StatelessWidget {
                     // ),
                   ),
                 ),
-                Positioned(
+                const Positioned(
                   left: 30,
                   bottom: 40,
                   child: Text("Infoline",
@@ -56,7 +56,7 @@ class MyDrawer extends StatelessWidget {
                 //   child: Text(userdatasp[0]['mobile'] ?? '',
                 //       style: const TextStyle(color: Colors.white70, fontSize: 13)),
                 // ),
-                Positioned(
+                const Positioned(
                   right: 10,
                   bottom: 30,
                   child: IconButton(
@@ -70,7 +70,7 @@ class MyDrawer extends StatelessWidget {
                     },
                   ),
                 ),
-                Positioned(
+                const Positioned(
                   right: 3,
                   bottom: 3,
                   child: Text("Version: ",
