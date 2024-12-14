@@ -36,6 +36,33 @@ class _AyatulKursiState extends State<AyatulKursi> {
             const SizedBox(
               height: 5,
             ),
+            Card(
+              elevation: 4, // Shadow for the card
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10), // Rounded corners
+              ),
+              child: Padding(
+                padding: EdgeInsets.all(16.0), // Padding inside the card
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(
+                      "This is a Card",
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    Text(
+                      "Cards are used to represent content inside an elevated container. You can add any widgets inside a card.",
+                      style: TextStyle(fontSize: 14),
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
+                ),
+              ),
+            ),
             Padding(
               padding: const EdgeInsets.only(
                 top: 10,
