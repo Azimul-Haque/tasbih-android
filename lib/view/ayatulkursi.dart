@@ -176,8 +176,6 @@ class _AyatulKursiState extends State<AyatulKursi> {
                 ],
               ),
             ),
-            _thisCard('أَسْتَغْفِرُ ٱللَّٰهَ',
-                'Astaghfirullah - আসতাগফিরুল্লাহ', Icons.label, Icons.check),
           ],
         ));
   }
