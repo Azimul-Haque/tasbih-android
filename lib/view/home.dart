@@ -128,7 +128,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   const Text(
                     'উপরের বক্সে ট্যাপ করুন',
                     style: TextStyle(
-                      fontSize: 14,
+                      fontSize: 12,
                     ),
                   ),
                 ],
