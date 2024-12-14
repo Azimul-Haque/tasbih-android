@@ -21,6 +21,7 @@ class _AyatulKursiState extends State<AyatulKursi> {
             const SizedBox(
               height: 5,
             ),
+            Padding(padding: EdgeInsets.only(top: 10, left: 10, right: 10,))
             _thisCard('أَسْتَغْفِرُ ٱللَّٰهَ',
                 'Astaghfirullah - আসতাগফিরুল্লাহ', Icons.label, Icons.check),
           ],
