@@ -130,7 +130,7 @@ class _AyatulKursiState extends State<AyatulKursi> {
                                                 .lightBlue, // Buffered portion color
                                             inactiveColor: Theme.of(context)
                                                 .colorScheme
-                                                .onPrimary, // Remaining portion color
+                                                .primary, // Remaining portion color
                                             onChanged: null, // Non-draggable
                                           ),
                                         ),
