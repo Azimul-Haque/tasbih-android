@@ -35,7 +35,7 @@ class _PrivacyPolicyState extends State<PrivacyPolicy> {
           },
         ),
         title: const Text(
-          "Terms & Conditions",
+          "Privacy Policy",
           style: TextStyle(
             fontFamily: 'Arial',
             fontWeight: FontWeight.bold,
