@@ -141,12 +141,16 @@ class _MyHomePageState extends State<MyHomePage> {
           const SizedBox(height: 50),
           Padding(
             padding: const EdgeInsets.all(15.0),
-            child: Text(
-              'আজকের আয়াত: [$surah:$ayahnumber]\n$ayah\n($ahayinbn)',
-              style: const TextStyle(
-                fontSize: 18,
-                fontFamily: 'HindSiliguri',
-              ),
+            child: Column(
+              children: [
+                Text(
+                  'আজকের আয়াত: [$surah:$ayahnumber]\n$ayah\n($ahayinbn)',
+                  style: const TextStyle(
+                    fontSize: 18,
+                    fontFamily: 'HindSiliguri',
+                  ),
+                )
+              ],
             ),
           ),
           const SizedBox(height: 50),
