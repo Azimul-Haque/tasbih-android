@@ -73,7 +73,10 @@ class _AyatulKursiState extends State<AyatulKursi> {
                                   } else if (isPlaying) {
                                     return IconButton(
                                       icon: const Icon(Icons.pause,
-                                          size: 36, color: Colors.green),
+                                          size: 36,
+                                          color: Theme.of(context)
+                                              .colorScheme
+                                              .primary),
                                       onPressed: _audioPlayer.pause,
                                     );
                                   } else {
