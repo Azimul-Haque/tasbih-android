@@ -5,14 +5,14 @@ class MyButton extends StatelessWidget {
   final double titlesize;
   final Color color;
   final void Function() ontapfunction;
-  String fontfamily;
+  final String fontfamily;
   const MyButton({
     super.key,
     required this.title,
     required this.titlesize,
     required this.color,
     required this.ontapfunction,
-    this.fontfamily,
+    required this.fontfamily,
   });
 
   @override
