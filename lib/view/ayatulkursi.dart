@@ -211,6 +211,7 @@ class _AyatulKursiState extends State<AyatulKursi> {
     try {
       await _audioPlayer.setUrl(audioUrl); // Load the audio file from URL
     } catch (e) {
+      // ignore: use_build_context_synchronously
       showSnackBar(context, 'Check internet connection!');
     }
 
