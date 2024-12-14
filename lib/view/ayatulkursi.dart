@@ -37,6 +37,7 @@ class _AyatulKursiState extends State<AyatulKursi> {
               height: 5,
             ),
             Card(
+              color: Colors.white,
               elevation: 4, // Shadow for the card
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10), // Rounded corners
