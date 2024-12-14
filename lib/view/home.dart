@@ -144,7 +144,7 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Column(
               children: [
                 const Text(
-                  'আজকের আয়াত:',
+                  'আজকের আয়াত: [$surah:$ayahnumber]',
                   style: TextStyle(
                     fontSize: 18,
                     fontFamily: 'Kalpurush',
