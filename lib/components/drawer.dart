@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tasbih/globals.dart';
+import 'package:tasbih/view/aboutus.dart';
 import 'package:tasbih/view/ayatulkursi.dart';
 import 'package:tasbih/view/privacypolicy.dart';
 import 'package:share_plus/share_plus.dart';
@@ -103,7 +104,7 @@ class MyDrawer extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const PrivacyPolicy(),
+                  builder: (context) => const AboutUs(),
                 ),
               );
             },
