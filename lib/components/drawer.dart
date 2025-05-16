@@ -96,7 +96,7 @@ class MyDrawer extends StatelessWidget {
           const Divider(thickness: .5),
           ListTile(
             leading: const Icon(Icons.privacy_tip_outlined),
-            title: const Text('প্রাইভেসি পলিসি',
+            title: const Text('আমাদের সম্পর্কে',
                 style: TextStyle(fontFamily: 'Kalpurush')),
             onTap: () {
               Navigator.pop(context);
