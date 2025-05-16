@@ -93,6 +93,21 @@ class MyDrawer extends StatelessWidget {
               );
             },
           ),
+          const Divider(thickness: .5),
+          ListTile(
+            leading: const Icon(Icons.privacy_tip_outlined),
+            title: const Text('প্রাইভেসি পলিসি',
+                style: TextStyle(fontFamily: 'Kalpurush')),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const PrivacyPolicy(),
+                ),
+              );
+            },
+          ),
           // const Divider(thickness: .5),
           // ListTile(
           //   leading: const Icon(Icons.mail_outline_sharp),
