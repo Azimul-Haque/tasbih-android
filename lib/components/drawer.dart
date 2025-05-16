@@ -117,7 +117,8 @@ class MyDrawer extends StatelessWidget {
                 text:
                     'তসবিহ অ্যাপ https://play.google.com/store/apps/details?id=com.orbachinujbuk.tasbih',
                 subject: "তসবিহ অ্যাপ",
-                uri: Uri.parse(uri),
+                uri: Uri.parse(
+                    'https://play.google.com/store/apps/details?id=com.orbachinujbuk.tasbih'),
               ));
             },
           ),
