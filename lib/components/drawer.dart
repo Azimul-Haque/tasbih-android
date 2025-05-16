@@ -113,6 +113,7 @@ class MyDrawer extends StatelessWidget {
               //     "তাসবিহ অ্যাপ https://play.google.com/store/apps/details?id=com.orbachinujbuk.tasbih",
               //     subject: "তাসবিহ অ্যাপ");
               SharePlus.instance.share(ShareParams(
+                title: '',
                 text:
                     'তসবিহ অ্যাপ https://play.google.com/store/apps/details?id=com.orbachinujbuk.tasbih',
                 subject: "তসবিহ অ্যাপ",
