@@ -116,8 +116,8 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Column(
                 children: [
                   MyBox(
-                    height: 150,
-                    widht: 150,
+                    height: 170,
+                    widht: 170,
                     color: Theme.of(context).colorScheme.secondary,
                     child: MyButton(
                         title: convertToBanglaNumber('$_counter'),

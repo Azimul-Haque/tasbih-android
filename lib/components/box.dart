@@ -19,7 +19,7 @@ class MyBox extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: color,
-        borderRadius: BorderRadius.circular(8),
+        borderRadius: BorderRadius.circular(100),
       ), // BoxDecoration
       width: widht,
       height: height,

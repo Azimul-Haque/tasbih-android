@@ -20,10 +20,10 @@ class MyButton extends StatelessWidget {
     return Material(
       elevation: 1,
       color: color,
-      borderRadius: BorderRadius.circular(8),
+      borderRadius: BorderRadius.circular(100),
       child: InkWell(
         onTap: ontapfunction,
-        borderRadius: BorderRadius.circular(8),
+        borderRadius: BorderRadius.circular(100),
         child: Container(
           padding: const EdgeInsets.all(5),
           child: Center(
