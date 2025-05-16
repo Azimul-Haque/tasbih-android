@@ -20,7 +20,7 @@ class _AboutUsState extends State<AboutUs> {
     // if (Platform.isAndroid) WebView.platform = SurfaceAndroidWebView();
     controller = WebViewController()
       ..loadRequest(
-        Uri.parse('https://orbachinujbuk.com/tasbih-app/privacy-policy/'),
+        Uri.parse('https://orbachinujbuk.com/tasbih-app/aboutus/'),
       );
   }
 
