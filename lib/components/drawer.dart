@@ -110,8 +110,8 @@ class MyDrawer extends StatelessWidget {
                 style: TextStyle(fontFamily: 'Kalpurush')),
             onTap: () {
               Share.share(
-                  "বিসিএস এক্সাম অ্যাপ https://play.google.com/store/apps/details?id=com.orbachinujbuk.bcs",
-                  subject: "বিসিএস এক্সাম অ্যাপ");
+                  "তাসবিহ অ্যাপ https://play.google.com/store/apps/details?id=com.orbachinujbuk.bcs",
+                  subject: "তাসবিহ অ্যাপ");
             },
           ),
         ],
