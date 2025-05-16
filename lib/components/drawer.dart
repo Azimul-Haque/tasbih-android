@@ -108,8 +108,9 @@ class MyDrawer extends StatelessWidget {
             title: const Text('শেয়ার করুন',
                 style: TextStyle(fontFamily: 'Kalpurush')),
             onTap: () {
-              // Update the state of the app.
-              // ...
+              Share.share(
+                  "বিসিএস এক্সাম অ্যাপ https://play.google.com/store/apps/details?id=com.orbachinujbuk.bcs",
+                  subject: "বিসিএস এক্সাম অ্যাপ");
             },
           ),
         ],
