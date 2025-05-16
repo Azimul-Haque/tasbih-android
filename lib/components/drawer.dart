@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tasbih/globals.dart';
 import 'package:tasbih/view/ayatulkursi.dart';
 import 'package:tasbih/view/privacypolicy.dart';
+import 'package:share/share.dart';
 
 class MyDrawer extends StatelessWidget {
   final Color? color;
