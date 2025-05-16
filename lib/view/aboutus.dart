@@ -29,7 +29,7 @@ class _AboutUsState extends State<AboutUs> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Privacy Policy',
+          'About us',
           style: TextStyle(fontFamily: 'HindSiliguri'),
         ),
       ),
